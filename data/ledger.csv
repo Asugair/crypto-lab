@@ -1,0 +1,2 @@
+ts_utc,session_id,pair,token_address,side,qty,price_usd,fees_usd,slippage_usd,net_usd,cash_after_usd,portfolio_after_usd,exit_reason,evidence_url
+2026-09-17T05:31:00Z,baseline,,,start,0,0,0,0,0,100.00,100.00,reference start,
