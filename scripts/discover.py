@@ -1,10 +1,21 @@
 """Discovery: new Solana pools from GeckoTerminal public API (keyless, ~30 req/min).
-Usage: python scripts/discover.py [--pages 5] [--out data/candidates.json] [--fixture file.json]
+Usage: python scripts/discover.py [--pages 3] [--out data/candidates.json] [--fixture file.json]
 Never trades. Trending/boost signals are NOT used as quality signals."""
 import sys, json, time, argparse
 from common import get_json, now_iso, load_rules, save, hours_since
 
-API = "https://api.geckoterminal.com/api/v2/networks/solana/new_pools?include=base_token,dex&page={}"
+BASE = "https://api.geckoterminal.com/api/v2/networks/solana"
+# Finding on 2026-09-17: new_pools only returns the newest ~100 pools, all under 1h old, so it never reaches the
+# 1-24h window on its own. Trending/top-volume lists are used purely as DISCOVERY sources (never quality); every
+# pool still passes the same age/liquidity/volume/sells filters.
+SOURCES = [
+    ("new_pools", BASE + "/new_pools?include=base_token,dex&page={}"),
+    ("trending_1h", BASE + "/trending_pools?include=base_token,dex&duration=1h&page={}"),
+    ("trending_6h", BASE + "/trending_pools?include=base_token,dex&duration=6h&page={}"),
+    ("trending_24h", BASE + "/trending_pools?include=base_token,dex&duration=24h&page={}"),
+    ("top_h1_volume", BASE + "/pools?include=base_token,dex&sort=h1_volume_usd_desc&page={}"),
+    ("top_h24_volume", BASE + "/pools?include=base_token,dex&sort=h24_volume_usd_desc&page={}"),
+]
 
 def parse_page(payload):
     inc = {i["id"]: i for i in payload.get("included", [])}
@@ -60,7 +71,7 @@ def _summ(excl):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pages", type=int, default=5)
+    ap.add_argument("--pages", type=int, default=3, help="pages per source (6 sources)")
     ap.add_argument("--out", default="data/candidates.json")
     ap.add_argument("--fixture")
     ap.add_argument("--rules", default="rules.json")
@@ -70,12 +81,17 @@ def main():
     if a.fixture:
         pools = parse_page(json.load(open(a.fixture)))
     else:
-        for pg in range(1, a.pages + 1):
-            data, err = get_json(API.format(pg))
-            if err: errors.append({"page": pg, "error": err}); break
-            pools += parse_page(data); time.sleep(2.2)
+        seen = set()
+        for name, url in SOURCES:
+            for pg in range(1, a.pages + 1):
+                data, err = get_json(url.format(pg))
+                if err: errors.append({"source": name, "page": pg, "error": err}); break
+                for p in parse_page(data):
+                    if p["pool_address"] not in seen:
+                        seen.add(p["pool_address"]); p["found_via"] = name; pools.append(p)
+                time.sleep(2.2)
     cands, excl = apply_filters(pools, f)
-    res = {"fetched_at": now_iso(), "source": "GeckoTerminal public API v2 (keyless)",
+    res = {"fetched_at": now_iso(), "source": "GeckoTerminal public API v2 (keyless): " + ", ".join(n for n, _ in SOURCES),
            "filters": f, "scanned": len(pools), "excluded": len(excl), "candidates": len(cands),
            "errors": errors, "candidates_list": cands, "exclusion_summary": _summ(excl),
            "status": "ok" if pools and not errors else ("partial" if pools else "no_data")}
