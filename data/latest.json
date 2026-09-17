@@ -1,0 +1,14 @@
+{
+  "cycle_at": "2026-09-17T06:06:02Z",
+  "discovery_status": "ok",
+  "scanned": 100,
+  "excluded": 100,
+  "exclusion_summary": {
+    "too_young": 100,
+    "low_liquidity": 82,
+    "low_volume_h1": 76,
+    "low_txns_h1": 66,
+    "no_sells_seen_h1": 24
+  },
+  "candidates": []
+}
