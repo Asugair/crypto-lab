@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-17T06:06:02Z",
+  "fetched_at": "2026-09-17T06:08:50Z",
   "source": "GeckoTerminal public API v2 (keyless)",
   "filters": {
     "network": "solana",
@@ -22,10 +22,10 @@
   "candidates_list": [],
   "exclusion_summary": {
     "too_young": 100,
-    "low_liquidity": 82,
-    "low_volume_h1": 76,
-    "low_txns_h1": 66,
-    "no_sells_seen_h1": 24
+    "low_liquidity": 94,
+    "low_volume_h1": 89,
+    "low_txns_h1": 81,
+    "no_sells_seen_h1": 23
   },
   "status": "ok"
 }
