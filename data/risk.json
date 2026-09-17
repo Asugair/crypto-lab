@@ -1,4 +1,80 @@
 {
-  "checked_at": "2026-09-17T06:08:50Z",
-  "reviews": []
+  "checked_at": "2026-09-17T06:15:14Z",
+  "reviews": [
+    {
+      "pair": "urmom / SOL",
+      "token_address": "GNVXbs8myY8PzBSHdGrPyXPJw7F3BVRRRQ6TjJgrt2fH",
+      "pool_address": "Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
+      "source_url": "https://www.geckoterminal.com/solana/pools/Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
+      "checked_at": "2026-09-17T06:15:06Z",
+      "rpc": "https://api.mainnet-beta.solana.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 1000000000000000,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 132,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "PAID / SOL",
+      "token_address": "6tAoUZSx1Pcjk5j3N6oT2nUxuGkk2wAQPo5XwNQ8Zcuv",
+      "pool_address": "DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
+      "source_url": "https://www.geckoterminal.com/solana/pools/DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
+      "checked_at": "2026-09-17T06:15:10Z",
+      "rpc": "https://api.mainnet-beta.solana.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 100000000000000000,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 150,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "BOAR / SOL",
+      "token_address": "LMYJ6T1MxeojgW4imqKGcuMYraLhqsWV2uFG4MSVmX6",
+      "pool_address": "93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
+      "source_url": "https://www.geckoterminal.com/solana/pools/93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
+      "checked_at": "2026-09-17T06:15:14Z",
+      "rpc": "https://api.mainnet-beta.solana.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999959783764971,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 150,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    }
+  ]
 }
