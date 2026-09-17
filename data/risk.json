@@ -1,37 +1,12 @@
 {
-  "checked_at": "2026-09-17T06:15:14Z",
+  "checked_at": "2026-09-17T06:23:33Z",
   "reviews": [
-    {
-      "pair": "urmom / SOL",
-      "token_address": "GNVXbs8myY8PzBSHdGrPyXPJw7F3BVRRRQ6TjJgrt2fH",
-      "pool_address": "Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
-      "source_url": "https://www.geckoterminal.com/solana/pools/Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
-      "checked_at": "2026-09-17T06:15:06Z",
-      "rpc": "https://api.mainnet-beta.solana.com",
-      "mint": {
-        "program": "spl_token",
-        "mint_authority": null,
-        "freeze_authority": null,
-        "supply_raw": 1000000000000000,
-        "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
-      },
-      "holders": null,
-      "sells_in_last_trades_page": 132,
-      "verdict": "unverified",
-      "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
     {
       "pair": "PAID / SOL",
       "token_address": "6tAoUZSx1Pcjk5j3N6oT2nUxuGkk2wAQPo5XwNQ8Zcuv",
       "pool_address": "DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
       "source_url": "https://www.geckoterminal.com/solana/pools/DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
-      "checked_at": "2026-09-17T06:15:10Z",
+      "checked_at": "2026-09-17T06:23:06Z",
       "rpc": "https://api.mainnet-beta.solana.com",
       "mint": {
         "program": "spl_token",
@@ -49,20 +24,23 @@
       "missing_checks": [
         "holders"
       ],
+      "check_errors": [
+        "getTokenLargestAccounts: HTTP Error 429: Too Many Requests"
+      ],
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "BOAR / SOL",
-      "token_address": "LMYJ6T1MxeojgW4imqKGcuMYraLhqsWV2uFG4MSVmX6",
-      "pool_address": "93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
-      "source_url": "https://www.geckoterminal.com/solana/pools/93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
-      "checked_at": "2026-09-17T06:15:14Z",
+      "pair": "ARGUS / SOL",
+      "token_address": "5HHtVnnJ5fjSWhXc7KjiLdM2jRy7gXRRqFZ9y6ecyEXm",
+      "pool_address": "2CfyXEncaWVoe1EE8CDZo3s2ApBJYrRYCmrwdSMvHcpn",
+      "source_url": "https://www.geckoterminal.com/solana/pools/2CfyXEncaWVoe1EE8CDZo3s2ApBJYrRYCmrwdSMvHcpn",
+      "checked_at": "2026-09-17T06:23:20Z",
       "rpc": "https://api.mainnet-beta.solana.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999959783764971,
+        "supply_raw": 100000000000000000,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -73,6 +51,37 @@
       "reject_reasons": [],
       "missing_checks": [
         "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: HTTP Error 429: Too Many Requests"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "GNOT / SOL",
+      "token_address": "6ZdSN9ZnR3CuSdemq5j6jYWThr4mr5zLMzKZugXKRkku",
+      "pool_address": "5AVYoPZrgufEDbjsyoCnH5YvYVYiR57S6YxX9b9YfFet",
+      "source_url": "https://www.geckoterminal.com/solana/pools/5AVYoPZrgufEDbjsyoCnH5YvYVYiR57S6YxX9b9YfFet",
+      "checked_at": "2026-09-17T06:23:33Z",
+      "rpc": "https://api.mainnet-beta.solana.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999999293685434,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 105,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: HTTP Error 429: Too Many Requests"
       ],
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     }

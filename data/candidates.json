@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-09-17T06:14:56Z",
-  "source": "GeckoTerminal public API v2 (keyless): new_pools, trending_1h, trending_6h, trending_24h, top_h1_volume, top_h24_volume",
+  "fetched_at": "2026-09-17T06:22:53Z",
+  "source": "GeckoTerminal public API v2 (keyless): new_pools, trending_1h, trending_6h, trending_24h, top_h24_tx, top_h24_volume",
   "filters": {
     "network": "solana",
     "age_hours_min": 1,
@@ -15,51 +15,22 @@
       "trending rank"
     ]
   },
-  "scanned": 208,
-  "excluded": 196,
+  "scanned": 300,
+  "excluded": 289,
   "candidates": 3,
   "errors": [
     {
       "source": "trending_1h",
-      "page": 2,
+      "page": 1,
       "error": "HTTP 429"
     },
     {
       "source": "trending_6h",
-      "page": 2,
-      "error": "HTTP 429"
-    },
-    {
-      "source": "trending_24h",
-      "page": 2,
-      "error": "HTTP 429"
-    },
-    {
-      "source": "top_h1_volume",
       "page": 1,
-      "error": "HTTP 400"
+      "error": "HTTP 429"
     }
   ],
   "candidates_list": [
-    {
-      "pool_address": "Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
-      "pair": "urmom / SOL",
-      "token_address": "GNVXbs8myY8PzBSHdGrPyXPJw7F3BVRRRQ6TjJgrt2fH",
-      "token_symbol": "urmom",
-      "dex": "PumpSwap",
-      "created_at": "2026-09-17T04:46:38Z",
-      "liquidity_usd": 311648.6298,
-      "volume_h1_usd": 19434031.2173523,
-      "volume_h24_usd": 27171180.0550148,
-      "txns_h1": 22739,
-      "sells_h1": 9976,
-      "price_change_h1_pct": "60.675",
-      "fdv_usd": "574444.7529",
-      "source_url": "https://www.geckoterminal.com/solana/pools/Bu1hSFLmVZ7UKF36gyxomTSxmJkbNr4tKmRjirtcf9N4",
-      "found_via": "top_h24_volume",
-      "age_hours": 1.47,
-      "exclude_reasons": []
-    },
     {
       "pool_address": "DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
       "pair": "PAID / SOL",
@@ -67,45 +38,64 @@
       "token_symbol": "PAID",
       "dex": "PumpSwap",
       "created_at": "2026-09-17T03:54:05Z",
-      "liquidity_usd": 143364.2228,
-      "volume_h1_usd": 7429364.64091851,
-      "volume_h24_usd": 10844133.1227935,
-      "txns_h1": 13209,
-      "sells_h1": 5730,
-      "price_change_h1_pct": "61.032",
-      "fdv_usd": "1241469.273",
+      "liquidity_usd": 150327.2172,
+      "volume_h1_usd": 6666674.16959702,
+      "volume_h24_usd": 11413296.1901899,
+      "txns_h1": 12033,
+      "sells_h1": 5142,
+      "price_change_h1_pct": "53.951",
+      "fdv_usd": "1333227.436",
       "source_url": "https://www.geckoterminal.com/solana/pools/DvhALWuasANm8EawU97Aza4Np1XdTaBMMd13LGvzohrh",
-      "found_via": "top_h24_volume",
-      "age_hours": 2.35,
+      "found_via": "top_h24_tx",
+      "age_hours": 2.48,
       "exclude_reasons": []
     },
     {
-      "pool_address": "93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
-      "pair": "BOAR / SOL",
-      "token_address": "LMYJ6T1MxeojgW4imqKGcuMYraLhqsWV2uFG4MSVmX6",
-      "token_symbol": "BOAR",
+      "pool_address": "2CfyXEncaWVoe1EE8CDZo3s2ApBJYrRYCmrwdSMvHcpn",
+      "pair": "ARGUS / SOL",
+      "token_address": "5HHtVnnJ5fjSWhXc7KjiLdM2jRy7gXRRqFZ9y6ecyEXm",
+      "token_symbol": "ARGUS",
       "dex": "PumpSwap",
-      "created_at": "2026-09-17T04:53:12Z",
-      "liquidity_usd": 107686.4922,
-      "volume_h1_usd": 6912570.91354403,
-      "volume_h24_usd": 8528233.78001021,
-      "txns_h1": 11391,
-      "sells_h1": 5194,
-      "price_change_h1_pct": "69.538",
-      "fdv_usd": "143171.457821807",
-      "source_url": "https://www.geckoterminal.com/solana/pools/93MwF7nfjmDtvurzx3QMQfLjs2aVnrEp3ysN44k71Qxn",
+      "created_at": "2026-09-17T04:06:36Z",
+      "liquidity_usd": 282018.2513,
+      "volume_h1_usd": 6228926.46947969,
+      "volume_h24_usd": 9968066.31164069,
+      "txns_h1": 9604,
+      "sells_h1": 4802,
+      "price_change_h1_pct": "18.969",
+      "fdv_usd": "1724857.247",
+      "source_url": "https://www.geckoterminal.com/solana/pools/2CfyXEncaWVoe1EE8CDZo3s2ApBJYrRYCmrwdSMvHcpn",
       "found_via": "top_h24_volume",
-      "age_hours": 1.36,
+      "age_hours": 2.27,
+      "exclude_reasons": []
+    },
+    {
+      "pool_address": "5AVYoPZrgufEDbjsyoCnH5YvYVYiR57S6YxX9b9YfFet",
+      "pair": "GNOT / SOL",
+      "token_address": "6ZdSN9ZnR3CuSdemq5j6jYWThr4mr5zLMzKZugXKRkku",
+      "token_symbol": "GNOT",
+      "dex": "PumpSwap",
+      "created_at": "2026-09-16T23:27:10Z",
+      "liquidity_usd": 294522.8936,
+      "volume_h1_usd": 5517775.88621664,
+      "volume_h24_usd": 9083565.15704712,
+      "txns_h1": 7497,
+      "sells_h1": 2611,
+      "price_change_h1_pct": "13.388",
+      "fdv_usd": "2593575.284",
+      "source_url": "https://www.geckoterminal.com/solana/pools/5AVYoPZrgufEDbjsyoCnH5YvYVYiR57S6YxX9b9YfFet",
+      "found_via": "top_h24_volume",
+      "age_hours": 6.93,
       "exclude_reasons": []
     }
   ],
   "exclusion_summary": {
-    "too_young": 83,
-    "low_liquidity": 129,
-    "low_volume_h1": 131,
-    "low_txns_h1": 120,
-    "no_sells_seen_h1": 77,
-    "too_old": 63
+    "too_young": 71,
+    "low_liquidity": 153,
+    "low_volume_h1": 180,
+    "low_txns_h1": 179,
+    "no_sells_seen_h1": 112,
+    "too_old": 141
   },
   "status": "partial"
 }
