@@ -1,0 +1,104 @@
+{
+ "MintAAA111": {
+  "mint": {
+   "value": {
+    "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "data": {
+     "parsed": {
+      "info": {
+       "mintAuthority": null,
+       "freezeAuthority": null,
+       "supply": "1000000000000000",
+       "decimals": 6
+      }
+     }
+    }
+   }
+  },
+  "largest": {
+   "value": [
+    {
+     "address": "TA1",
+     "amount": "600000000000000"
+    },
+    {
+     "address": "TA2",
+     "amount": "50000000000000"
+    },
+    {
+     "address": "TA3",
+     "amount": "30000000000000"
+    }
+   ]
+  },
+  "accounts": {
+   "TA1": {
+    "value": {
+     "data": {
+      "parsed": {
+       "info": {
+        "owner": "PoolAuth1"
+       }
+      }
+     }
+    }
+   },
+   "TA2": {
+    "value": {
+     "data": {
+      "parsed": {
+       "info": {
+        "owner": "WalletX"
+       }
+      }
+     }
+    }
+   },
+   "TA3": {
+    "value": {
+     "data": {
+      "parsed": {
+       "info": {
+        "owner": "WalletY"
+       }
+      }
+     }
+    }
+   }
+  },
+  "wallets": {
+   "PoolAuth1": {
+    "value": {
+     "owner": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA"
+    }
+   },
+   "WalletX": {
+    "value": {
+     "owner": "11111111111111111111111111111111"
+    }
+   },
+   "WalletY": {
+    "value": null
+   }
+  },
+  "trades": {
+   "data": [
+    {
+     "attributes": {
+      "kind": "sell"
+     }
+    },
+    {
+     "attributes": {
+      "kind": "buy"
+     }
+    },
+    {
+     "attributes": {
+      "kind": "sell"
+     }
+    }
+   ]
+  }
+ }
+}
