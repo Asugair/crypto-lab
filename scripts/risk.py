@@ -6,7 +6,9 @@ Usage: python scripts/risk.py [--in data/candidates.json] [--out data/risk.json]
 import json, argparse, os, time
 from common import post_json, get_json, now_iso, load_rules, save
 
-RPC = os.environ.get("SOL_RPC", "https://api.mainnet-beta.solana.com")
+# Public, keyless RPC endpoints tried in order; api.mainnet-beta returned 429 on getTokenLargestAccounts from GitHub Actions.
+RPCS = [u for u in os.environ.get("SOL_RPC", "https://solana-rpc.publicnode.com,https://api.mainnet-beta.solana.com,https://solana.drpc.org").split(",") if u]
+RPC = RPCS[0]
 SYSTEM_PROGRAM = "11111111111111111111111111111111"
 TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
 TRADES = "https://api.geckoterminal.com/api/v2/networks/solana/pools/{}/trades"
@@ -14,12 +16,16 @@ TRADES = "https://api.geckoterminal.com/api/v2/networks/solana/pools/{}/trades"
 def rpc(method, params, fixture=None, retries=3):
     if fixture is not None:
         return fixture, None
+    global RPC
     err = None
-    for i in range(retries):
-        r, err = post_json(RPC, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
-        if not err and "error" in r: err = str(r["error"])
-        if not err: return r.get("result"), None
-        time.sleep(2 * (i + 1))  # public RPC rate limits; back off and retry
+    for url in RPCS:
+        for i in range(retries):
+            r, err = post_json(url, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
+            if not err and "error" in r: err = str(r["error"])
+            if not err:
+                RPC = url; return r.get("result"), None
+            if "429" not in str(err) and "403" not in str(err): break  # not a rate limit, try next endpoint
+            time.sleep(2 * (i + 1))
     return None, f"{method}: {err}"
 
 def parse_mint(acc):
