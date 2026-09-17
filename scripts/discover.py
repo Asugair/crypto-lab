@@ -1,5 +1,5 @@
 """Discovery: new Solana pools from GeckoTerminal public API (keyless, ~30 req/min).
-Usage: python scripts/discover.py [--pages 3] [--out data/candidates.json] [--fixture file.json]
+Usage: python scripts/discover.py [--pages 2] [--out data/candidates.json] [--fixture file.json]
 Never trades. Trending/boost signals are NOT used as quality signals."""
 import sys, json, time, argparse
 from common import get_json, now_iso, load_rules, save, hours_since
@@ -13,7 +13,7 @@ SOURCES = [
     ("trending_1h", BASE + "/trending_pools?include=base_token,dex&duration=1h&page={}"),
     ("trending_6h", BASE + "/trending_pools?include=base_token,dex&duration=6h&page={}"),
     ("trending_24h", BASE + "/trending_pools?include=base_token,dex&duration=24h&page={}"),
-    ("top_h1_volume", BASE + "/pools?include=base_token,dex&sort=h1_volume_usd_desc&page={}"),
+    ("top_h24_tx", BASE + "/pools?include=base_token,dex&sort=h24_tx_count_desc&page={}"),
     ("top_h24_volume", BASE + "/pools?include=base_token,dex&sort=h24_volume_usd_desc&page={}"),
 ]
 
@@ -71,7 +71,7 @@ def _summ(excl):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pages", type=int, default=3, help="pages per source (6 sources)")
+    ap.add_argument("--pages", type=int, default=2, help="pages per source (6 sources)")
     ap.add_argument("--out", default="data/candidates.json")
     ap.add_argument("--fixture")
     ap.add_argument("--rules", default="rules.json")
@@ -89,7 +89,7 @@ def main():
                 for p in parse_page(data):
                     if p["pool_address"] not in seen:
                         seen.add(p["pool_address"]); p["found_via"] = name; pools.append(p)
-                time.sleep(2.2)
+                time.sleep(3.0)  # ~20 req/min, under the 30/min public limit (429 seen at 2.2s)
     cands, excl = apply_filters(pools, f)
     res = {"fetched_at": now_iso(), "source": "GeckoTerminal public API v2 (keyless): " + ", ".join(n for n, _ in SOURCES),
            "filters": f, "scanned": len(pools), "excluded": len(excl), "candidates": len(cands),

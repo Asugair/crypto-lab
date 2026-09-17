@@ -11,13 +11,16 @@ SYSTEM_PROGRAM = "11111111111111111111111111111111"
 TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
 TRADES = "https://api.geckoterminal.com/api/v2/networks/solana/pools/{}/trades"
 
-def rpc(method, params, fixture=None):
+def rpc(method, params, fixture=None, retries=3):
     if fixture is not None:
         return fixture, None
-    r, err = post_json(RPC, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
-    if err: return None, err
-    if "error" in r: return None, str(r["error"])
-    return r.get("result"), None
+    err = None
+    for i in range(retries):
+        r, err = post_json(RPC, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
+        if not err and "error" in r: err = str(r["error"])
+        if not err: return r.get("result"), None
+        time.sleep(2 * (i + 1))  # public RPC rate limits; back off and retry
+    return None, f"{method}: {err}"
 
 def parse_mint(acc):
     """acc = result of getAccountInfo(jsonParsed). Returns dict of mint facts."""
@@ -74,8 +77,10 @@ def review(c, g, fixture=None):
     fx = lambda k: (fixture or {}).get(k)
     mint_acc, e1 = rpc("getAccountInfo", [c["token_address"], {"encoding": "jsonParsed"}], fx("mint"))
     mint = parse_mint(mint_acc) if not e1 else {"error": e1}
-    conc = None
+    conc = None; errors = []
+    if e1: errors.append(e1)
     largest, e2 = rpc("getTokenLargestAccounts", [c["token_address"]], fx("largest"))
+    if e2: errors.append(e2)
     if not e2 and largest and "error" not in mint:
         owners = {}
         for h in largest.get("value", [])[:20]:
@@ -92,13 +97,14 @@ def review(c, g, fixture=None):
         conc = holder_concentration(largest.get("value", []), owners, {c["pool_address"]}, mint["supply_raw"])
     sells_recent = None
     tr, e5 = (fx("trades"), None) if fixture else get_json(TRADES.format(c["pool_address"]))
+    if e5: errors.append(f"trades: {e5}")
     if not e5 and tr:
         sells_recent = sum(1 for t in tr.get("data", []) if t["attributes"].get("kind") == "sell")
     v, reasons, missing = verdict(mint, conc, sells_recent, g)
     return {**{k: c[k] for k in ("pair","token_address","pool_address","source_url")},
             "checked_at": now_iso(), "rpc": RPC if not fixture else "fixture", "mint": mint,
             "holders": conc, "sells_in_last_trades_page": sells_recent,
-            "verdict": v, "reject_reasons": reasons, "missing_checks": missing,
+            "verdict": v, "reject_reasons": reasons, "missing_checks": missing, "check_errors": errors,
             "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."}
 
 def main():
