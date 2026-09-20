@@ -1,52 +1,24 @@
 {
-  "checked_at": "2026-09-20T16:48:51Z",
+  "checked_at": "2026-09-20T19:25:53Z",
   "reviews": [
-    {
-      "pair": "天才 / SOL",
-      "token_address": "F23JELHvka1giM3eAcG2WyfbAkvkvs2Lh2Z9YkYYHcwD",
-      "pool_address": "LWd1DGhXPbtLbCwNvPTEfnqD8KPqGxH5ndJ5w3SZtEH",
-      "source_url": "https://www.geckoterminal.com/solana/pools/LWd1DGhXPbtLbCwNvPTEfnqD8KPqGxH5ndJ5w3SZtEH",
-      "checked_at": "2026-09-20T16:47:35Z",
-      "rpc": "https://solana-rpc.publicnode.com",
-      "mint": {
-        "program": "spl_token",
-        "mint_authority": null,
-        "freeze_authority": null,
-        "supply_raw": 99999997975433591,
-        "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
-      },
-      "holders": null,
-      "sells_in_last_trades_page": 150,
-      "verdict": "unverified",
-      "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "check_errors": [
-        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
     {
       "pair": "Claude / SOL",
       "token_address": "9LUjcsxK9497vufWkRL97TwjTV3e2MzcYzAYZZ5Txk4F",
       "pool_address": "HJ6BSdZx6eG6LXVRKZzmNBMmdvAGR86HmZqGeGkR2kbH",
       "source_url": "https://www.geckoterminal.com/solana/pools/HJ6BSdZx6eG6LXVRKZzmNBMmdvAGR86HmZqGeGkR2kbH",
-      "checked_at": "2026-09-20T16:48:10Z",
+      "checked_at": "2026-09-20T19:24:37Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999988178600512,
+        "supply_raw": 99999987999517201,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 117,
+      "sells_in_last_trades_page": 115,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -62,19 +34,47 @@
       "token_address": "joUAuUmyYvkNtZMc5MmSyS3odVRzEyt6FMKPDGpBwCA",
       "pool_address": "2eoA8D97w65XQxzVewcNC5Tju89AYVgt1N9rS6zUmXa7",
       "source_url": "https://www.geckoterminal.com/solana/pools/2eoA8D97w65XQxzVewcNC5Tju89AYVgt1N9rS6zUmXa7",
-      "checked_at": "2026-09-20T16:48:51Z",
+      "checked_at": "2026-09-20T19:25:13Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999998291212124,
+        "supply_raw": 99999998126362918,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 112,
+      "sells_in_last_trades_page": 115,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "OPENAI / SOL",
+      "token_address": "2L6VE3LUJN1WoR46KPWosNWXNy9ko9ECczJ6nE8ywgMP",
+      "pool_address": "DRj2seGk2W4LQox8PiieXG1JomobtyWAm2Lw5fCsjuA1",
+      "source_url": "https://www.geckoterminal.com/solana/pools/DRj2seGk2W4LQox8PiieXG1JomobtyWAm2Lw5fCsjuA1",
+      "checked_at": "2026-09-20T19:25:53Z",
+      "rpc": "https://solana-rpc.publicnode.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999998833810524,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 101,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [

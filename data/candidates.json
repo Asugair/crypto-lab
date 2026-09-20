@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-20T16:46:55Z",
+  "fetched_at": "2026-09-20T19:23:56Z",
   "source": "GeckoTerminal public API v2 (keyless): new_pools, trending_1h, trending_6h, trending_24h, top_h24_tx, top_h24_volume",
   "filters": {
     "network": "solana",
@@ -15,46 +15,17 @@
       "trending rank"
     ]
   },
-  "scanned": 269,
-  "excluded": 246,
+  "scanned": 314,
+  "excluded": 295,
   "candidates": 3,
   "errors": [
     {
       "source": "trending_1h",
-      "page": 2,
-      "error": "HTTP 429"
-    },
-    {
-      "source": "trending_6h",
-      "page": 2,
-      "error": "HTTP 429"
-    },
-    {
-      "source": "trending_24h",
-      "page": 2,
+      "page": 1,
       "error": "HTTP 429"
     }
   ],
   "candidates_list": [
-    {
-      "pool_address": "LWd1DGhXPbtLbCwNvPTEfnqD8KPqGxH5ndJ5w3SZtEH",
-      "pair": "天才 / SOL",
-      "token_address": "F23JELHvka1giM3eAcG2WyfbAkvkvs2Lh2Z9YkYYHcwD",
-      "token_symbol": "天才",
-      "dex": "PumpSwap",
-      "created_at": "2026-09-20T14:25:01Z",
-      "liquidity_usd": 409999.863,
-      "volume_h1_usd": 10457335.2089595,
-      "volume_h24_usd": 23526715.1550016,
-      "txns_h1": 12845,
-      "sells_h1": 6422,
-      "price_change_h1_pct": "21.929",
-      "fdv_usd": "1588448.23673161",
-      "source_url": "https://www.geckoterminal.com/solana/pools/LWd1DGhXPbtLbCwNvPTEfnqD8KPqGxH5ndJ5w3SZtEH",
-      "found_via": "top_h24_volume",
-      "age_hours": 2.37,
-      "exclude_reasons": []
-    },
     {
       "pool_address": "HJ6BSdZx6eG6LXVRKZzmNBMmdvAGR86HmZqGeGkR2kbH",
       "pair": "Claude / SOL",
@@ -62,16 +33,16 @@
       "token_symbol": "Claude",
       "dex": "PumpSwap",
       "created_at": "2026-09-20T12:39:21Z",
-      "liquidity_usd": 531674.7875,
-      "volume_h1_usd": 6727363.37907132,
-      "volume_h24_usd": 26627320.9328029,
-      "txns_h1": 9617,
-      "sells_h1": 3623,
-      "price_change_h1_pct": "26.35",
-      "fdv_usd": "2457551.082",
+      "liquidity_usd": 572325.281,
+      "volume_h1_usd": 6207435.01808836,
+      "volume_h24_usd": 43487572.2406251,
+      "txns_h1": 8586,
+      "sells_h1": 3363,
+      "price_change_h1_pct": "15.07",
+      "fdv_usd": "3699205.093",
       "source_url": "https://www.geckoterminal.com/solana/pools/HJ6BSdZx6eG6LXVRKZzmNBMmdvAGR86HmZqGeGkR2kbH",
-      "found_via": "top_h24_tx",
-      "age_hours": 4.13,
+      "found_via": "trending_6h",
+      "age_hours": 6.74,
       "exclude_reasons": []
     },
     {
@@ -81,26 +52,45 @@
       "token_symbol": "Whale",
       "dex": "PumpSwap",
       "created_at": "2026-09-20T13:50:20Z",
-      "liquidity_usd": 455749.8917,
-      "volume_h1_usd": 6650661.18838721,
-      "volume_h24_usd": 18538633.6560313,
-      "txns_h1": 9601,
-      "sells_h1": 3635,
-      "price_change_h1_pct": "31.558",
-      "fdv_usd": "1988309.76025579",
+      "liquidity_usd": 515150.7357,
+      "volume_h1_usd": 5848470.70067416,
+      "volume_h24_usd": 35566026.7426238,
+      "txns_h1": 8066,
+      "sells_h1": 3164,
+      "price_change_h1_pct": "18.406",
+      "fdv_usd": "3464469.93837004",
       "source_url": "https://www.geckoterminal.com/solana/pools/2eoA8D97w65XQxzVewcNC5Tju89AYVgt1N9rS6zUmXa7",
-      "found_via": "top_h24_volume",
-      "age_hours": 2.94,
+      "found_via": "top_h24_tx",
+      "age_hours": 5.56,
+      "exclude_reasons": []
+    },
+    {
+      "pool_address": "DRj2seGk2W4LQox8PiieXG1JomobtyWAm2Lw5fCsjuA1",
+      "pair": "OPENAI / SOL",
+      "token_address": "2L6VE3LUJN1WoR46KPWosNWXNy9ko9ECczJ6nE8ywgMP",
+      "token_symbol": "OPENAI",
+      "dex": "PumpSwap",
+      "created_at": "2026-09-20T13:38:48Z",
+      "liquidity_usd": 376084.0105,
+      "volume_h1_usd": 5365788.83267933,
+      "volume_h24_usd": 34030793.102769,
+      "txns_h1": 6403,
+      "sells_h1": 2229,
+      "price_change_h1_pct": "10.719",
+      "fdv_usd": "2417468.67462814",
+      "source_url": "https://www.geckoterminal.com/solana/pools/DRj2seGk2W4LQox8PiieXG1JomobtyWAm2Lw5fCsjuA1",
+      "found_via": "trending_6h",
+      "age_hours": 5.75,
       "exclude_reasons": []
     }
   ],
   "exclusion_summary": {
-    "too_young": 98,
-    "low_liquidity": 179,
-    "low_volume_h1": 174,
-    "low_txns_h1": 158,
-    "no_sells_seen_h1": 99,
-    "too_old": 71
+    "too_young": 78,
+    "low_liquidity": 170,
+    "low_volume_h1": 171,
+    "low_txns_h1": 162,
+    "no_sells_seen_h1": 103,
+    "too_old": 136
   },
   "status": "partial"
 }
