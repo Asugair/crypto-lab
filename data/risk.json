@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-09-21T10:41:41Z",
+  "checked_at": "2026-09-21T18:40:41Z",
   "reviews": [
     {
-      "pair": "Stamp / SOL",
-      "token_address": "CjaAmmYRpJoFGAmsJDuwvibGroaXNCa8RBYWtd5vL7wh",
-      "pool_address": "GBovxuHjqDeq7NTkDVm9Upts9EoQAx8bfB7L1Lk9uonD",
-      "source_url": "https://www.geckoterminal.com/solana/pools/GBovxuHjqDeq7NTkDVm9Upts9EoQAx8bfB7L1Lk9uonD",
-      "checked_at": "2026-09-21T10:40:33Z",
+      "pair": "CP / SOL",
+      "token_address": "H59mChjcwQHEjFMzzdveg2Yjqmrq4Q7oAeS4newU7MFS",
+      "pool_address": "6WsrUCscRfBRWs5CQ2ZXea1rMCbFyUR9JkBBoAfKHuTe",
+      "source_url": "https://www.geckoterminal.com/solana/pools/6WsrUCscRfBRWs5CQ2ZXea1rMCbFyUR9JkBBoAfKHuTe",
+      "checked_at": "2026-09-21T18:39:32Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999897109459,
+        "supply_raw": 999999948572900,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 139,
+      "sells_in_last_trades_page": 105,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -30,23 +30,23 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "Stamp / SOL",
-      "token_address": "ByGoNJ9LdwjbwTVzR1ZmoH5UfxNsSEEP3A3McFp8rqXJ",
-      "pool_address": "71rhhAsSV2hejUQGbd66EYjZs5tekGJvscMiVGJrse88",
-      "source_url": "https://www.geckoterminal.com/solana/pools/71rhhAsSV2hejUQGbd66EYjZs5tekGJvscMiVGJrse88",
-      "checked_at": "2026-09-21T10:41:07Z",
+      "pair": "OpenAI / SOL",
+      "token_address": "2gLFtjezWC2nDC1289qd6o5wN8iT3da81t8euSEqDS5o",
+      "pool_address": "A8kW1Cz9zdMzvEZ163j7B1Qc8ZTNguS8ydAZiK2rzwtM",
+      "source_url": "https://www.geckoterminal.com/solana/pools/A8kW1Cz9zdMzvEZ163j7B1Qc8ZTNguS8ydAZiK2rzwtM",
+      "checked_at": "2026-09-21T18:40:05Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999917043957,
+        "supply_raw": 99999998097752686,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 145,
+      "sells_in_last_trades_page": 115,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -58,23 +58,23 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "TIGRINO / SOL",
-      "token_address": "2W766ukZ2WH3As7BGy1okjpMnbBHnFn8SCFD1zrD7AVW",
-      "pool_address": "Hbf6iNztvXkitsam7Xd4NkYL2gmNxKCc1AukcwLqone1",
-      "source_url": "https://www.geckoterminal.com/solana/pools/Hbf6iNztvXkitsam7Xd4NkYL2gmNxKCc1AukcwLqone1",
-      "checked_at": "2026-09-21T10:41:41Z",
+      "pair": "FOMO / SOL",
+      "token_address": "8Dae96KhmWWojskSRkqECNRUSj88UXosEGpKi5TkS2uD",
+      "pool_address": "ND9iAwruJPxKegrvf6Q7joP9ZY9RBnn9ywRWE8fRvFQ",
+      "source_url": "https://www.geckoterminal.com/solana/pools/ND9iAwruJPxKegrvf6Q7joP9ZY9RBnn9ywRWE8fRvFQ",
+      "checked_at": "2026-09-21T18:40:41Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999641522911,
+        "supply_raw": 99999997374364768,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 100,
+      "sells_in_last_trades_page": 114,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
