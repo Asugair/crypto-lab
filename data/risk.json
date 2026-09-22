@@ -1,24 +1,52 @@
 {
-  "checked_at": "2026-09-21T18:40:41Z",
+  "checked_at": "2026-09-22T09:52:47Z",
   "reviews": [
     {
-      "pair": "CP / SOL",
-      "token_address": "H59mChjcwQHEjFMzzdveg2Yjqmrq4Q7oAeS4newU7MFS",
-      "pool_address": "6WsrUCscRfBRWs5CQ2ZXea1rMCbFyUR9JkBBoAfKHuTe",
-      "source_url": "https://www.geckoterminal.com/solana/pools/6WsrUCscRfBRWs5CQ2ZXea1rMCbFyUR9JkBBoAfKHuTe",
-      "checked_at": "2026-09-21T18:39:32Z",
+      "pair": "X7 / SOL",
+      "token_address": "BsE3aa5FdE6FVEkWvA8ShAGpzZasEgJbfSqRC4LmErTK",
+      "pool_address": "F16kiKtygqjfiEGu6ywjU84RibisZGMsxiQmdmWjBqPQ",
+      "source_url": "https://www.geckoterminal.com/solana/pools/F16kiKtygqjfiEGu6ywjU84RibisZGMsxiQmdmWjBqPQ",
+      "checked_at": "2026-09-22T09:51:32Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999948572900,
+        "supply_raw": 999999923704305,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 105,
+      "sells_in_last_trades_page": 142,
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "ppoly / SOL",
+      "token_address": "EbmUmMFjkYwvsD7Sd9TpH4MxEAhqjbV94mCgdkNqZ1NQ",
+      "pool_address": "AYQEy4MgpENVPWzeuB7tJ617qAPhG8TXYyvJm5bGhnSk",
+      "source_url": "https://www.geckoterminal.com/solana/pools/AYQEy4MgpENVPWzeuB7tJ617qAPhG8TXYyvJm5bGhnSk",
+      "checked_at": "2026-09-22T09:52:07Z",
+      "rpc": "https://solana-rpc.publicnode.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999996270481663,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "sells_in_last_trades_page": 113,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -31,50 +59,22 @@
     },
     {
       "pair": "OpenAI / SOL",
-      "token_address": "2gLFtjezWC2nDC1289qd6o5wN8iT3da81t8euSEqDS5o",
-      "pool_address": "A8kW1Cz9zdMzvEZ163j7B1Qc8ZTNguS8ydAZiK2rzwtM",
-      "source_url": "https://www.geckoterminal.com/solana/pools/A8kW1Cz9zdMzvEZ163j7B1Qc8ZTNguS8ydAZiK2rzwtM",
-      "checked_at": "2026-09-21T18:40:05Z",
+      "token_address": "5XazgLq9bkjorUbZj47nJEZPAF2kke9WH3HCXJraEPh5",
+      "pool_address": "725xs25xDZVxsGcUJ1vo2LTPYXDsugDgJcTx12ZyrSbu",
+      "source_url": "https://www.geckoterminal.com/solana/pools/725xs25xDZVxsGcUJ1vo2LTPYXDsugDgJcTx12ZyrSbu",
+      "checked_at": "2026-09-22T09:52:47Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999998097752686,
+        "supply_raw": 99999999786793044,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
       "sells_in_last_trades_page": 115,
-      "verdict": "unverified",
-      "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "check_errors": [
-        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
-    {
-      "pair": "FOMO / SOL",
-      "token_address": "8Dae96KhmWWojskSRkqECNRUSj88UXosEGpKi5TkS2uD",
-      "pool_address": "ND9iAwruJPxKegrvf6Q7joP9ZY9RBnn9ywRWE8fRvFQ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/ND9iAwruJPxKegrvf6Q7joP9ZY9RBnn9ywRWE8fRvFQ",
-      "checked_at": "2026-09-21T18:40:41Z",
-      "rpc": "https://solana-rpc.publicnode.com",
-      "mint": {
-        "program": "spl_token",
-        "mint_authority": null,
-        "freeze_authority": null,
-        "supply_raw": 99999997374364768,
-        "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
-      },
-      "holders": null,
-      "sells_in_last_trades_page": 114,
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
