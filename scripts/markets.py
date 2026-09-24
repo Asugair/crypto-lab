@@ -86,7 +86,8 @@ def main():
     fx = json.load(open(a.fixture)) if a.fixture else None
     out, errors = {"fetched_at": now_iso(), "etfs": [], "btc": None}, []
     for sym in b["halal_etfs"]:
-        series, src, err = (fx["etfs"][sym], "fixture", None) if fx else etf_series(sym)
+        series, src, err = ((fx["etfs"].get(sym), "fixture", None if sym in fx["etfs"] else "not in fixture")
+                            if fx else etf_series(sym))
         if err or not series: errors.append(f"{sym}: {err}"); continue
         out["etfs"].append(etf_row(sym, series, src, start)); time.sleep(0 if fx else 1)
     candles, err = (fx["btc"], None) if fx else get_json(COINBASE)
