@@ -52,9 +52,12 @@ def summarize(pools, target_net_pct):
         if near: day.append((p, min(near, key=lambda o: abs(o["h"] - 24))))
     alive = [(p, o) for p, o in day if not dead(p, o) and o.get("ret_pct") is not None]
     rets = [o["ret_pct"] for _, o in alive]
+    # the number the pre-registered 09-30 rule uses (MEMORY.md): every candidate counts, a dead/drained pool as -100%
+    everyone = rets + [-100.0] * (len(day) - len(alive))
     return {"tracked": len(pools), "with_day_observation": len(day),
             "dead_or_drained_by_day": len(day) - len(alive),
             "day_median_ret_pct_alive": round(statistics.median(rets), 1) if rets else None,
+            "day_median_ret_pct_all_dead_as_minus100": round(statistics.median(everyone), 1) if everyone else None,
             # a dead/drained pool counts as a miss, not as missing data
             "day_share_above_target_plus_cost_pct": round(100 * sum(
                 o["ret_pct"] > target_net_pct + (p.get("cost_pct_est") or 0) for p, o in alive) / len(day)) if day else None,

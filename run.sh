@@ -31,3 +31,4 @@ PY
 # forward price snapshots of past candidates + halal ETF / BTC benchmarks; a failure here never blocks the scan
 (cd scripts && python3 snapshot.py --latest ../data/latest.json --out ../data/snapshots.json --rules ../rules.json) || echo "snapshot failed"
 (cd scripts && python3 markets.py --out ../data/markets.json --rules ../rules.json) || echo "markets failed"
+(cd scripts && python3 history.py --out ../data/base_rates.json --rules ../rules.json) || echo "base rates failed"  # weekly
