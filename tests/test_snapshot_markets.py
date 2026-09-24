@@ -25,6 +25,7 @@ s = snapshot.summarize(pools, 5)
 assert s["with_day_observation"] == 4 and s["dead_or_drained_by_day"] == 2, s
 assert s["day_share_above_target_plus_cost_pct"] == 25, s        # only UP beats 5% + cost, out of all 4
 assert s["day_share_down_50pct_or_dead"] == 75, s                # DOWN (-60%) + DRAIN + GONE
+assert s["day_median_ret_pct_all_dead_as_minus100"] == -80.0, s   # [50, -60, -100, -100]
 # end-to-end with a fixture: parse /pools/multi and write the file
 json.dump({"cycle_at": iso(now), "candidates": []}, open(f"{d}/latest.json", "w"))
 json.dump({"pools": pools}, open(f"{d}/snap.json", "w"))
@@ -63,3 +64,19 @@ risk.post_json = lambda url, payload, timeout=20: (None, "HTTP 401 bad key " + u
 _, err = risk.rpc("getTokenLargestAccounts", ["x"], retries=1)
 assert "SECRETKEY123" not in err and "mainnet.helius-rpc.com" in err, err
 print("snapshot + markets + helius tests ok")
+
+# --- history: calendar-year returns and drawdowns
+import history
+s = [("2020-06-01", 100.0), ("2020-12-31", 200.0), ("2021-03-01", 100.0), ("2021-12-31", 300.0), ("2022-12-30", 150.0), ("2023-02-01", 165.0)]
+h = history.stats(s)
+y = {r["year"]: r for r in h["years"]}
+assert y["2020"]["ret_pct"] == 100.0 and y["2020"]["partial"] and y["2023"]["partial"], y
+assert y["2021"]["ret_pct"] == 50.0 and y["2021"]["max_dd_pct"] == -50.0 and not y["2021"]["partial"], y
+assert y["2022"]["ret_pct"] == -50.0 and h["full_years"] == 2 and h["share_full_years_up_pct"] == 50, h
+assert h["worst_drawdown_pct"] == -50.0 and h["cagr_pct"] is not None, h
+fx = {"BTC": s, "SPUS": s, "HLAL": s, "UMMA": s}
+json.dump(fx, open(f"{d}/hist.json", "w"))
+subprocess.run(["python3", "history.py", "--out", f"{d}/b.json", "--rules", "../rules.json", "--fixture", f"{d}/hist.json"],
+               check=True, capture_output=True)
+assert set(json.load(open(f"{d}/b.json"))["assets"]) == {"BTC", "SPUS", "HLAL", "UMMA"}
+print("history tests ok")

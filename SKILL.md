@@ -18,15 +18,18 @@ Read `rules.json` first. It is the only source of rules. Do not change it to fit
 8. Result is "انتظار" when evidence is insufficient. Do not repeat alerts without a change.
 
 ## Cycle (in order)
+0. Read `MEMORY.md` first: what the lab has learned, the agent's past mistakes, open hypotheses and the pre-registered 09-30 decision rule. It is the lab's only memory across sessions.
 1. `python3 scripts/discover.py` → `data/candidates.json` (GeckoTerminal public API, keyless; 6 discovery sources, 3 s between requests; 429s are logged in `errors` and the status becomes `partial`).
 2. `python3 scripts/risk.py` → `data/risk.json` (keyless public Solana RPCs tried in order; failures are recorded per candidate in `check_errors`).
 3. `python3 scripts/cost.py --liquidity <usd> [--quote-in-pct X --quote-out-pct Y]` per surviving candidate.
 4. Manual holder check (section below) for every candidate whose `missing_checks` contains `holders`.
 5. Fill `templates/report_template.md` in Arabic. Append one line to `data/decisions.jsonl`.
 6. Market/news section: search, then fetch the original source (regulator, exchange blog, Fed, CoinDesk/NPR for votes). Record event date and publish date separately.
+Last: update `MEMORY.md` per its own rules (dated, evidence path, observation vs. interpretation, never rewrite past entries, never move the decision rule after seeing results).
 `bash run.sh` does steps 1 to 3 and writes `data/latest.json`; GitHub Actions runs it on schedule.
 Price snapshots (2026-09-24, replaces track.py, whose old-candle numbers were unreliable): `run.sh` runs `scripts/snapshot.py` → `data/snapshots.json`. Price at discovery vs. the live price at every later scan for 7 days, plus liquidity. Observations only, NOT trades: never write them to the ledger or call them P&L. Quote `summary` with its counts; dead/drained pools count as misses.
 Benchmarks (2026-09-24): `scripts/markets.py` → `data/markets.json`: Shariah-screened ETFs from `rules.json` (SPUS, HLAL, UMMA; the label is the issuer's claim) and Bitcoin indicators (price, SMA50/200, Mayer multiple, RSI14, 30d volatility, drawdown, Fear & Greed). Context for the 09-30 decision, never an entry signal. Report them in section 1 with `fetched_at` and source.
+Base rates (2026-09-24): `scripts/history.py` → `data/base_rates.json`, weekly: calendar-year return and max drawdown, CAGR and worst drawdown for BTC (since 2015) and the halal ETFs (full history). Past years, not a forecast.
 
 Brand gate (added 2026-09-24): symbols/names matching `discovery_filters.reject_brand_impersonation` are excluded at discovery as `brand_impersonation`.
 
