@@ -27,7 +27,7 @@ assert [k["pool_address"] for k in kept] == ["P1", "P3"], kept
 assert kept[0]["same_symbol_other_mints"] == ["M2"] and excl[0]["exclude_reasons"] == ["duplicate_token_pool"]
 # rpc: every endpoint's failure reason is kept
 risk.RPCS = ["https://a.example", "https://b.example"]
-risk.post_json = lambda url, payload: (None, "HTTP 400 " + url)
+risk.post_json = lambda url, payload, timeout=20: (None, "HTTP 400 " + url)
 _, err = risk.rpc("getTokenLargestAccounts", ["x"])
 assert "a.example" in err and "b.example" in err, err
 # brand gate: whole-word symbol/name match only
@@ -65,6 +65,10 @@ assert len(r["rows"]) == 1 and r["pending_under_24h_or_retry"] == 1, r
 assert (row["ret_1h_pct"], row["ret_6h_pct"], row["ret_24h_pct"]) == (100.0, -60.0, 10.0), row
 assert (row["max_up_24h_pct"], row["max_down_24h_pct"]) == (150.0, -70.0), row
 assert r["summary"]["share_24h_above_target_plus_cost_pct"] == 100 and r["summary"]["share_fell_50pct_within_24h"] == 100
+# detection 5 min into a candle (the 2026-09-24 crash): entry candle starts before t0, window must not be empty
+import track
+row2 = track.evaluate({"detected_at": iso(t0 + timedelta(minutes=5))}, candles)
+assert row2["status"] == "ok" and row2["max_up_24h_pct"] is not None, row2
 print("track tests ok")
 PY3
 echo 'all tests passed'

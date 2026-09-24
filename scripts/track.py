@@ -40,14 +40,14 @@ def price_at(candles, t):
 def evaluate(det, candles):
     t0 = ts(det["detected_at"])
     candles = sorted(c for c in candles if t0 - CANDLE <= c[0] <= t0 + CHECKPOINTS["24h"])
-    p0, _ = price_at(candles, t0)
+    p0, t_p0 = price_at(candles, t0)
     if not candles or not p0:
         return {"status": "no_price_at_detection"}
     out = {"status": "ok", "price_at_detection": p0}
     for k, dt in CHECKPOINTS.items():
         p, _ = price_at(candles, t0 + dt)
         out[f"ret_{k}_pct"] = round(100 * (p / p0 - 1), 1) if p else None
-    window = [c for c in candles if c[0] >= t0]
+    window = [c for c in candles if c[0] >= t_p0]  # from the entry candle, which may start up to 7.5 min before t0
     out["max_up_24h_pct"] = round(100 * (max(c[2] for c in window) / p0 - 1), 1)
     out["max_down_24h_pct"] = round(100 * (min(c[3] for c in window) / p0 - 1), 1)
     out["last_trade_candle_h"] = round((window[-1][0] - t0) / 3600, 1)
@@ -89,8 +89,11 @@ def main():
         if err or not data:
             errors.append({"pool": pool, "error": err or "empty"}); pending += 1; continue  # retried next run
         candles = (((data.get("data") or {}).get("attributes") or {}).get("ohlcv_list")) or []
-        rows.append({**det, **evaluate(det, [[int(c[0])] + [float(x) for x in c[1:5]] for c in candles]),
-                     "evaluated_at": now_iso(), "source": "GeckoTerminal OHLCV 15m"})
+        try:
+            out = evaluate(det, [[int(c[0])] + [float(x) for x in c[1:5]] for c in candles])
+        except Exception as e:  # one odd pool must not throw away the whole run (2026-09-24 17:55 run lost all 48)
+            errors.append({"pool": pool, "error": f"evaluate: {e!r}"}); pending += 1; continue
+        rows.append({**det, **out, "evaluated_at": now_iso(), "source": "GeckoTerminal OHLCV 15m"})
     res = {"updated_at": now_iso(), "pending_under_24h_or_retry": pending, "errors": errors,
            "summary": summarize(rows, target), "rows": rows}
     save(a.out, res)
