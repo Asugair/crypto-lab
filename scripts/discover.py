@@ -1,7 +1,7 @@
 """Discovery: new Solana pools from GeckoTerminal public API (keyless, ~30 req/min).
 Usage: python scripts/discover.py [--pages 2] [--out data/candidates.json] [--fixture file.json]
 Never trades. Trending/boost signals are NOT used as quality signals."""
-import sys, json, time, argparse
+import sys, json, time, argparse, re
 from common import get_json, now_iso, load_rules, save, hours_since
 
 BASE = "https://api.geckoterminal.com/api/v2/networks/solana"
@@ -32,6 +32,8 @@ def parse_page(payload):
             "pair": a["name"],
             "token_address": base_id.replace("solana_", ""),
             "token_symbol": tok.get("symbol"),
+            "token_name": tok.get("name"),
+            "price_usd": float(a.get("base_token_price_usd") or 0) or None,
             "dex": inc.get(dex_id, {}).get("attributes", {}).get("name", dex_id),
             "created_at": a.get("pool_created_at"),
             "liquidity_usd": float(a.get("reserve_in_usd") or 0),
@@ -45,10 +47,17 @@ def parse_page(payload):
         })
     return out
 
+def brand_hit(p, brands):
+    """Whole-word, case-insensitive match of a listed brand in the symbol or name ("OpenAI Agent" hits, "GPTX" does not)."""
+    words = set(re.findall(r"[A-Z0-9]+", f'{p.get("token_symbol") or ""} {p.get("token_name") or ""}'.upper()))
+    return next((b for b in brands if b in words), None)
+
 def apply_filters(pools, f):
     kept, excluded = [], []
+    brands = [b.upper() for b in f.get("reject_brand_impersonation", [])]
     for p in pools:
         reasons = []
+        if brand_hit(p, brands): reasons.append("brand_impersonation")
         if not p["created_at"]:
             reasons.append("no_created_at")
         else:

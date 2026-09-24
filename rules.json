@@ -27,7 +27,9 @@
     "min_volume_h1_usd": 5000,
     "min_txns_h1": 60,
     "max_candidates": 3,
-    "ignore_signals": ["boosts", "paid ads", "trending rank"]
+    "ignore_signals": ["boosts", "paid ads", "trending rank"],
+    "reject_brand_impersonation": ["OPENAI", "CHATGPT", "GPT", "CLAUDE", "ANTHROPIC", "GOOGLE", "GOOGL", "GEMINI", "APPLE", "AAPL", "META", "TSLA", "TESLA", "ELON", "MUSK", "NVIDIA", "NVDA", "MICROSOFT", "MSFT", "AMAZON", "AMZN"],
+    "reject_brand_impersonation_added": "2026-09-24 by Abdulelah in session: 8 days of scans were dominated by tokens named after companies (OpenAI x7, Claude, Apple, META, TSLA, GOOGL, ELON). Whole-word match on symbol or name."
   },
   "risk_gates": {
     "reject_if_mint_authority": true,

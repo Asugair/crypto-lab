@@ -20,5 +20,6 @@ jobs:
         run: |
           git config user.name "crypto-lab-bot"; git config user.email "bot@users.noreply.github.com"
           mkdir -p data/history && cp data/latest.json "data/history/$(date -u +%Y%m%dT%H%M)Z.json"
+          (cd scripts && python3 track.py --history ../data/history --out ../data/tracking.json --rules ../rules.json) || echo "tracking failed, scan still committed"
           git add data && git commit -m "scan $(date -u +%FT%TZ)" || echo "no changes"
           git push

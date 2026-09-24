@@ -30,6 +30,41 @@ risk.RPCS = ["https://a.example", "https://b.example"]
 risk.post_json = lambda url, payload: (None, "HTTP 400 " + url)
 _, err = risk.rpc("getTokenLargestAccounts", ["x"])
 assert "a.example" in err and "b.example" in err, err
-print("dedupe + rpc error tests ok")
+# brand gate: whole-word symbol/name match only
+from discover import brand_hit
+B = ["OPENAI", "GPT", "META"]
+assert brand_hit({"token_symbol": "OpenAI", "token_name": "x"}, B) == "OPENAI"
+assert brand_hit({"token_symbol": "AGENT", "token_name": "GPT Agent"}, B) == "GPT"
+assert brand_hit({"token_symbol": "GPTX", "token_name": "Metaverse cat"}, B) is None
+f["reject_brand_impersonation"] = B
+kept, excl = apply_filters([{**mk("P9", "M9", 9e6), "token_symbol": "OPENAI"}], f)
+assert not kept and excl[0]["exclude_reasons"] == ["brand_impersonation"]
+print("dedupe + rpc error + brand tests ok")
 PY2
+python3 - << 'PY3'
+# track: price outcome from OHLCV, evaluated only once a pool is >24h old
+import json, os, subprocess, tempfile
+from datetime import datetime, timedelta, timezone
+d = tempfile.mkdtemp(); os.makedirs(f"{d}/h")
+t0 = (datetime.now(timezone.utc) - timedelta(hours=30)).replace(minute=0, second=0, microsecond=0)
+iso = lambda t: t.strftime('%Y-%m-%dT%H:%M:%SZ')
+json.dump({"cycle_at": iso(t0), "candidates": [
+    {"pair": "OLD / SOL", "verdict": "unverified", "cost_pct_est": 0.66, "url": "https://x/pools/POOLOLD"}]}, open(f"{d}/h/a.json", "w"))
+json.dump({"cycle_at": iso(t0 + timedelta(hours=25)), "candidates": [
+    {"pair": "NEW / SOL", "verdict": "unverified", "cost_pct_est": 0.66, "url": "https://x/pools/POOLNEW"}]}, open(f"{d}/h/b.json", "w"))
+T = int(t0.timestamp())
+# price 1.0 at detection, 2.0 at +1h, 0.4 at +6h, 1.1 at +24h (candle opens); low 0.3, high 2.5
+opens = {0: 1.0, 3600: 2.0, 6*3600: 0.4, 24*3600: 1.1}
+candles = [[T + k*900, opens.get(k*900, 1.0), 2.5 if k == 5 else 1.2, 0.3 if k == 30 else 0.9, 1.0, 10] for k in range(0, 97)]
+json.dump({"POOLOLD": {"data": {"attributes": {"ohlcv_list": candles[::-1]}}}}, open(f"{d}/fx.json", "w"))
+subprocess.run(["python3", "track.py", "--history", f"{d}/h", "--out", f"{d}/t.json", "--rules", "../rules.json",
+                "--fixture", f"{d}/fx.json"], check=True, capture_output=True)
+r = json.load(open(f"{d}/t.json"))
+row = r["rows"][0]
+assert len(r["rows"]) == 1 and r["pending_under_24h_or_retry"] == 1, r
+assert (row["ret_1h_pct"], row["ret_6h_pct"], row["ret_24h_pct"]) == (100.0, -60.0, 10.0), row
+assert (row["max_up_24h_pct"], row["max_down_24h_pct"]) == (150.0, -70.0), row
+assert r["summary"]["share_24h_above_target_plus_cost_pct"] == 100 and r["summary"]["share_fell_50pct_within_24h"] == 100
+print("track tests ok")
+PY3
 echo 'all tests passed'
