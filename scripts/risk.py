@@ -12,12 +12,23 @@ RPC = RPCS[0]
 SYSTEM_PROGRAM = "11111111111111111111111111111111"
 TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
 TRADES = "https://api.geckoterminal.com/api/v2/networks/solana/pools/{}/trades"
+TOKEN_INFO = "https://api.geckoterminal.com/api/v2/networks/solana/tokens/{}/info"
+
+def gt_holders(token, fixture=None):
+    """Supporting evidence only. GeckoTerminal's top_10 share INCLUDES pool/program accounts, so it can never
+    pass the non-pool gates and never changes the verdict; it tells the manual Solscan check what to expect."""
+    d, err = (fixture, None) if fixture is not None else get_json(TOKEN_INFO.format(token))
+    if err or not d: return {"error": err or "empty"}
+    h = ((d.get("data") or {}).get("attributes") or {}).get("holders") or {}
+    dist = h.get("distribution_percentage") or {}
+    return {"count": h.get("count"), "top10_incl_pools_pct": dist.get("top_10"), "last_updated": h.get("last_updated"),
+            "fetched_at": now_iso(), "source_url": TOKEN_INFO.format(token), "label": "includes pools; not a gate"}
 
 def rpc(method, params, fixture=None, retries=3):
     if fixture is not None:
         return fixture, None
     global RPC
-    err = None
+    errs = []
     for url in RPCS:
         for i in range(retries):
             r, err = post_json(url, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
@@ -26,7 +37,8 @@ def rpc(method, params, fixture=None, retries=3):
                 RPC = url; return r.get("result"), None
             if "429" not in str(err) and "403" not in str(err): break  # not a rate limit, try next endpoint
             time.sleep(2 * (i + 1))
-    return None, f"{method}: {err}"
+        errs.append(f"{url.split('//')[-1].split('/')[0]}: {err}")  # every endpoint's reason, not just the last
+    return None, f"{method}: " + " | ".join(errs)
 
 def parse_mint(acc):
     """acc = result of getAccountInfo(jsonParsed). Returns dict of mint facts."""
@@ -107,9 +119,11 @@ def review(c, g, fixture=None):
     if not e5 and tr:
         sells_recent = sum(1 for t in tr.get("data", []) if t["attributes"].get("kind") == "sell")
     v, reasons, missing = verdict(mint, conc, sells_recent, g)
+    gth = gt_holders(c["token_address"], fx("gt_info")) if (fixture is None or fx("gt_info")) else None
     return {**{k: c[k] for k in ("pair","token_address","pool_address","source_url")},
             "checked_at": now_iso(), "rpc": RPC if not fixture else "fixture", "mint": mint,
-            "holders": conc, "sells_in_last_trades_page": sells_recent,
+            "holders": conc, "holders_geckoterminal": gth, "sells_in_last_trades_page": sells_recent,
+            "manual_holder_check_url": f"https://solscan.io/token/{c['token_address']}#holders",
             "verdict": v, "reject_reasons": reasons, "missing_checks": missing, "check_errors": errors,
             "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."}
 

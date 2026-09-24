@@ -17,7 +17,7 @@ def get_json(url, retries=3, timeout=20):
         except urllib.error.HTTPError as e:
             last = f"HTTP {e.code}"
             if e.code == 429:
-                time.sleep(3 * (i + 1)); continue
+                time.sleep(10 * (i + 1)); continue  # 3/6/9 s was not enough on 2026-09-24 (trending_1h lost)
             break
         except Exception as e:
             last = str(e); time.sleep(1)
@@ -29,6 +29,11 @@ def post_json(url, payload, timeout=20):
                                      headers={**UA, "Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode()), None
+    except urllib.error.HTTPError as e:
+        # keep the body: a bare "HTTP 400" hid why getTokenLargestAccounts failed on every run until 2026-09-24
+        try: body = e.read().decode(errors="replace")[:200]
+        except Exception: body = ""
+        return None, f"HTTP {e.code} {body}".strip()
     except Exception as e:
         return None, str(e)
 
