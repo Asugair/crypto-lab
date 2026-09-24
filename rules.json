@@ -2,10 +2,11 @@
   "experiment": {
     "name": "Abdulelah $100 paper test",
     "start_date": "2026-09-17",
-    "end_date": "2026-09-26",
+    "end_date": "2026-09-30",
     "start_cash_usd": 100,
     "stop_at_portfolio_usd": 90,
-    "last_scheduled_cycle": "2026-09-26 morning",
+    "last_scheduled_cycle": "2026-09-30 morning",
+    "extended_on": "2026-09-24 by Abdulelah in session: end date 09-26 -> 09-30 only; no gate, filter or session rule changed",
     "note": "Hypotheses under test, no guaranteed weekly doubling. Rules change only by joint review, never retroactively."
   },
   "session_rules": {

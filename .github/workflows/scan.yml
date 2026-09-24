@@ -2,7 +2,7 @@ name: crypto-lab scan
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 5,9,13,17 * * *"   # 08:00 / 12:00 / 16:00 / 20:00 Riyadh. Delete this block after 2026-09-26.
+    - cron: "0 5,9,13,17 * * *"   # 08:00 / 12:00 / 16:00 / 20:00 Riyadh. Delete this block after 2026-09-30.
 permissions:
   contents: write
 jobs:

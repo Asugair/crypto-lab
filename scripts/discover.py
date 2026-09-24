@@ -61,7 +61,19 @@ def apply_filters(pools, f):
         if p["sells_h1"] == 0: reasons.append("no_sells_seen_h1")
         (excluded if reasons else kept).append({**p, "exclude_reasons": reasons})
     kept.sort(key=lambda x: -x["volume_h1_usd"])
-    return kept[: f["max_candidates"]], excluded
+    # One slot per token: extra pools of the same mint are dropped (2026-09-24 surfaced two HYPE pools).
+    # Different mints sharing a symbol are kept but flagged: a same-name clone is a copycat warning, never a signal.
+    by_token, by_symbol = {}, {}
+    for p in kept:
+        if p["token_address"] in by_token:
+            excluded.append({**p, "exclude_reasons": ["duplicate_token_pool"]}); continue
+        by_token[p["token_address"]] = p
+        by_symbol.setdefault((p.get("token_symbol") or "").upper(), []).append(p["token_address"])
+    uniq = list(by_token.values())
+    for p in uniq:
+        twins = [t for t in by_symbol.get((p.get("token_symbol") or "").upper(), []) if t != p["token_address"]]
+        p["same_symbol_other_mints"] = twins
+    return uniq[: f["max_candidates"]], excluded
 
 def _summ(excl):
     s = {}

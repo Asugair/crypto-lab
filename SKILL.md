@@ -48,7 +48,7 @@ Public keyless RPCs answer `getTokenLargestAccounts` with HTTP 429 from GitHub A
 Only after this manual step may a verdict move from `unverified` to `needs_live_verification`. Never skip it and never upgrade on the strength of the automated fields alone.
 
 ## Daily summary (first run 09:00 to 11:00 Riyadh)
-Coverage actually achieved; scanned/excluded/candidates; biggest documented change; reject reasons; what the joint review needs; five-minute review reminder. On 2026-09-26 morning: remind to close the experiment and compute net-of-cost result from `data/ledger.csv` only. That is the last scheduled cycle; do not extend.
+Coverage actually achieved; scanned/excluded/candidates; biggest documented change; reject reasons; what the joint review needs; five-minute review reminder. On 2026-09-30 morning (extended from 09-26 on 2026-09-24, see rules.json): remind to close the experiment and compute net-of-cost result from `data/ledger.csv` only. That is the last scheduled cycle; do not extend.
 
 ## What this package cannot do
 Read wallets, sign, quote real slippage, detect honeypots beyond the listed gates, or see MEV/priority-fee reality. Those are joint-session tasks with the real DEX quote screen open.
