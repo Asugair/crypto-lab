@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T21:16:09Z",
+  "fetched_at": "2026-09-24T21:36:19Z",
   "etfs": [
     {
       "symbol": "SPUS",
@@ -33,21 +33,32 @@
       "sma50": 36.83,
       "sma200": 34.46,
       "above_sma200": true
+    },
+    {
+      "symbol": "SPTE",
+      "source": "yahoo",
+      "last_date": "2026-09-24",
+      "close": 49.55,
+      "ret_since_experiment_start_pct": 6.1,
+      "ret_1m_pct": 7.27,
+      "sma50": 46.94,
+      "sma200": 41.76,
+      "above_sma200": true
     }
   ],
   "btc": {
     "source": "coinbase daily",
     "last_date": "2026-09-24",
-    "price": 84310.0,
-    "ret_since_experiment_start_pct": 10.72,
-    "ret_7d_pct": 10.43,
-    "ret_30d_pct": 7.36,
-    "sma50": 74924.0,
-    "sma200": 70851.0,
+    "price": 84474.0,
+    "ret_since_experiment_start_pct": 10.94,
+    "ret_7d_pct": 10.64,
+    "ret_30d_pct": 7.57,
+    "sma50": 74927.0,
+    "sma200": 70852.0,
     "mayer_multiple": 1.19,
-    "rsi14": 65.2,
+    "rsi14": 65.6,
     "vol30d_annualized_pct": 43.3,
-    "drawdown_from_300d_high_pct": -26.86,
+    "drawdown_from_300d_high_pct": -26.72,
     "fear_greed": {
       "value": 71,
       "label": "Greed"

@@ -1,0 +1,299 @@
+{
+  "fetched_at": "2026-09-24T21:36:25Z",
+  "assets": {
+    "BTC": {
+      "source": "coinbase daily",
+      "from": "2015-07-20",
+      "to": "2026-09-24",
+      "years": [
+        {
+          "year": "2015",
+          "ret_pct": 53.7,
+          "max_dd_pct": -28.6,
+          "partial": true
+        },
+        {
+          "year": "2016",
+          "ret_pct": 126.2,
+          "max_dd_pct": -30.2,
+          "partial": false
+        },
+        {
+          "year": "2017",
+          "ret_pct": 1324.2,
+          "max_dd_pct": -36.3,
+          "partial": false
+        },
+        {
+          "year": "2018",
+          "ret_pct": -73.4,
+          "max_dd_pct": -81.4,
+          "partial": false
+        },
+        {
+          "year": "2019",
+          "ret_pct": 94.1,
+          "max_dd_pct": -48.8,
+          "partial": false
+        },
+        {
+          "year": "2020",
+          "ret_pct": 304.6,
+          "max_dd_pct": -53.2,
+          "partial": false
+        },
+        {
+          "year": "2021",
+          "ret_pct": 59.4,
+          "max_dd_pct": -53.1,
+          "partial": false
+        },
+        {
+          "year": "2022",
+          "ret_pct": -64.2,
+          "max_dd_pct": -67.0,
+          "partial": false
+        },
+        {
+          "year": "2023",
+          "ret_pct": 155.8,
+          "max_dd_pct": -20.1,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "ret_pct": 120.8,
+          "max_dd_pct": -26.2,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "ret_pct": -6.3,
+          "max_dd_pct": -32.1,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "ret_pct": -3.4,
+          "max_dd_pct": -39.6,
+          "partial": true
+        }
+      ],
+      "history_years": 11.2,
+      "short_history": false,
+      "since_inception_ret_pct": 30073.2,
+      "cagr_pct": 66.6,
+      "worst_drawdown_pct": -83.8,
+      "full_years": 10,
+      "share_full_years_up_pct": 70
+    },
+    "SPUS": {
+      "source": "yahoo",
+      "from": "2019-12-16",
+      "to": "2026-09-24",
+      "years": [
+        {
+          "year": "2019",
+          "ret_pct": 0.5,
+          "max_dd_pct": -0.1,
+          "partial": true
+        },
+        {
+          "year": "2020",
+          "ret_pct": 23.2,
+          "max_dd_pct": -29.5,
+          "partial": false
+        },
+        {
+          "year": "2021",
+          "ret_pct": 34.2,
+          "max_dd_pct": -6.2,
+          "partial": false
+        },
+        {
+          "year": "2022",
+          "ret_pct": -23.6,
+          "max_dd_pct": -28.1,
+          "partial": false
+        },
+        {
+          "year": "2023",
+          "ret_pct": 32.9,
+          "max_dd_pct": -10.9,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "ret_pct": 27.1,
+          "max_dd_pct": -7.9,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "ret_pct": 17.8,
+          "max_dd_pct": -20.8,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "ret_pct": 16.3,
+          "max_dd_pct": -8.8,
+          "partial": true
+        }
+      ],
+      "history_years": 6.8,
+      "short_history": false,
+      "since_inception_ret_pct": 194.0,
+      "cagr_pct": 17.3,
+      "worst_drawdown_pct": -29.5,
+      "full_years": 6,
+      "share_full_years_up_pct": 83
+    },
+    "HLAL": {
+      "source": "yahoo",
+      "from": "2019-07-15",
+      "to": "2026-09-24",
+      "years": [
+        {
+          "year": "2019",
+          "ret_pct": 10.4,
+          "max_dd_pct": -6.4,
+          "partial": true
+        },
+        {
+          "year": "2020",
+          "ret_pct": 23.0,
+          "max_dd_pct": -31.7,
+          "partial": false
+        },
+        {
+          "year": "2021",
+          "ret_pct": 27.5,
+          "max_dd_pct": -5.2,
+          "partial": false
+        },
+        {
+          "year": "2022",
+          "ret_pct": -18.5,
+          "max_dd_pct": -22.8,
+          "partial": false
+        },
+        {
+          "year": "2023",
+          "ret_pct": 29.1,
+          "max_dd_pct": -9.8,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "ret_pct": 16.4,
+          "max_dd_pct": -6.1,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "ret_pct": 17.4,
+          "max_dd_pct": -18.3,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "ret_pct": 20.7,
+          "max_dd_pct": -8.4,
+          "partial": true
+        }
+      ],
+      "history_years": 7.2,
+      "short_history": false,
+      "since_inception_ret_pct": 200.4,
+      "cagr_pct": 16.5,
+      "worst_drawdown_pct": -31.7,
+      "full_years": 6,
+      "share_full_years_up_pct": 83
+    },
+    "UMMA": {
+      "source": "yahoo",
+      "from": "2022-01-03",
+      "to": "2026-09-24",
+      "years": [
+        {
+          "year": "2022",
+          "ret_pct": -23.1,
+          "max_dd_pct": -34.8,
+          "partial": true
+        },
+        {
+          "year": "2023",
+          "ret_pct": 17.5,
+          "max_dd_pct": -14.7,
+          "partial": false
+        },
+        {
+          "year": "2024",
+          "ret_pct": 4.6,
+          "max_dd_pct": -8.6,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "ret_pct": 27.0,
+          "max_dd_pct": -14.6,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "ret_pct": 21.8,
+          "max_dd_pct": -14.1,
+          "partial": true
+        }
+      ],
+      "history_years": 4.7,
+      "short_history": false,
+      "since_inception_ret_pct": 46.2,
+      "cagr_pct": 8.4,
+      "worst_drawdown_pct": -34.8,
+      "full_years": 3,
+      "share_full_years_up_pct": 100
+    },
+    "SPTE": {
+      "source": "yahoo",
+      "from": "2023-11-27",
+      "to": "2026-09-24",
+      "years": [
+        {
+          "year": "2023",
+          "ret_pct": 5.2,
+          "max_dd_pct": 0.0,
+          "partial": true
+        },
+        {
+          "year": "2024",
+          "ret_pct": 34.7,
+          "max_dd_pct": -14.0,
+          "partial": false
+        },
+        {
+          "year": "2025",
+          "ret_pct": 24.8,
+          "max_dd_pct": -22.8,
+          "partial": false
+        },
+        {
+          "year": "2026",
+          "ret_pct": 39.0,
+          "max_dd_pct": -9.7,
+          "partial": true
+        }
+      ],
+      "history_years": 2.8,
+      "short_history": true,
+      "since_inception_ret_pct": 145.9,
+      "cagr_pct": 37.5,
+      "worst_drawdown_pct": -22.8,
+      "full_years": 2,
+      "share_full_years_up_pct": 100
+    }
+  },
+  "errors": [],
+  "caveat": "Price returns only (ETF dividends and fees excluded). First and current years are partial. Past years are not a forecast."
+}
