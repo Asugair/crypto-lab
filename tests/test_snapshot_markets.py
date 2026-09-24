@@ -48,12 +48,13 @@ assert row["close"] == 399 and row["above_sma200"] is True and row["ret_since_ex
 candles = [[int((now - timedelta(days=i)).timestamp()), 0, 0, 0, 50000 + 100 * (299 - i), 0] for i in range(300)]
 btc = markets.btc_row(candles, {"value": 50, "label": "Neutral"}, start)
 assert btc["price"] == 79900 and btc["mayer_multiple"] > 1 and btc["drawdown_from_300d_high_pct"] == 0.0, btc
-json.dump({"etfs": {"SPUS": series, "HLAL": series, "UMMA": series}, "btc": candles,
+ETFS = json.load(open("../rules.json"))["benchmarks"]["halal_etfs"]
+json.dump({"etfs": {s: series for s in ETFS}, "btc": candles,
            "fng": {"data": [{"value": "60", "value_classification": "Greed"}]}}, open(f"{d}/mk.json", "w"))
 subprocess.run(["python3", "markets.py", "--out", f"{d}/m.json", "--rules", "../rules.json", "--fixture", f"{d}/mk.json"],
                check=True, capture_output=True)
 m = json.load(open(f"{d}/m.json"))
-assert len(m["etfs"]) == 3 and m["btc"]["fear_greed"]["value"] == 60 and not m["errors"], m
+assert len(m["etfs"]) == len(ETFS) and m["btc"]["fear_greed"]["value"] == 60 and not m["errors"], m
 
 # --- risk: a Helius key goes first and never appears in what gets committed
 os.environ["HELIUS_API_KEY"] = "SECRETKEY123"
@@ -74,9 +75,9 @@ assert y["2020"]["ret_pct"] == 100.0 and y["2020"]["partial"] and y["2023"]["par
 assert y["2021"]["ret_pct"] == 50.0 and y["2021"]["max_dd_pct"] == -50.0 and not y["2021"]["partial"], y
 assert y["2022"]["ret_pct"] == -50.0 and h["full_years"] == 2 and h["share_full_years_up_pct"] == 50, h
 assert h["worst_drawdown_pct"] == -50.0 and h["cagr_pct"] is not None, h
-fx = {"BTC": s, "SPUS": s, "HLAL": s, "UMMA": s}
+fx = {"BTC": s, **{e: s for e in ETFS}}
 json.dump(fx, open(f"{d}/hist.json", "w"))
 subprocess.run(["python3", "history.py", "--out", f"{d}/b.json", "--rules", "../rules.json", "--fixture", f"{d}/hist.json"],
                check=True, capture_output=True)
-assert set(json.load(open(f"{d}/b.json"))["assets"]) == {"BTC", "SPUS", "HLAL", "UMMA"}
+assert set(json.load(open(f"{d}/b.json"))["assets"]) == {"BTC", *ETFS}
 print("history tests ok")
