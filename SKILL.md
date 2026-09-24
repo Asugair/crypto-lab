@@ -26,6 +26,8 @@ Read `rules.json` first. It is the only source of rules. Do not change it to fit
 6. Market/news section: search, then fetch the original source (regulator, exchange blog, Fed, CoinDesk/NPR for votes). Record event date and publish date separately.
 `bash run.sh` does steps 1 to 3 and writes `data/latest.json`; GitHub Actions runs it on schedule.
 
+Brand gate (added 2026-09-24): symbols/names matching `discovery_filters.reject_brand_impersonation` are excluded at discovery as `brand_impersonation`.
+
 ## Verdicts
 - `reject`: any hard gate hit (mint/freeze authority, transfer fee / permanent delegate / transfer hook / frozen default state, top-10 non-pool > 30%, single non-pool > 10%, no sells observed).
 - `unverified`: a check could not run (RPC error, holder class unknown, trades page missing).
