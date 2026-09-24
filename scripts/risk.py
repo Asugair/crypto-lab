@@ -7,7 +7,8 @@ import json, argparse, os, time
 from common import post_json, get_json, now_iso, load_rules, save
 
 # Public, keyless RPC endpoints tried in order; api.mainnet-beta returned 429 on getTokenLargestAccounts from GitHub Actions.
-RPCS = [u for u in os.environ.get("SOL_RPC", "https://solana-rpc.publicnode.com,https://api.mainnet-beta.solana.com,https://solana.drpc.org").split(",") if u]
+# solana.drpc.org dropped 2026-09-24: "chain is not available on free plan".
+RPCS = [u for u in os.environ.get("SOL_RPC", "https://solana-rpc.publicnode.com,https://api.mainnet-beta.solana.com").split(",") if u]
 RPC = RPCS[0]
 SYSTEM_PROGRAM = "11111111111111111111111111111111"
 TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
@@ -24,14 +25,14 @@ def gt_holders(token, fixture=None):
     return {"count": h.get("count"), "top10_incl_pools_pct": dist.get("top_10"), "last_updated": h.get("last_updated"),
             "fetched_at": now_iso(), "source_url": TOKEN_INFO.format(token), "label": "includes pools; not a gate"}
 
-def rpc(method, params, fixture=None, retries=3):
+def rpc(method, params, fixture=None, retries=3, timeout=20):
     if fixture is not None:
         return fixture, None
     global RPC
     errs = []
     for url in RPCS:
         for i in range(retries):
-            r, err = post_json(url, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params})
+            r, err = post_json(url, {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}, timeout=timeout)
             if not err and "error" in r: err = str(r["error"])
             if not err:
                 RPC = url; return r.get("result"), None
@@ -97,7 +98,8 @@ def review(c, g, fixture=None):
     mint = parse_mint(mint_acc) if not e1 else {"error": e1}
     conc = None; errors = []
     if e1: errors.append(e1)
-    largest, e2 = rpc("getTokenLargestAccounts", [c["token_address"]], fx("largest"))
+    # 2026-09-24 17:53 run: publicnode timed out at 20 s, mainnet-beta 429, drpc "not on free plan"; try a longer wait
+    largest, e2 = rpc("getTokenLargestAccounts", [c["token_address"]], fx("largest"), retries=2, timeout=60)
     if e2: errors.append(e2)
     if not e2 and largest and "error" not in mint:
         owners = {}
