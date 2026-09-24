@@ -39,6 +39,11 @@
     "max_single_nonpool_pct": 10,
     "unverified_if_any_check_missing": true
   },
+  "benchmarks": {
+    "halal_etfs": ["SPUS", "HLAL", "UMMA"],
+    "btc": true,
+    "added": "2026-09-24 by Abdulelah in session. Context for the 09-30 decision, never an entry signal. ETFs are those their issuers market as Shariah-compliant (SP Funds S&P 500 Sharia, Wahed FTSE USA Shariah, Wahed Dow Jones Islamic World); that label is the issuer's claim."
+  },
   "cost_assumptions_estimate": {
     "sol_network_fee_sol": 0.00002,
     "dex_fee_pct": 0.30,

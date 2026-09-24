@@ -20,7 +20,7 @@ for cand, rev in zip(c["candidates_list"], r["reviews"]):
                  "age_hours": cand.get("age_hours"), "liquidity_usd": round(cand["liquidity_usd"]),
                  "volume_h1_usd": round(cand["volume_h1_usd"]), "txns_h1": cand["txns_h1"], "sells_h1": cand["sells_h1"],
                  "price_change_h1_pct": cand.get("price_change_h1_pct"), "fdv_usd": cand.get("fdv_usd"),
-                 "found_via": cand.get("found_via"), "same_symbol_other_mints": cand.get("same_symbol_other_mints", []),
+                 "found_via": cand.get("found_via"), "price_usd": cand.get("price_usd"), "same_symbol_other_mints": cand.get("same_symbol_other_mints", []),
                  "gt_holders_count": gth.get("count"), "gt_top10_incl_pools_pct": gth.get("top10_incl_pools_pct"),
                  "check_errors": rev.get("check_errors", []), "manual_holder_check_url": rev.get("manual_holder_check_url")})
 json.dump({"cycle_at": c["fetched_at"], "discovery_status": c["status"], "scanned": c["scanned"], "excluded": c["excluded"],
@@ -28,3 +28,6 @@ json.dump({"cycle_at": c["fetched_at"], "discovery_status": c["status"], "scanne
            "stale_for_scalping_after_min": 60, "candidates": rows}, open("data/latest.json","w"), indent=2)
 print(json.dumps(rows, indent=1, ensure_ascii=False))
 PY
+# forward price snapshots of past candidates + halal ETF / BTC benchmarks; a failure here never blocks the scan
+(cd scripts && python3 snapshot.py --latest ../data/latest.json --out ../data/snapshots.json --rules ../rules.json) || echo "snapshot failed"
+(cd scripts && python3 markets.py --out ../data/markets.json --rules ../rules.json) || echo "markets failed"
