@@ -25,6 +25,8 @@ Read `rules.json` first. It is the only source of rules. Do not change it to fit
 5. Fill `templates/report_template.md` in Arabic. Append one line to `data/decisions.jsonl`.
 6. Market/news section: search, then fetch the original source (regulator, exchange blog, Fed, CoinDesk/NPR for votes). Record event date and publish date separately.
 `bash run.sh` does steps 1 to 3 and writes `data/latest.json`; GitHub Actions runs it on schedule.
+Price snapshots (2026-09-24, replaces track.py, whose old-candle numbers were unreliable): `run.sh` runs `scripts/snapshot.py` → `data/snapshots.json`. Price at discovery vs. the live price at every later scan for 7 days, plus liquidity. Observations only, NOT trades: never write them to the ledger or call them P&L. Quote `summary` with its counts; dead/drained pools count as misses.
+Benchmarks (2026-09-24): `scripts/markets.py` → `data/markets.json`: Shariah-screened ETFs from `rules.json` (SPUS, HLAL, UMMA; the label is the issuer's claim) and Bitcoin indicators (price, SMA50/200, Mayer multiple, RSI14, 30d volatility, drawdown, Fear & Greed). Context for the 09-30 decision, never an entry signal. Report them in section 1 with `fetched_at` and source.
 
 Brand gate (added 2026-09-24): symbols/names matching `discovery_filters.reject_brand_impersonation` are excluded at discovery as `brand_impersonation`.
 
@@ -41,7 +43,8 @@ B. **Search-then-fetch.** `web_fetch` only opens URLs that already appeared in t
 C. **Dry run for logic only.** `bash tests/run_tests.sh` (renders `tests/fixture_new_pools.template.json` with fresh timestamps). Output is fixture data, never report it as market data.
 If A and B both fail: discovery = 0 scanned, status `no_data`, decision `انتظار`. That is a valid, honest report.
 
-## Holder check: manual, by the agent, every cycle (no keys, by decision on 2026-09-17)
+## Holder check: automatic only with a free Helius key; otherwise manual, by the agent, every cycle
+Since 2026-09-24 publicnode refuses `getTokenLargestAccounts` without a personal token and mainnet-beta returns 429, so the keyless path is closed. If the repo secret `HELIUS_API_KEY` is set (free plan), `risk.py` tries Helius first and the key never reaches committed files. Without it, the manual procedure below still applies.
 Public keyless RPCs answer `getTokenLargestAccounts` with HTTP 429 from GitHub Actions, so `risk.py` leaves `holders` in `missing_checks` and the verdict is `unverified`. The agent completes this check by hand for every candidate, every cycle:
 1. Open `https://solscan.io/token/<token_address>#holders` (chat env: `web_search` the exact URL first, then `web_fetch`; alternatively the GeckoTerminal pool page from `source_url`).
 2. Record fetch time, top-10 holders with %, and classify each: pool/program (Raydium, PumpSwap, Meteora vaults, burn address) vs wallet vs unknown.

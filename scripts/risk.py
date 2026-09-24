@@ -9,7 +9,15 @@ from common import post_json, get_json, now_iso, load_rules, save
 # Public, keyless RPC endpoints tried in order; api.mainnet-beta returned 429 on getTokenLargestAccounts from GitHub Actions.
 # solana.drpc.org dropped 2026-09-24: "chain is not available on free plan".
 RPCS = [u for u in os.environ.get("SOL_RPC", "https://solana-rpc.publicnode.com,https://api.mainnet-beta.solana.com").split(",") if u]
+# 2026-09-24: publicnode now answers getTokenLargestAccounts with "Indexed requests require a personal token", so no
+# keyless endpoint can run the holder check. With the HELIUS_API_KEY secret set (free plan), Helius is tried first.
+# The key lives only in the URL; record_host() keeps it out of risk.json, errors and logs.
+if os.environ.get("HELIUS_API_KEY"):
+    RPCS.insert(0, "https://mainnet.helius-rpc.com/?api-key=" + os.environ["HELIUS_API_KEY"])
 RPC = RPCS[0]
+
+def record_host(url):
+    return url.split("//")[-1].split("/")[0].split("?")[0]
 SYSTEM_PROGRAM = "11111111111111111111111111111111"
 TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
 TRADES = "https://api.geckoterminal.com/api/v2/networks/solana/pools/{}/trades"
@@ -38,7 +46,8 @@ def rpc(method, params, fixture=None, retries=3, timeout=20):
                 RPC = url; return r.get("result"), None
             if "429" not in str(err) and "403" not in str(err): break  # not a rate limit, try next endpoint
             time.sleep(2 * (i + 1))
-        errs.append(f"{url.split('//')[-1].split('/')[0]}: {err}")  # every endpoint's reason, not just the last
+        key = os.environ.get("HELIUS_API_KEY")
+        errs.append(f"{record_host(url)}: {str(err).replace(key, '***') if key else err}")  # every endpoint's reason, not just the last
     return None, f"{method}: " + " | ".join(errs)
 
 def parse_mint(acc):
@@ -123,7 +132,7 @@ def review(c, g, fixture=None):
     v, reasons, missing = verdict(mint, conc, sells_recent, g)
     gth = gt_holders(c["token_address"], fx("gt_info")) if (fixture is None or fx("gt_info")) else None
     return {**{k: c[k] for k in ("pair","token_address","pool_address","source_url")},
-            "checked_at": now_iso(), "rpc": RPC if not fixture else "fixture", "mint": mint,
+            "checked_at": now_iso(), "rpc": record_host(RPC) if not fixture else "fixture", "mint": mint,
             "holders": conc, "holders_geckoterminal": gth, "sells_in_last_trades_page": sells_recent,
             "manual_holder_check_url": f"https://solscan.io/token/{c['token_address']}#holders",
             "verdict": v, "reject_reasons": reasons, "missing_checks": missing, "check_errors": errors,

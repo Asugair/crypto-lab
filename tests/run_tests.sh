@@ -41,44 +41,5 @@ kept, excl = apply_filters([{**mk("P9", "M9", 9e6), "token_symbol": "OPENAI"}], 
 assert not kept and excl[0]["exclude_reasons"] == ["brand_impersonation"]
 print("dedupe + rpc error + brand tests ok")
 PY2
-python3 - << 'PY3'
-# track v2: price outcome from OHLCV, evaluated only once a pool is >24h old
-import json, os, subprocess, tempfile
-from datetime import datetime, timedelta, timezone
-import track
-d = tempfile.mkdtemp(); os.makedirs(f"{d}/h")
-t0 = (datetime.now(timezone.utc) - timedelta(hours=30)).replace(minute=0, second=0, microsecond=0)
-iso = lambda t: t.strftime('%Y-%m-%dT%H:%M:%SZ')
-cand = lambda name: {"pair": f"{name} / SOL", "verdict": "unverified", "cost_pct_est": 0.66, "url": f"https://x/pools/{name}"}
-json.dump({"cycle_at": iso(t0), "candidates": [cand("OK"), cand("SPIKE"), cand("DEAD")]}, open(f"{d}/h/a.json", "w"))
-json.dump({"cycle_at": iso(t0 + timedelta(hours=25)), "candidates": [cand("NEW")]}, open(f"{d}/h/b.json", "w"))
-T = int(t0.timestamp())
-px = lambda k: 2.0 if 4 <= k < 24 else (0.4 if 24 <= k < 96 else (1.1 if k == 96 else 1.0))  # +1h 2.0, +6h 0.4, +24h 1.1
-normal = [[T + k*900, px(k), px(k) * 1.1, px(k) * 0.9, px(k), 10] for k in range(97)]
-spike = [c[:] for c in normal]; spike[10][2] = 1000.0                                          # one bad print
-dead = normal[:9]                                                                               # quiet after 2h
-fx = {n: {"data": {"attributes": {"ohlcv_list": c[::-1]}}} for n, c in (("OK", normal), ("SPIKE", spike), ("DEAD", dead))}
-json.dump(fx, open(f"{d}/fx.json", "w"))
-subprocess.run(["python3", "track.py", "--history", f"{d}/h", "--out", f"{d}/t.json", "--rules", "../rules.json",
-                "--fixture", f"{d}/fx.json"], check=True, capture_output=True)
-r = json.load(open(f"{d}/t.json")); rows = {x["pair"].split()[0]: x for x in r["rows"]}
-assert r["pending_under_24h_or_retry"] == 1 and set(rows) == {"OK", "SPIKE", "DEAD"}, r
-ok = rows["OK"]
-assert ok["status"] == "ok" and (ok["ret_1h_pct"], ok["ret_6h_pct"], ok["ret_24h_pct"]) == (100.0, -60.0, 10.0), ok
-assert (ok["max_up_close_24h_pct"], ok["max_down_close_24h_pct"]) == (100.0, -60.0), ok
-assert rows["SPIKE"]["status"] == "suspect_data", rows["SPIKE"]
-dd = rows["DEAD"]
-assert dd["status"] == "ok" and dd["ret_1h_pct"] == 100.0 and dd["ret_6h_pct"] is None and dd["stopped_before_6h"], dd
-sm = r["summary"]
-assert sm["suspect_data"] == 1 and sm["ret_6h"]["n_priced"] == 1 and sm["ret_6h"]["n_stopped_trading"] == 1, sm
-# detection 5 min into a candle (the 2026-09-24 crash): entry candle starts before t0, window must not be empty
-row2 = track.evaluate({"detected_at": iso(t0 + timedelta(minutes=5))}, normal)
-assert row2["status"] == "ok" and row2["max_up_close_24h_pct"] is not None, row2
-# rows from an older version are re-evaluated
-json.dump({"rows": [{**rows["OK"], "version": 1}]}, open(f"{d}/t.json", "w"))
-subprocess.run(["python3", "track.py", "--history", f"{d}/h", "--out", f"{d}/t.json", "--rules", "../rules.json",
-                "--fixture", f"{d}/fx.json"], check=True, capture_output=True)
-assert all(x["version"] == track.VERSION for x in json.load(open(f"{d}/t.json"))["rows"])
-print("track tests ok")
-PY3
+python3 ../tests/test_snapshot_markets.py
 echo 'all tests passed'
