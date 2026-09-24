@@ -32,3 +32,4 @@ PY
 (cd scripts && python3 snapshot.py --latest ../data/latest.json --out ../data/snapshots.json --rules ../rules.json) || echo "snapshot failed"
 (cd scripts && python3 markets.py --out ../data/markets.json --rules ../rules.json) || echo "markets failed"
 (cd scripts && python3 history.py --out ../data/base_rates.json --rules ../rules.json) || echo "base rates failed"  # weekly
+(cd scripts && python3 brief.py --data ../data --out ../data/brief.md > /dev/null) || echo "brief failed"  # one-page summary for the next agent

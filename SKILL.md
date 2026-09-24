@@ -25,6 +25,7 @@ Read `LESSONS.md` first and follow it, then `rules.json`. `rules.json` is the on
 4. Manual holder check (section below) for every candidate whose `missing_checks` contains `holders`.
 5. Fill `templates/report_template.md` in Arabic. Append one line to `data/decisions.jsonl`.
 6. Market/news section: search, then fetch the original source (regulator, exchange blog, Fed, CoinDesk/NPR for votes). Record event date and publish date separately.
+Brief (2026-09-24): `run.sh` ends with `scripts/brief.py` → `data/brief.md`, one Arabic page with every number from the data files (scan, candidates, snapshots, benchmarks with base rates, last ledger balance). Read it instead of the JSON files; open a JSON file only to check a specific number.
 Lessons: the agent never writes to `LESSONS.md`. It only proposes a new lesson in its report (section "دروس مقترحة"), in the file's format and with evidence in the repo; it is added only by a joint decision with Abdulelah, logged in `data/decisions.jsonl`.
 Last: update `MEMORY.md` (the agent's working notebook, unlike `LESSONS.md`) per its own rules (dated, evidence path, observation vs. interpretation, never rewrite past entries, never move the decision rule after seeing results).
 `bash run.sh` does steps 1 to 3 and writes `data/latest.json`; GitHub Actions runs it on schedule.
