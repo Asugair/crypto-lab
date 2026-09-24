@@ -75,9 +75,22 @@ assert y["2020"]["ret_pct"] == 100.0 and y["2020"]["partial"] and y["2023"]["par
 assert y["2021"]["ret_pct"] == 50.0 and y["2021"]["max_dd_pct"] == -50.0 and not y["2021"]["partial"], y
 assert y["2022"]["ret_pct"] == -50.0 and h["full_years"] == 2 and h["share_full_years_up_pct"] == 50, h
 assert h["worst_drawdown_pct"] == -50.0 and h["cagr_pct"] is not None, h
+assert h["short_history"] and h["since_inception_ret_pct"] == 65.0 and h["history_years"] == 2.7, h
 fx = {"BTC": s, **{e: s for e in ETFS}}
 json.dump(fx, open(f"{d}/hist.json", "w"))
 subprocess.run(["python3", "history.py", "--out", f"{d}/b.json", "--rules", "../rules.json", "--fixture", f"{d}/hist.json"],
                check=True, capture_output=True)
 assert set(json.load(open(f"{d}/b.json"))["assets"]) == {"BTC", *ETFS}
 print("history tests ok")
+
+# --- brief: renders from partial data and from nothing, never invents a balance
+import brief
+os.makedirs(f"{d}/empty", exist_ok=True)
+txt = brief.build(f"{d}/empty")
+assert "غير متوفر" in txt and "لا نفترض رصيدًا" in txt, txt
+os.makedirs(f"{d}/bd", exist_ok=True)
+json.dump(m, open(f"{d}/bd/markets.json", "w")); json.dump(json.load(open(f"{d}/b.json")), open(f"{d}/bd/base_rates.json", "w"))
+open(f"{d}/bd/ledger.csv", "w").write(open("../data/ledger.csv").read())
+txt = brief.build(f"{d}/bd")
+assert "SPUS" in txt and "BTC" in txt and "100.00$" in txt and "⚠️ قصير" in txt, txt
+print("brief tests ok")

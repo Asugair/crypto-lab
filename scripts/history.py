@@ -55,7 +55,9 @@ def stats(series):
     closes = [c for _, c in series]
     yrs = (datetime.strptime(series[-1][0], "%Y-%m-%d") - datetime.strptime(series[0][0], "%Y-%m-%d")).days / 365.25
     full = [y for y in ys if not y["partial"]]
-    return {"from": series[0][0], "to": series[-1][0], "years": ys,
+    # under 3 years (e.g. SPTE) one good run is not a base rate: flag it so reports do not read it as one
+    return {"from": series[0][0], "to": series[-1][0], "years": ys, "history_years": round(yrs, 1),
+            "short_history": yrs < 3, "since_inception_ret_pct": round(100 * (closes[-1] / closes[0] - 1), 1),
             "cagr_pct": round(100 * ((closes[-1] / closes[0]) ** (1 / yrs) - 1), 1) if yrs >= 1 else None,
             "worst_drawdown_pct": max_dd(closes),
             "full_years": len(full), "share_full_years_up_pct": round(100 * sum(y["ret_pct"] > 0 for y in full) / len(full)) if full else None}
