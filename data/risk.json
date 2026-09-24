@@ -1,87 +1,114 @@
 {
-  "checked_at": "2026-09-24T09:56:49Z",
+  "checked_at": "2026-09-24T17:55:41Z",
   "reviews": [
     {
       "pair": "HYPE / SOL",
-      "token_address": "BhMyVUjVihdDjKccLT8HwpYPNM8nTYar7ZxvULkKzmhd",
-      "pool_address": "4RbGCAjugi6Rj28d5keiAmAbAfRTbyMicewYBpgCcdTL",
-      "source_url": "https://www.geckoterminal.com/solana/pools/4RbGCAjugi6Rj28d5keiAmAbAfRTbyMicewYBpgCcdTL",
-      "checked_at": "2026-09-24T09:55:37Z",
+      "token_address": "FdqSN23y37qLrykLJ8yj9yo7TJHKqVXq1RdvKiknhd4c",
+      "pool_address": "2tiAfY5NVcvpm2hwnEYnmCF4xKJB3tApgrqJiuHh5517",
+      "source_url": "https://www.geckoterminal.com/solana/pools/2tiAfY5NVcvpm2hwnEYnmCF4xKJB3tApgrqJiuHh5517",
+      "checked_at": "2026-09-24T17:54:32Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999954253260,
+        "supply_raw": 999999916142317,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 147,
-      "verdict": "unverified",
-      "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "check_errors": [
-        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
-    {
-      "pair": "HYPE / SOL",
-      "token_address": "Gtos9Zj4BTbhxXFcthcTDaoSjBk8gFnf5sAj9rSBnuhX",
-      "pool_address": "9Pe41CQrymx7CRAUp8ccvqyxL4kd3ivdC8YP8XRNevjg",
-      "source_url": "https://www.geckoterminal.com/solana/pools/9Pe41CQrymx7CRAUp8ccvqyxL4kd3ivdC8YP8XRNevjg",
-      "checked_at": "2026-09-24T09:56:10Z",
-      "rpc": "https://solana-rpc.publicnode.com",
-      "mint": {
-        "program": "spl_token",
-        "mint_authority": null,
-        "freeze_authority": null,
-        "supply_raw": 999999945784475,
-        "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
+      "holders_geckoterminal": {
+        "count": 1681,
+        "top10_incl_pools_pct": "95.9684",
+        "last_updated": "2026-09-24T17:39:22Z",
+        "fetched_at": "2026-09-24T17:54:32Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/FdqSN23y37qLrykLJ8yj9yo7TJHKqVXq1RdvKiknhd4c/info",
+        "label": "includes pools; not a gate"
       },
-      "holders": null,
       "sells_in_last_trades_page": 150,
+      "manual_holder_check_url": "https://solscan.io/token/FdqSN23y37qLrykLJ8yj9yo7TJHKqVXq1RdvKiknhd4c#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
         "holders"
       ],
       "check_errors": [
-        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: The read operation timed out | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 } | solana.drpc.org: HTTP 400 {\"id\":1,\"jsonrpc\":\"2.0\",\"error\":{\"message\":\"chain is not available on free plan, please upgrade to paid plan\",\"code\":35}}"
       ],
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "SI / SOL",
-      "token_address": "ESwAEe9vv96sXggccNQvyhAHuSRLSC2iFV7FAQF1H2SY",
-      "pool_address": "EGkTMj7bxH3kzUVDUXLsp7MRVZJX5zthEW4M6r2MpNwM",
-      "source_url": "https://www.geckoterminal.com/solana/pools/EGkTMj7bxH3kzUVDUXLsp7MRVZJX5zthEW4M6r2MpNwM",
-      "checked_at": "2026-09-24T09:56:49Z",
+      "pair": "NUVEX / SOL",
+      "token_address": "GX6V2AW1vDfBkP6r8eNzzSJqUN88uE956qujArp6weSn",
+      "pool_address": "3ZpvqSBLwn9UJsp83Z7qB8vuTVis682MEMH1FyWb1cNF",
+      "source_url": "https://www.geckoterminal.com/solana/pools/3ZpvqSBLwn9UJsp83Z7qB8vuTVis682MEMH1FyWb1cNF",
+      "checked_at": "2026-09-24T17:55:06Z",
       "rpc": "https://solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 1000000001000000,
+        "supply_raw": 999999933299482,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
-      "sells_in_last_trades_page": 125,
+      "holders_geckoterminal": {
+        "count": 2029,
+        "top10_incl_pools_pct": "95.9372",
+        "last_updated": "2026-09-24T17:44:45Z",
+        "fetched_at": "2026-09-24T17:55:06Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/GX6V2AW1vDfBkP6r8eNzzSJqUN88uE956qujArp6weSn/info",
+        "label": "includes pools; not a gate"
+      },
+      "sells_in_last_trades_page": 82,
+      "manual_holder_check_url": "https://solscan.io/token/GX6V2AW1vDfBkP6r8eNzzSJqUN88uE956qujArp6weSn#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
         "holders"
       ],
       "check_errors": [
-        "getTokenLargestAccounts: HTTP Error 400: Bad Request"
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: The read operation timed out | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 } | solana.drpc.org: HTTP 400 {\"id\":1,\"jsonrpc\":\"2.0\",\"error\":{\"message\":\"chain is not available on free plan, please upgrade to paid plan\",\"code\":35}}"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "CT / SOL",
+      "token_address": "7ZRo7G1fjW5YjvLdBsUUdGKtTWgRVnNEsKs9gjWmULto",
+      "pool_address": "A441bsA2SSEFgFbtBuzmfW73i4sMsw2JB3wExkkdTgUw",
+      "source_url": "https://www.geckoterminal.com/solana/pools/A441bsA2SSEFgFbtBuzmfW73i4sMsw2JB3wExkkdTgUw",
+      "checked_at": "2026-09-24T17:55:41Z",
+      "rpc": "https://solana-rpc.publicnode.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999983077239697,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "holders_geckoterminal": {
+        "count": 4952,
+        "top10_incl_pools_pct": "89.6488",
+        "last_updated": "2026-09-24T17:40:36Z",
+        "fetched_at": "2026-09-24T17:55:41Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7ZRo7G1fjW5YjvLdBsUUdGKtTWgRVnNEsKs9gjWmULto/info",
+        "label": "includes pools; not a gate"
+      },
+      "sells_in_last_trades_page": 108,
+      "manual_holder_check_url": "https://solscan.io/token/7ZRo7G1fjW5YjvLdBsUUdGKtTWgRVnNEsKs9gjWmULto#holders",
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: The read operation timed out | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 } | solana.drpc.org: HTTP 400 {\"id\":1,\"jsonrpc\":\"2.0\",\"error\":{\"message\":\"chain is not available on free plan, please upgrade to paid plan\",\"code\":35}}"
       ],
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     }
