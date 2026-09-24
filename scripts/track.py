@@ -37,36 +37,50 @@ def price_at(candles, t):
             return (c[1], c[0]) if c[0] - t <= MAX_GAP else (None, c[0])
     return None, None
 
+VERSION = 2  # v1 (2026-09-24) used wick highs/lows and silently dropped pools that stopped trading; re-evaluate
+SPIKE = 20    # a candle whose high/low is 20x its open/close, or a 20x close-to-close jump, is a bad print, not a price
+
 def evaluate(det, candles):
     t0 = ts(det["detected_at"])
     candles = sorted(c for c in candles if t0 - CANDLE <= c[0] <= t0 + CHECKPOINTS["24h"])
     p0, t_p0 = price_at(candles, t0)
     if not candles or not p0:
-        return {"status": "no_price_at_detection"}
-    out = {"status": "ok", "price_at_detection": p0}
+        return {"status": "no_price_at_detection", "n_candles": len(candles), "version": VERSION}
+    window = [c for c in candles if c[0] >= t_p0]  # from the entry candle, which may start up to 7.5 min before t0
+    last_h = (window[-1][0] - t0) / 3600
+    suspect = any(max(c[2] / max(c[1], c[4]), min(c[1], c[4]) / c[3] if c[3] > 0 else SPIKE + 1) > SPIKE for c in window) \
+        or any(max(b[4] / a[4], a[4] / b[4]) > SPIKE for a, b in zip(window, window[1:]) if a[4] > 0 and b[4] > 0)
+    out = {"status": "suspect_data" if suspect else "ok", "price_at_detection": p0, "n_candles": len(window),
+           "last_trade_candle_h": round(last_h, 1), "version": VERSION}
     for k, dt in CHECKPOINTS.items():
         p, _ = price_at(candles, t0 + dt)
         out[f"ret_{k}_pct"] = round(100 * (p / p0 - 1), 1) if p else None
-    window = [c for c in candles if c[0] >= t_p0]  # from the entry candle, which may start up to 7.5 min before t0
-    out["max_up_24h_pct"] = round(100 * (max(c[2] for c in window) / p0 - 1), 1)
-    out["max_down_24h_pct"] = round(100 * (min(c[3] for c in window) / p0 - 1), 1)
-    out["last_trade_candle_h"] = round((window[-1][0] - t0) / 3600, 1)
+        # no candle near the checkpoint because the pool went quiet: counted, not silently dropped
+        out[f"stopped_before_{k}"] = p is None and last_h < dt / 3600
+    closes = [c[4] for c in window]
+    out["max_up_close_24h_pct"] = round(100 * (max(closes) / p0 - 1), 1)
+    out["max_down_close_24h_pct"] = round(100 * (min(closes) / p0 - 1), 1)
     return out
 
 def summarize(rows, target_net_pct):
-    ok = [r for r in rows if r.get("status") == "ok"]
+    cur = [r for r in rows if r.get("version") == VERSION]
+    ok = [r for r in cur if r.get("status") == "ok"]
     def stat(k):
-        v = [r[k] for r in ok if r.get(k) is not None]
-        return {"n": len(v), "median_pct": round(statistics.median(v), 1) if v else None,
-                "share_up_pct": round(100 * sum(x > 0 for x in v) / len(v)) if v else None}
-    beat = [r for r in ok if r.get("ret_24h_pct") is not None and r["cost_pct_est"] is not None]
-    return {"evaluated": len(rows), "with_prices": len(ok), "no_price": len(rows) - len(ok),
-            **{f"ret_{k}": stat(f"ret_{k}_pct") for k in CHECKPOINTS},
-            "share_24h_above_target_plus_cost_pct": round(100 * sum(
-                r["ret_24h_pct"] > target_net_pct + r["cost_pct_est"] for r in beat) / len(beat)) if beat else None,
-            "share_fell_50pct_within_24h": round(100 * sum(r["max_down_24h_pct"] <= -50 for r in ok) / len(ok)) if ok else None,
-            "caveat": "Price observations, not trades. Detection price is optimistic (a real entry comes later); "
-                      "costs are the model Estimate; +/-15 min resolution."}
+        v = [r[f"ret_{k}_pct"] for r in ok if r.get(f"ret_{k}_pct") is not None]
+        stopped = sum(r.get(f"stopped_before_{k}", False) for r in ok)
+        return {"n_priced": len(v), "n_stopped_trading": stopped,
+                "median_pct": round(statistics.median(v), 1) if v else None,
+                "share_up_pct": round(100 * sum(x > 0 for x in v) / len(v)) if v else None,
+                "share_above_target_plus_cost_pct": round(100 * sum(
+                    r[f"ret_{k}_pct"] > target_net_pct + (r.get("cost_pct_est") or 0) for r in ok
+                    if r.get(f"ret_{k}_pct") is not None) / len(v)) if v else None}
+    return {"evaluated": len(cur), "ok": len(ok), "suspect_data": sum(r["status"] == "suspect_data" for r in cur),
+            "no_price": sum(r["status"] == "no_price_at_detection" for r in cur),
+            **{f"ret_{k}": stat(k) for k in CHECKPOINTS},
+            "share_close_fell_50pct_within_24h": round(100 * sum(r["max_down_close_24h_pct"] <= -50 for r in ok) / len(ok)) if ok else None,
+            "caveat": "Price observations, not trades. Medians use only pools still trading at that checkpoint (survivors); "
+                      "n_stopped_trading counts the rest (dead or migrated pool, unknown which). Detection price is optimistic "
+                      "(a real entry comes later); costs are the model Estimate; +/-15 min resolution; suspect_data excluded."}
 
 def main():
     ap = argparse.ArgumentParser()
@@ -76,7 +90,7 @@ def main():
     target = load_rules(a.rules)["session_rules"]["target_net_pct"]
     fixture = json.load(open(a.fixture)) if a.fixture else None
     prev = json.load(open(a.out)).get("rows", []) if os.path.exists(a.out) else []
-    done = {r["pool_address"]: r for r in prev if r.get("status") in ("ok", "no_price_at_detection")}
+    done = {r["pool_address"]: r for r in prev if r.get("version") == VERSION}
     rows, pending, errors, now = [], 0, [], time.time()
     for pool, det in detections(a.history).items():
         if pool in done: rows.append(done[pool]); continue
