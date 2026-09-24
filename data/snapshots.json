@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-09-24T21:16:09Z",
+  "errors": [],
+  "summary": {
+    "tracked": 3,
+    "with_day_observation": 0,
+    "dead_or_drained_by_day": 0,
+    "day_median_ret_pct_alive": null,
+    "day_share_above_target_plus_cost_pct": null,
+    "day_share_down_50pct_or_dead": null,
+    "caveat": "Observed prices at discovery and at later scans; not trades. Detection price is optimistic (a real entry comes later). Dead = pool gone or liquidity < max($1k, 20% of first seen)."
+  },
+  "pools": {
+    "57AdCcraMwxW2F9jLv9T31C2LhG7uzmTZstddeWNMspS": {
+      "pair": "NPC / SOL",
+      "token_address": "P2vweuTnvaUeSngxW81Yzm8F4SxFM7uqn8TwemD7cPk",
+      "detected_at": "2026-09-24T21:13:52Z",
+      "price0": 1.6608111443321814e-06,
+      "liquidity0_usd": 245920,
+      "cost_pct_est": 0.66,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "C8jhatGfCNzBJ5akcNWSnJi9tsD8fgLRxi2D8KWWYBMn": {
+      "pair": "AXIS / SOL",
+      "token_address": "3EyBYkKEc5ZeYTkimcYEXucefWdJsobR8DesComWjXig",
+      "detected_at": "2026-09-24T21:13:52Z",
+      "price0": 3.798483575073918e-05,
+      "liquidity0_usd": 415639,
+      "cost_pct_est": 0.65,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "A441bsA2SSEFgFbtBuzmfW73i4sMsw2JB3wExkkdTgUw": {
+      "pair": "CT / SOL",
+      "token_address": "7ZRo7G1fjW5YjvLdBsUUdGKtTWgRVnNEsKs9gjWmULto",
+      "detected_at": "2026-09-24T21:13:52Z",
+      "price0": 3.4386570117447323e-05,
+      "liquidity0_usd": 397857,
+      "cost_pct_est": 0.65,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    }
+  }
+}
