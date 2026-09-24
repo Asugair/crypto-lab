@@ -5,7 +5,7 @@ description: Run one cycle of Abdulelah's $100 paper crypto experiment (Solana m
 
 # crypto-lab · operating procedure for any agent (Opus, Sonnet, Claude Code)
 
-Read `rules.json` first. It is the only source of rules. Do not change it to fit results; propose changes in the report under "للمراجعة المشتركة".
+Read `LESSONS.md` first and follow it, then `rules.json`. `rules.json` is the only source of rules; `LESSONS.md` is what our own experiment taught us. Do not change it to fit results; propose changes in the report under "للمراجعة المشتركة".
 
 ## Truth rules (non-negotiable)
 1. No data or a failed check = `unverified` = no entry recommendation. Never fill a gap with a guess.
@@ -18,14 +18,15 @@ Read `rules.json` first. It is the only source of rules. Do not change it to fit
 8. Result is "انتظار" when evidence is insufficient. Do not repeat alerts without a change.
 
 ## Cycle (in order)
-0. Read `MEMORY.md` first: what the lab has learned, the agent's past mistakes, open hypotheses and the pre-registered 09-30 decision rule. It is the lab's only memory across sessions.
+0. Read `LESSONS.md` before `rules.json` and follow it. Then read `MEMORY.md`: what the lab has learned, the agent's past mistakes, open hypotheses and the pre-registered 09-30 decision rule. It is the lab's only memory across sessions.
 1. `python3 scripts/discover.py` → `data/candidates.json` (GeckoTerminal public API, keyless; 6 discovery sources, 3 s between requests; 429s are logged in `errors` and the status becomes `partial`).
 2. `python3 scripts/risk.py` → `data/risk.json` (keyless public Solana RPCs tried in order; failures are recorded per candidate in `check_errors`).
 3. `python3 scripts/cost.py --liquidity <usd> [--quote-in-pct X --quote-out-pct Y]` per surviving candidate.
 4. Manual holder check (section below) for every candidate whose `missing_checks` contains `holders`.
 5. Fill `templates/report_template.md` in Arabic. Append one line to `data/decisions.jsonl`.
 6. Market/news section: search, then fetch the original source (regulator, exchange blog, Fed, CoinDesk/NPR for votes). Record event date and publish date separately.
-Last: update `MEMORY.md` per its own rules (dated, evidence path, observation vs. interpretation, never rewrite past entries, never move the decision rule after seeing results).
+Lessons: the agent never writes to `LESSONS.md`. It only proposes a new lesson in its report (section "دروس مقترحة"), in the file's format and with evidence in the repo; it is added only by a joint decision with Abdulelah, logged in `data/decisions.jsonl`.
+Last: update `MEMORY.md` (the agent's working notebook, unlike `LESSONS.md`) per its own rules (dated, evidence path, observation vs. interpretation, never rewrite past entries, never move the decision rule after seeing results).
 `bash run.sh` does steps 1 to 3 and writes `data/latest.json`; GitHub Actions runs it on schedule.
 Price snapshots (2026-09-24, replaces track.py, whose old-candle numbers were unreliable): `run.sh` runs `scripts/snapshot.py` → `data/snapshots.json`. Price at discovery vs. the live price at every later scan for 7 days, plus liquidity. Observations only, NOT trades: never write them to the ledger or call them P&L. Quote `summary` with its counts; dead/drained pools count as misses.
 Benchmarks (2026-09-24): `scripts/markets.py` → `data/markets.json`: Shariah-screened ETFs from `rules.json` (SPUS, HLAL, UMMA; the label is the issuer's claim) and Bitcoin indicators (price, SMA50/200, Mayer multiple, RSI14, 30d volatility, drawdown, Fear & Greed). Context for the 09-30 decision, never an entry signal. Report them in section 1 with `fetched_at` and source.
