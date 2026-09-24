@@ -1,0 +1,58 @@
+{
+  "fetched_at": "2026-09-24T21:16:09Z",
+  "etfs": [
+    {
+      "symbol": "SPUS",
+      "source": "yahoo",
+      "last_date": "2026-09-24",
+      "close": 59.57,
+      "ret_since_experiment_start_pct": 3.06,
+      "ret_1m_pct": 2.57,
+      "sma50": 58.12,
+      "sma200": 54.23,
+      "above_sma200": true
+    },
+    {
+      "symbol": "HLAL",
+      "source": "yahoo",
+      "last_date": "2026-09-24",
+      "close": 74.95,
+      "ret_since_experiment_start_pct": 3.77,
+      "ret_1m_pct": 4.51,
+      "sma50": 72.17,
+      "sma200": 66.98,
+      "above_sma200": true
+    },
+    {
+      "symbol": "UMMA",
+      "source": "yahoo",
+      "last_date": "2026-09-24",
+      "close": 36.85,
+      "ret_since_experiment_start_pct": 2.02,
+      "ret_1m_pct": -1.52,
+      "sma50": 36.83,
+      "sma200": 34.46,
+      "above_sma200": true
+    }
+  ],
+  "btc": {
+    "source": "coinbase daily",
+    "last_date": "2026-09-24",
+    "price": 84310.0,
+    "ret_since_experiment_start_pct": 10.72,
+    "ret_7d_pct": 10.43,
+    "ret_30d_pct": 7.36,
+    "sma50": 74924.0,
+    "sma200": 70851.0,
+    "mayer_multiple": 1.19,
+    "rsi14": 65.2,
+    "vol30d_annualized_pct": 43.3,
+    "drawdown_from_300d_high_pct": -26.86,
+    "fear_greed": {
+      "value": 71,
+      "label": "Greed"
+    }
+  },
+  "errors": [],
+  "caveat": "Context, not signals. Shariah status is each issuer's claim. Returns are price only, before fees/spreads; 'since experiment start' uses the last close before 2026-09-17."
+}
