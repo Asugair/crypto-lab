@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-09-25T10:15:04Z",
+  "updated_at": "2026-09-25T18:00:12Z",
   "errors": [],
   "summary": {
-    "tracked": 8,
+    "tracked": 11,
     "with_day_observation": 5,
     "dead_or_drained_by_day": 3,
     "day_median_ret_pct_alive": 18.3,
@@ -28,6 +28,14 @@
           "ret_pct": 7645.2,
           "liquidity_usd": 183,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 20.8,
+          "missing": false,
+          "ret_pct": 7645.2,
+          "liquidity_usd": 187,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -43,6 +51,14 @@
         {
           "at": "2026-09-25T10:15:04Z",
           "h": 13.0,
+          "missing": false,
+          "ret_pct": 27.9,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 20.8,
           "missing": false,
           "ret_pct": 27.9,
           "liquidity_usd": 0,
@@ -66,6 +82,14 @@
           "ret_pct": 30.1,
           "liquidity_usd": 386444,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 20.8,
+          "missing": false,
+          "ret_pct": 30.1,
+          "liquidity_usd": 395129,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -84,6 +108,14 @@
           "missing": false,
           "ret_pct": 6.5,
           "liquidity_usd": 217854,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 20.4,
+          "missing": false,
+          "ret_pct": 6.5,
+          "liquidity_usd": 222750,
           "volume_h1_usd": 0
         }
       ]
@@ -104,6 +136,14 @@
           "ret_pct": 22.6,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 20.4,
+          "missing": false,
+          "ret_pct": 22.6,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -115,7 +155,16 @@
       "liquidity0_usd": 127145,
       "cost_pct_est": 0.67,
       "verdict_at_detection": "unverified",
-      "obs": []
+      "obs": [
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 7.8,
+          "missing": false,
+          "ret_pct": -91.6,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        }
+      ]
     },
     "CvjgF5YpxiBZauZhm683uUU6FknuaJRZpYVibW1TrYH": {
       "pair": "KII / SOL",
@@ -125,7 +174,16 @@
       "liquidity0_usd": 106724,
       "cost_pct_est": 0.68,
       "verdict_at_detection": "unverified",
-      "obs": []
+      "obs": [
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 7.8,
+          "missing": false,
+          "ret_pct": 79.2,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        }
+      ]
     },
     "CpC4x1Fk9EiAboehKVCyGdGxg5a23ExyBfFxUjsS1BA3": {
       "pair": "Desk / SOL",
@@ -134,6 +192,45 @@
       "price0": 0.00011297260309929852,
       "liquidity0_usd": 194954,
       "cost_pct_est": 0.66,
+      "verdict_at_detection": "unverified",
+      "obs": [
+        {
+          "at": "2026-09-25T18:00:12Z",
+          "h": 7.8,
+          "missing": false,
+          "ret_pct": 27073.0,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        }
+      ]
+    },
+    "6b3vR5ZyHoH6H7DffFAzuWhhfJboAcNzDWsrKTK91rCP": {
+      "pair": "ONE / SOL",
+      "token_address": "BxGdxqU1NSp9feCeMNizVh2gjQVSSyzzCBG2DBWK6PaM",
+      "detected_at": "2026-09-25T17:57:53Z",
+      "price0": 0.00011576067172184886,
+      "liquidity0_usd": 119308,
+      "cost_pct_est": 0.67,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "9ZzXAZFjDBjwTG1jVVkXXcXQfXLUyqNE5cYvhob7qSwu": {
+      "pair": "ONDO / SOL",
+      "token_address": "FhDaACP6tNahnzFQTmT3LoJatZpmo6uki2wb8MAs9QC7",
+      "detected_at": "2026-09-25T17:57:53Z",
+      "price0": 0.0003080546699453779,
+      "liquidity0_usd": 89369,
+      "cost_pct_est": 0.68,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "EPkCJ82BRjHPG5jQq1QUaEwom2LTwBGqkDpN5PJFHrt4": {
+      "pair": "AXIS / SOL",
+      "token_address": "GLMmCse3vKeK84SHbnaMzTBQFWYvxKAecBwoLZtdZLAX",
+      "detected_at": "2026-09-25T17:57:53Z",
+      "price0": 1.7188284714879784e-05,
+      "liquidity0_usd": 382415,
+      "cost_pct_est": 0.65,
       "verdict_at_detection": "unverified",
       "obs": []
     }
