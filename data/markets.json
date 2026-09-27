@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-27T10:35:31Z",
+  "fetched_at": "2026-09-27T17:47:10Z",
   "etfs": [
     {
       "symbol": "SPUS",
@@ -49,16 +49,16 @@
   "btc": {
     "source": "coinbase daily",
     "last_date": "2026-09-27",
-    "price": 84900.0,
-    "ret_since_experiment_start_pct": 11.5,
-    "ret_7d_pct": 4.61,
-    "ret_30d_pct": 9.07,
-    "sma50": 76112.0,
-    "sma200": 71076.0,
+    "price": 84468.0,
+    "ret_since_experiment_start_pct": 10.93,
+    "ret_7d_pct": 4.08,
+    "ret_30d_pct": 8.52,
+    "sma50": 76103.0,
+    "sma200": 71073.0,
     "mayer_multiple": 1.19,
-    "rsi14": 66.1,
+    "rsi14": 65.1,
     "vol30d_annualized_pct": 41.4,
-    "drawdown_from_300d_high_pct": -26.35,
+    "drawdown_from_300d_high_pct": -26.72,
     "fear_greed": {
       "value": 70,
       "label": "Greed"
