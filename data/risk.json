@@ -1,33 +1,33 @@
 {
-  "checked_at": "2026-10-03T17:17:31Z",
+  "checked_at": "2026-10-04T11:09:36Z",
   "reviews": [
     {
-      "pair": "Encycloped / SOL",
-      "token_address": "HaUvojyBE24AUAqUafcpsrHY8QsDpMhxXCMnxoDHzk6C",
-      "pool_address": "5gepFzo9o9nHkJeNJdKiKRghqYoqcJSzF6X684pUbE7S",
-      "source_url": "https://www.geckoterminal.com/solana/pools/5gepFzo9o9nHkJeNJdKiKRghqYoqcJSzF6X684pUbE7S",
-      "checked_at": "2026-10-03T17:15:09Z",
+      "pair": "bHooks / SOL",
+      "token_address": "14s7xS1xtPaCgsiVdV53BimNqBbzQ1h2rpVfo7CeCrYS",
+      "pool_address": "8jfkMuLmiECdM5k1zJWNrd3T8dYeqBJ6nt8Qn1RqhbgZ",
+      "source_url": "https://www.geckoterminal.com/solana/pools/8jfkMuLmiECdM5k1zJWNrd3T8dYeqBJ6nt8Qn1RqhbgZ",
+      "checked_at": "2026-10-04T11:08:13Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999806675995,
+        "supply_raw": 999999970432226,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 231,
-        "top10_incl_pools_pct": "95.3003",
-        "last_updated": "2026-10-03T16:00:49Z",
-        "fetched_at": "2026-10-03T17:15:09Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/HaUvojyBE24AUAqUafcpsrHY8QsDpMhxXCMnxoDHzk6C/info",
+        "count": 5015,
+        "top10_incl_pools_pct": "98.0991",
+        "last_updated": "2026-10-04T11:01:04Z",
+        "fetched_at": "2026-10-04T11:08:13Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/14s7xS1xtPaCgsiVdV53BimNqBbzQ1h2rpVfo7CeCrYS/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 141,
-      "manual_holder_check_url": "https://solscan.io/token/HaUvojyBE24AUAqUafcpsrHY8QsDpMhxXCMnxoDHzk6C#holders",
+      "sells_in_last_trades_page": 77,
+      "manual_holder_check_url": "https://solscan.io/token/14s7xS1xtPaCgsiVdV53BimNqBbzQ1h2rpVfo7CeCrYS#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -39,32 +39,32 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "CLAUDIA / SOL",
-      "token_address": "JnNHubnBrch4aBqt67oJ1i8GvgwLVSJBdbTNmezdDHw",
-      "pool_address": "BN3xmyFY8MwvyP9wSqTRHZZxnqSYSPzwfi3cEK4TrEPX",
-      "source_url": "https://www.geckoterminal.com/solana/pools/BN3xmyFY8MwvyP9wSqTRHZZxnqSYSPzwfi3cEK4TrEPX",
-      "checked_at": "2026-10-03T17:16:20Z",
+      "pair": "CRAWL / SOL",
+      "token_address": "CK1iEnL7at8osebhtkBR23tSvTGQdSjRHW1dUiryakqG",
+      "pool_address": "5vMacs8t7j2fwQ9a4UrqDMqUdmY9iYzhjeFgLUovp7Bb",
+      "source_url": "https://www.geckoterminal.com/solana/pools/5vMacs8t7j2fwQ9a4UrqDMqUdmY9iYzhjeFgLUovp7Bb",
+      "checked_at": "2026-10-04T11:09:24Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 100000000000000000,
+        "supply_raw": 999999893240120,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 238,
-        "top10_incl_pools_pct": "95.9328",
-        "last_updated": "2026-10-03T16:16:14Z",
-        "fetched_at": "2026-10-03T17:16:20Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/JnNHubnBrch4aBqt67oJ1i8GvgwLVSJBdbTNmezdDHw/info",
+        "count": 2003,
+        "top10_incl_pools_pct": "93.65",
+        "last_updated": "2026-10-04T10:56:16Z",
+        "fetched_at": "2026-10-04T11:09:24Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/CK1iEnL7at8osebhtkBR23tSvTGQdSjRHW1dUiryakqG/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 120,
-      "manual_holder_check_url": "https://solscan.io/token/JnNHubnBrch4aBqt67oJ1i8GvgwLVSJBdbTNmezdDHw#holders",
+      "sells_in_last_trades_page": 94,
+      "manual_holder_check_url": "https://solscan.io/token/CK1iEnL7at8osebhtkBR23tSvTGQdSjRHW1dUiryakqG#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -76,39 +76,55 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "CLAUDIA / SOL",
-      "token_address": "DNuSWa6nCjRoTHREpQBxAejEUw51rXkAbknbZgyZ1ETj",
-      "pool_address": "2w1yZqKhYCo8KUEAEqXLh1oZDqGbu9JQ6qLpxggazFSZ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/2w1yZqKhYCo8KUEAEqXLh1oZDqGbu9JQ6qLpxggazFSZ",
-      "checked_at": "2026-10-03T17:17:31Z",
+      "pair": "CRAWL / SOL",
+      "token_address": "BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump",
+      "pool_address": "2B8tftZ5ww8TREMr3pgkgERLNjJyJxEAPWMENViGMsL4",
+      "source_url": "https://www.geckoterminal.com/solana/pools/2B8tftZ5ww8TREMr3pgkgERLNjJyJxEAPWMENViGMsL4",
+      "checked_at": "2026-10-04T11:09:36Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
-        "program": "spl_token",
+        "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999882676829,
+        "supply_raw": 973113554176608,
         "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
+        "extensions": [
+          "metadataPointer",
+          "tokenMetadata"
+        ],
+        "extension_details": {
+          "metadataPointer": {
+            "authority": null,
+            "metadataAddress": "BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump"
+          },
+          "tokenMetadata": {
+            "additionalMetadata": [],
+            "mint": "BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump",
+            "name": "CRAWLNET",
+            "symbol": "CRAWL",
+            "updateAuthority": null,
+            "uri": "https://ipfs.io/ipfs/bafkreiae3diu6wznn2vmmojusoq4iam6fdfrql4lswueqbzefocm5qhkmy"
+          }
+        }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 190,
-        "top10_incl_pools_pct": "98.4757",
-        "last_updated": "2026-10-03T15:58:27Z",
-        "fetched_at": "2026-10-03T17:17:31Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/DNuSWa6nCjRoTHREpQBxAejEUw51rXkAbknbZgyZ1ETj/info",
+        "count": 6568,
+        "top10_incl_pools_pct": "14.6653",
+        "last_updated": "2026-10-04T11:00:41Z",
+        "fetched_at": "2026-10-04T11:09:36Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 101,
-      "manual_holder_check_url": "https://solscan.io/token/DNuSWa6nCjRoTHREpQBxAejEUw51rXkAbknbZgyZ1ETj#holders",
+      "sells_in_last_trades_page": 182,
+      "manual_holder_check_url": "https://solscan.io/token/BXoHJddsWJLHtAopeiSbKUSELsu8hSFMs8baGMDkpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
         "holders"
       ],
       "check_errors": [
-        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 403 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32602,\"message\":\"Indexed requests require a personal token. Get one at: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
       ],
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     }
