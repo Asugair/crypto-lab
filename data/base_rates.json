@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-10-02T11:06:25Z",
+  "fetched_at": "2026-10-09T11:52:57Z",
   "assets": {
     "BTC": {
       "source": "coinbase daily",
       "from": "2015-07-20",
-      "to": "2026-10-02",
+      "to": "2026-10-09",
       "years": [
         {
           "year": "2015",
@@ -74,15 +74,15 @@
         },
         {
           "year": "2026",
-          "ret_pct": -1.3,
+          "ret_pct": -4.9,
           "max_dd_pct": -39.6,
           "partial": true
         }
       ],
       "history_years": 11.2,
       "short_history": false,
-      "since_inception_ret_pct": 30753.7,
-      "cagr_pct": 66.8,
+      "since_inception_ret_pct": 29608.9,
+      "cagr_pct": 66.1,
       "worst_drawdown_pct": -83.8,
       "full_years": 10,
       "share_full_years_up_pct": 70
@@ -90,7 +90,7 @@
     "SPUS": {
       "source": "yahoo",
       "from": "2019-12-16",
-      "to": "2026-10-01",
+      "to": "2026-10-08",
       "years": [
         {
           "year": "2019",
@@ -136,15 +136,15 @@
         },
         {
           "year": "2026",
-          "ret_pct": 16.6,
+          "ret_pct": 18.1,
           "max_dd_pct": -8.8,
           "partial": true
         }
       ],
       "history_years": 6.8,
       "short_history": false,
-      "since_inception_ret_pct": 194.7,
-      "cagr_pct": 17.2,
+      "since_inception_ret_pct": 198.4,
+      "cagr_pct": 17.4,
       "worst_drawdown_pct": -29.5,
       "full_years": 6,
       "share_full_years_up_pct": 83
@@ -152,7 +152,7 @@
     "HLAL": {
       "source": "yahoo",
       "from": "2019-07-15",
-      "to": "2026-10-01",
+      "to": "2026-10-08",
       "years": [
         {
           "year": "2019",
@@ -198,15 +198,15 @@
         },
         {
           "year": "2026",
-          "ret_pct": 20.7,
+          "ret_pct": 21.9,
           "max_dd_pct": -8.4,
           "partial": true
         }
       ],
       "history_years": 7.2,
       "short_history": false,
-      "since_inception_ret_pct": 200.3,
-      "cagr_pct": 16.5,
+      "since_inception_ret_pct": 203.4,
+      "cagr_pct": 16.6,
       "worst_drawdown_pct": -31.7,
       "full_years": 6,
       "share_full_years_up_pct": 83
@@ -214,7 +214,7 @@
     "UMMA": {
       "source": "yahoo",
       "from": "2022-01-03",
-      "to": "2026-10-01",
+      "to": "2026-10-08",
       "years": [
         {
           "year": "2022",
@@ -242,15 +242,15 @@
         },
         {
           "year": "2026",
-          "ret_pct": 22.7,
+          "ret_pct": 20.8,
           "max_dd_pct": -14.1,
           "partial": true
         }
       ],
-      "history_years": 4.7,
+      "history_years": 4.8,
       "short_history": false,
-      "since_inception_ret_pct": 47.3,
-      "cagr_pct": 8.5,
+      "since_inception_ret_pct": 45.0,
+      "cagr_pct": 8.1,
       "worst_drawdown_pct": -34.8,
       "full_years": 3,
       "share_full_years_up_pct": 100
@@ -258,7 +258,7 @@
     "SPTE": {
       "source": "yahoo",
       "from": "2023-11-27",
-      "to": "2026-10-01",
+      "to": "2026-10-08",
       "years": [
         {
           "year": "2023",
@@ -280,15 +280,15 @@
         },
         {
           "year": "2026",
-          "ret_pct": 41.4,
+          "ret_pct": 41.3,
           "max_dd_pct": -9.7,
           "partial": true
         }
       ],
-      "history_years": 2.8,
+      "history_years": 2.9,
       "short_history": true,
-      "since_inception_ret_pct": 150.2,
-      "cagr_pct": 38.0,
+      "since_inception_ret_pct": 150.1,
+      "cagr_pct": 37.7,
       "worst_drawdown_pct": -22.8,
       "full_years": 2,
       "share_full_years_up_pct": 100
