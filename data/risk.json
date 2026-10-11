@@ -1,18 +1,18 @@
 {
-  "checked_at": "2026-10-11T11:27:10Z",
+  "checked_at": "2026-10-11T18:05:27Z",
   "reviews": [
     {
-      "pair": "Incognito / SOL",
-      "token_address": "9ct3U3ZUgss9Kp1dQrbM4o4xcaPg4gEs61damzvB92Q",
-      "pool_address": "3VVt4RGVzMUMXEXGyPucLSeVDqpJTZJdaNApYcnbm89b",
-      "source_url": "https://www.geckoterminal.com/solana/pools/3VVt4RGVzMUMXEXGyPucLSeVDqpJTZJdaNApYcnbm89b",
-      "checked_at": "2026-10-11T11:25:17Z",
+      "pair": "DOPE / SOL",
+      "token_address": "DF2itwPUjUpA41SXY6SBF8iC2uZDvAoJt7gbXhSBA9e",
+      "pool_address": "HG7j3utg8aYgpAzLfrdGuBKAgjdqycL4CPjvB46JdVHw",
+      "source_url": "https://www.geckoterminal.com/solana/pools/HG7j3utg8aYgpAzLfrdGuBKAgjdqycL4CPjvB46JdVHw",
+      "checked_at": "2026-10-11T18:03:33Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999916322281,
+        "supply_raw": 999999969214906,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -22,12 +22,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-10-11T11:25:17Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/9ct3U3ZUgss9Kp1dQrbM4o4xcaPg4gEs61damzvB92Q/info",
+        "fetched_at": "2026-10-11T18:03:33Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/DF2itwPUjUpA41SXY6SBF8iC2uZDvAoJt7gbXhSBA9e/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 122,
-      "manual_holder_check_url": "https://solscan.io/token/9ct3U3ZUgss9Kp1dQrbM4o4xcaPg4gEs61damzvB92Q#holders",
+      "sells_in_last_trades_page": 150,
+      "manual_holder_check_url": "https://solscan.io/token/DF2itwPUjUpA41SXY6SBF8iC2uZDvAoJt7gbXhSBA9e#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -39,17 +39,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "USDF / SOL",
-      "token_address": "Gzu6PDDTYnTq2hcPQUSmAZBqsn2Gau5Te56jeZX1DDXE",
-      "pool_address": "BbDToV28mM1wT216sN8dYwSByGQGkyToRNkFrb26mNMp",
-      "source_url": "https://www.geckoterminal.com/solana/pools/BbDToV28mM1wT216sN8dYwSByGQGkyToRNkFrb26mNMp",
-      "checked_at": "2026-10-11T11:26:08Z",
+      "pair": "MUNK / SOL",
+      "token_address": "GLwKimCH2ds3tFffm3482hdtSkgBGEvXFmXrcxn9e6wW",
+      "pool_address": "6zrQaWBe6dVEjZSpCC1hvnn7P7DJxebzNiZ3pb75praH",
+      "source_url": "https://www.geckoterminal.com/solana/pools/6zrQaWBe6dVEjZSpCC1hvnn7P7DJxebzNiZ3pb75praH",
+      "checked_at": "2026-10-11T18:04:25Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999953198323,
+        "supply_raw": 999999861632865,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -59,12 +59,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-10-11T11:26:08Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/Gzu6PDDTYnTq2hcPQUSmAZBqsn2Gau5Te56jeZX1DDXE/info",
+        "fetched_at": "2026-10-11T18:04:25Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/GLwKimCH2ds3tFffm3482hdtSkgBGEvXFmXrcxn9e6wW/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 142,
-      "manual_holder_check_url": "https://solscan.io/token/Gzu6PDDTYnTq2hcPQUSmAZBqsn2Gau5Te56jeZX1DDXE#holders",
+      "sells_in_last_trades_page": 111,
+      "manual_holder_check_url": "https://solscan.io/token/GLwKimCH2ds3tFffm3482hdtSkgBGEvXFmXrcxn9e6wW#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -76,17 +76,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "ALLOX / SOL",
-      "token_address": "9vHb8cc3hSF4NHorFpXVfqPb4PxHUhbHcAGtJEPeT2e9",
-      "pool_address": "gZHcFR2uxjLH6gks3yAzKqj1HWtgTWPFW9o7iNQ8xRJ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/gZHcFR2uxjLH6gks3yAzKqj1HWtgTWPFW9o7iNQ8xRJ",
-      "checked_at": "2026-10-11T11:27:10Z",
+      "pair": "DOPE / SOL",
+      "token_address": "JZkUA4vgY7xLxyt1hJvfu1n7RbTG2uvVedEzBMbRV1B",
+      "pool_address": "CWbYDVNWbBWqhJ6NCwdLuRT9rwpBa3pwtN1MV32p3DfH",
+      "source_url": "https://www.geckoterminal.com/solana/pools/CWbYDVNWbBWqhJ6NCwdLuRT9rwpBa3pwtN1MV32p3DfH",
+      "checked_at": "2026-10-11T18:05:27Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999999840649449,
+        "supply_raw": 99999993508664105,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -96,12 +96,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-10-11T11:27:10Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/9vHb8cc3hSF4NHorFpXVfqPb4PxHUhbHcAGtJEPeT2e9/info",
+        "fetched_at": "2026-10-11T18:05:27Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/JZkUA4vgY7xLxyt1hJvfu1n7RbTG2uvVedEzBMbRV1B/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 141,
-      "manual_holder_check_url": "https://solscan.io/token/9vHb8cc3hSF4NHorFpXVfqPb4PxHUhbHcAGtJEPeT2e9#holders",
+      "sells_in_last_trades_page": 140,
+      "manual_holder_check_url": "https://solscan.io/token/JZkUA4vgY7xLxyt1hJvfu1n7RbTG2uvVedEzBMbRV1B#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
