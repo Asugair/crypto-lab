@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-24T16:35:54Z",
+  "fetched_at": "2026-10-24T19:27:53Z",
   "source": "GeckoTerminal public API v2 (keyless): new_pools, trending_1h, trending_6h, trending_24h, top_h24_tx, top_h24_volume",
   "filters": {
     "network": "solana",
@@ -39,30 +39,75 @@
     ],
     "reject_brand_impersonation_added": "2026-09-24 by Abdulelah in session: 8 days of scans were dominated by tokens named after companies (OpenAI x7, Claude, Apple, META, TSLA, GOOGL, ELON). Whole-word match on symbol or name."
   },
-  "scanned": 366,
-  "excluded": 338,
+  "scanned": 202,
+  "excluded": 180,
   "candidates": 3,
-  "errors": [],
+  "errors": [
+    {
+      "source": "trending_6h",
+      "page": 5,
+      "error": "HTTP 429"
+    },
+    {
+      "source": "trending_24h",
+      "page": 1,
+      "error": "HTTP 429"
+    },
+    {
+      "source": "top_h24_tx",
+      "page": 1,
+      "error": "HTTP 429"
+    },
+    {
+      "source": "top_h24_volume",
+      "page": 1,
+      "error": "HTTP 429"
+    }
+  ],
   "candidates_list": [
+    {
+      "pool_address": "6pQssERCTFeG1xUXSkkHEJXr26Lqe9LcZgXJT2K7cmFb",
+      "pair": "GDC / SOL",
+      "token_address": "DrBnTKVKqfzthj2b4VjB2aYeVpkhdR1WXqCEPfpxjYbC",
+      "token_symbol": "GDC",
+      "token_name": "GDCoinSolana",
+      "price_usd": 6.701155590177379e-05,
+      "dex": "PumpSwap",
+      "created_at": "2026-10-24T18:19:51Z",
+      "liquidity_usd": 70935.9323,
+      "volume_h1_usd": 7120115.99145283,
+      "volume_h24_usd": 7126009.75878352,
+      "txns_h1": 11639,
+      "sells_h1": 4655,
+      "price_change_h1_pct": "197.856",
+      "fdv_usd": "67011.5356338314",
+      "source_url": "https://www.geckoterminal.com/solana/pools/6pQssERCTFeG1xUXSkkHEJXr26Lqe9LcZgXJT2K7cmFb",
+      "found_via": "trending_1h",
+      "age_hours": 1.13,
+      "exclude_reasons": [],
+      "same_symbol_other_mints": [
+        "4ipcoJ37nXNXs66SR9MVYTz6vwUdqsXYfLD4vYE6pump"
+      ]
+    },
     {
       "pool_address": "A67d8qXm4frRJc4LcdoXnvEbXjUT4ywWCRvWBFSY6Y7W",
       "pair": "ALLOX / SOL",
       "token_address": "BGpURkQa9NeUp9uJPQnJgzdhmQtDkXesiFWWVDWcKu7P",
       "token_symbol": "ALLOX",
       "token_name": "AlloX",
-      "price_usd": 1.137964095381725e-05,
+      "price_usd": 1.4042007097686522e-05,
       "dex": "PumpSwap",
       "created_at": "2026-10-24T13:28:14Z",
-      "liquidity_usd": 279633.8664,
-      "volume_h1_usd": 5714972.43466558,
-      "volume_h24_usd": 18317395.8398864,
-      "txns_h1": 5437,
-      "sells_h1": 2604,
-      "price_change_h1_pct": "5.714",
-      "fdv_usd": "1131497.008",
+      "liquidity_usd": 276219.8188,
+      "volume_h1_usd": 5896830.97344729,
+      "volume_h24_usd": 35781338.7885189,
+      "txns_h1": 5528,
+      "sells_h1": 2632,
+      "price_change_h1_pct": "7.48",
+      "fdv_usd": "1412646.488",
       "source_url": "https://www.geckoterminal.com/solana/pools/A67d8qXm4frRJc4LcdoXnvEbXjUT4ywWCRvWBFSY6Y7W",
       "found_via": "trending_1h",
-      "age_hours": 3.13,
+      "age_hours": 5.99,
       "exclude_reasons": [],
       "same_symbol_other_mints": []
     },
@@ -72,55 +117,31 @@
       "token_address": "B68DmS6KsYcNpEifba6mptE8rgSV5s6Uuaeo3piND2pY",
       "token_symbol": "SO",
       "token_name": "Soul Labs",
-      "price_usd": 1.2265855400517561e-05,
+      "price_usd": 1.535933500984256e-05,
       "dex": "PumpSwap",
       "created_at": "2026-10-24T13:25:26Z",
-      "liquidity_usd": 313436.8826,
-      "volume_h1_usd": 5695474.95613696,
-      "volume_h24_usd": 18522942.3054555,
-      "txns_h1": 5434,
-      "sells_h1": 2582,
-      "price_change_h1_pct": "9.57",
-      "fdv_usd": "1231084.73",
+      "liquidity_usd": 304999.3273,
+      "volume_h1_usd": 5870039.9178737,
+      "volume_h24_usd": 35906056.4256834,
+      "txns_h1": 5460,
+      "sells_h1": 2600,
+      "price_change_h1_pct": "7.237",
+      "fdv_usd": "1542180.09",
       "source_url": "https://www.geckoterminal.com/solana/pools/J6sx2A6hgt8S3pB7zd4BmPdMwDqEaBibnDtfozBq55Ku",
       "found_via": "trending_1h",
-      "age_hours": 3.17,
+      "age_hours": 6.04,
       "exclude_reasons": [],
       "same_symbol_other_mints": []
-    },
-    {
-      "pool_address": "FtocPAhFwYD3Kh92ZVbcSoAL9wmcryL5g49SADcXRQXe",
-      "pair": "NODF / SOL",
-      "token_address": "DAwy9AjZRm8cq5yp57qagEvihgj7H9idNHLWf3qoYRFp",
-      "token_symbol": "NODF",
-      "token_name": "NODF",
-      "price_usd": 0.0009540492666093522,
-      "dex": "PumpSwap",
-      "created_at": "2026-10-24T13:11:39Z",
-      "liquidity_usd": 307703.1955,
-      "volume_h1_usd": 2240559.49449757,
-      "volume_h24_usd": 11382125.8784929,
-      "txns_h1": 4077,
-      "sells_h1": 2032,
-      "price_change_h1_pct": "15.15",
-      "fdv_usd": "949165.40143624",
-      "source_url": "https://www.geckoterminal.com/solana/pools/FtocPAhFwYD3Kh92ZVbcSoAL9wmcryL5g49SADcXRQXe",
-      "found_via": "trending_6h",
-      "age_hours": 3.4,
-      "exclude_reasons": [],
-      "same_symbol_other_mints": [
-        "akRhNAuqczoExHHa6B6PmvutTPpjAnGUF3JDf3npump"
-      ]
     }
   ],
   "exclusion_summary": {
-    "too_young": 78,
-    "low_liquidity": 175,
-    "low_volume_h1": 182,
-    "low_txns_h1": 160,
-    "no_sells_seen_h1": 105,
-    "brand_impersonation": 17,
-    "too_old": 171
+    "too_young": 83,
+    "low_liquidity": 74,
+    "low_volume_h1": 74,
+    "low_txns_h1": 55,
+    "no_sells_seen_h1": 12,
+    "brand_impersonation": 3,
+    "too_old": 93
   },
-  "status": "ok"
+  "status": "partial"
 }
