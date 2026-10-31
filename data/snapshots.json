@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-30T18:38:20Z",
+  "updated_at": "2026-10-31T10:56:40Z",
   "errors": [],
   "summary": {
-    "tracked": 203,
-    "with_day_observation": 198,
-    "dead_or_drained_by_day": 169,
+    "tracked": 206,
+    "with_day_observation": 203,
+    "dead_or_drained_by_day": 174,
     "day_median_ret_pct_alive": 0.3,
     "day_median_ret_pct_all_dead_as_minus100": -100.0,
     "day_share_above_target_plus_cost_pct": 5,
@@ -20307,6 +20307,14 @@
           "ret_pct": 55.5,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 162.3,
+          "missing": false,
+          "ret_pct": 55.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -20418,6 +20426,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 146.0,
+          "missing": false,
+          "ret_pct": 56.0,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 162.3,
           "missing": false,
           "ret_pct": 56.0,
           "liquidity_usd": 0,
@@ -20537,6 +20553,14 @@
           "ret_pct": -4.5,
           "liquidity_usd": 305325,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 162.3,
+          "missing": false,
+          "ret_pct": -4.5,
+          "liquidity_usd": 305325,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -20644,6 +20668,14 @@
           "ret_pct": -0.0,
           "liquidity_usd": 70531,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 159.5,
+          "missing": false,
+          "ret_pct": -0.0,
+          "liquidity_usd": 70531,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -20739,6 +20771,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 128.9,
+          "missing": false,
+          "ret_pct": 24.0,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 145.2,
           "missing": false,
           "ret_pct": 24.0,
           "liquidity_usd": 0,
@@ -20842,6 +20882,14 @@
           "ret_pct": 13.2,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 145.2,
+          "missing": false,
+          "ret_pct": 13.2,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -20941,6 +20989,14 @@
           "ret_pct": 0.0,
           "liquidity_usd": 70465,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 145.2,
+          "missing": false,
+          "ret_pct": -1.1,
+          "liquidity_usd": 70465,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21028,6 +21084,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 121.5,
+          "missing": false,
+          "ret_pct": 168.7,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 137.8,
           "missing": false,
           "ret_pct": 168.7,
           "liquidity_usd": 0,
@@ -21123,6 +21187,14 @@
           "ret_pct": 184.9,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 137.8,
+          "missing": false,
+          "ret_pct": 184.9,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21214,6 +21286,14 @@
           "ret_pct": 21986.9,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 137.8,
+          "missing": false,
+          "ret_pct": 21986.9,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21297,6 +21377,14 @@
           "ret_pct": -99.2,
           "liquidity_usd": 2789,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 119.9,
+          "missing": false,
+          "ret_pct": -99.2,
+          "liquidity_usd": 2826,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21376,6 +21464,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 103.6,
+          "missing": false,
+          "ret_pct": -14.8,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 119.9,
           "missing": false,
           "ret_pct": -14.8,
           "liquidity_usd": 0,
@@ -21463,6 +21559,14 @@
           "ret_pct": 0.0,
           "liquidity_usd": 331950,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 119.9,
+          "missing": false,
+          "ret_pct": 0.0,
+          "liquidity_usd": 331950,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21534,6 +21638,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 95.4,
+          "missing": false,
+          "ret_pct": 50502.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 111.7,
           "missing": false,
           "ret_pct": 50502.5,
           "liquidity_usd": 0,
@@ -21613,6 +21725,14 @@
           "ret_pct": 9.9,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 111.7,
+          "missing": false,
+          "ret_pct": 9.9,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21688,6 +21808,14 @@
           "ret_pct": -99.5,
           "liquidity_usd": 2129,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 111.7,
+          "missing": false,
+          "ret_pct": -99.5,
+          "liquidity_usd": 2159,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -21754,6 +21882,14 @@
           "missing": false,
           "ret_pct": -99.0,
           "liquidity_usd": 3138,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 96.5,
+          "missing": false,
+          "ret_pct": -99.0,
+          "liquidity_usd": 3170,
           "volume_h1_usd": 0
         }
       ]
@@ -21822,6 +21958,14 @@
           "ret_pct": -88.6,
           "liquidity_usd": 29047,
           "volume_h1_usd": 3562
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 96.5,
+          "missing": false,
+          "ret_pct": -89.2,
+          "liquidity_usd": 28354,
+          "volume_h1_usd": 457
         }
       ]
     },
@@ -21889,6 +22033,14 @@
           "ret_pct": -99.2,
           "liquidity_usd": 3605,
           "volume_h1_usd": 194
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 96.5,
+          "missing": false,
+          "ret_pct": -99.2,
+          "liquidity_usd": 3687,
+          "volume_h1_usd": 1
         }
       ]
     },
@@ -21944,6 +22096,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 71.9,
+          "missing": false,
+          "ret_pct": -97.3,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 88.2,
           "missing": false,
           "ret_pct": -97.3,
           "liquidity_usd": 0,
@@ -22007,6 +22167,14 @@
           "ret_pct": 0.0,
           "liquidity_usd": 58985,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 88.2,
+          "missing": false,
+          "ret_pct": -0.6,
+          "liquidity_usd": 58985,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22066,6 +22234,14 @@
           "ret_pct": -99.0,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 88.2,
+          "missing": false,
+          "ret_pct": -99.0,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22116,6 +22292,14 @@
           "missing": false,
           "ret_pct": -99.8,
           "liquidity_usd": 3879,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 71.7,
+          "missing": false,
+          "ret_pct": -99.8,
+          "liquidity_usd": 3688,
           "volume_h1_usd": 0
         }
       ]
@@ -22168,6 +22352,14 @@
           "ret_pct": -98.5,
           "liquidity_usd": 2180,
           "volume_h1_usd": 8
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 71.7,
+          "missing": false,
+          "ret_pct": -98.5,
+          "liquidity_usd": 2225,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22219,6 +22411,14 @@
           "ret_pct": -99.2,
           "liquidity_usd": 3404,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 71.7,
+          "missing": false,
+          "ret_pct": -99.2,
+          "liquidity_usd": 3457,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22258,6 +22458,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 47.8,
+          "missing": false,
+          "ret_pct": 35.6,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 64.1,
           "missing": false,
           "ret_pct": 35.6,
           "liquidity_usd": 0,
@@ -22305,6 +22513,14 @@
           "ret_pct": -99.9,
           "liquidity_usd": 3809,
           "volume_h1_usd": 24
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 64.1,
+          "missing": false,
+          "ret_pct": -99.9,
+          "liquidity_usd": 3873,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22348,6 +22564,14 @@
           "ret_pct": 20.5,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 64.1,
+          "missing": false,
+          "ret_pct": 20.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22379,6 +22603,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 31.2,
+          "missing": false,
+          "ret_pct": 84.4,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 47.5,
           "missing": false,
           "ret_pct": 84.4,
           "liquidity_usd": 0,
@@ -22418,6 +22650,14 @@
           "ret_pct": 9.1,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 47.5,
+          "missing": false,
+          "ret_pct": 9.1,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22453,6 +22693,14 @@
           "ret_pct": -2.1,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 47.5,
+          "missing": false,
+          "ret_pct": -2.1,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22476,6 +22724,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 23.6,
+          "missing": false,
+          "ret_pct": 31.2,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 39.9,
           "missing": false,
           "ret_pct": 31.2,
           "liquidity_usd": 0,
@@ -22507,6 +22763,14 @@
           "ret_pct": 13.5,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 39.9,
+          "missing": false,
+          "ret_pct": 13.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22522,6 +22786,14 @@
         {
           "at": "2026-10-30T18:38:20Z",
           "h": 7.3,
+          "missing": false,
+          "ret_pct": 35966143.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 23.6,
           "missing": false,
           "ret_pct": 35966143.5,
           "liquidity_usd": 0,
@@ -22545,6 +22817,14 @@
           "ret_pct": -94.1,
           "liquidity_usd": 0,
           "volume_h1_usd": 0
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 23.6,
+          "missing": false,
+          "ret_pct": -94.1,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22564,6 +22844,14 @@
           "ret_pct": 50.4,
           "liquidity_usd": 156516,
           "volume_h1_usd": 3534101
+        },
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 23.6,
+          "missing": false,
+          "ret_pct": 123.5,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
         }
       ]
     },
@@ -22575,7 +22863,16 @@
       "liquidity0_usd": 99655,
       "cost_pct_est": 0.68,
       "verdict_at_detection": "unverified",
-      "obs": []
+      "obs": [
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 16.3,
+          "missing": false,
+          "ret_pct": -98.7,
+          "liquidity_usd": 0,
+          "volume_h1_usd": 0
+        }
+      ]
     },
     "8aKyrcT5Z16HGNJuHUBPdZC2ZD7PncWm9PMgZYiNpEqw": {
       "pair": "PODCATWALK / SOL",
@@ -22584,6 +22881,45 @@
       "price0": 0.0005039748927836736,
       "liquidity0_usd": 61117,
       "cost_pct_est": 0.71,
+      "verdict_at_detection": "unverified",
+      "obs": [
+        {
+          "at": "2026-10-31T10:56:40Z",
+          "h": 16.3,
+          "missing": false,
+          "ret_pct": -99.6,
+          "liquidity_usd": 2302,
+          "volume_h1_usd": 0
+        }
+      ]
+    },
+    "DNAYCfUcAAMqbB4kd1r89Py362Tn7Rcf87pk8aQcBA6F": {
+      "pair": "发发 / SOL",
+      "token_address": "13QmkLUpcAz1Lqwm1oBFm7t2BFPDPHFKPFCDFvaoLD4s",
+      "detected_at": "2026-10-31T10:54:23Z",
+      "price0": 1.2200497842832742e-06,
+      "liquidity0_usd": 180528,
+      "cost_pct_est": 0.66,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "F8AvZ2MQ1dff2t2kgsWSin3CwbQ2eYwWoErZ4fABWXQM": {
+      "pair": "FUN / SOL",
+      "token_address": "FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump",
+      "detected_at": "2026-10-31T10:54:23Z",
+      "price0": 4.813551097892139e-05,
+      "liquidity0_usd": 18158,
+      "cost_pct_est": 0.86,
+      "verdict_at_detection": "unverified",
+      "obs": []
+    },
+    "81jgrpTMsQWc1rGWXutyYWW27ruiAtehUZwLydcHHWDB": {
+      "pair": "BNB / SOL",
+      "token_address": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump",
+      "detected_at": "2026-10-31T10:54:23Z",
+      "price0": 0.0006033708350351724,
+      "liquidity0_usd": 69507,
+      "cost_pct_est": 0.7,
       "verdict_at_detection": "unverified",
       "obs": []
     }
