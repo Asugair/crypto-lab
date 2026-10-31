@@ -1,33 +1,33 @@
 {
-  "checked_at": "2026-10-31T10:56:40Z",
+  "checked_at": "2026-10-31T17:43:14Z",
   "reviews": [
     {
-      "pair": "发发 / SOL",
-      "token_address": "13QmkLUpcAz1Lqwm1oBFm7t2BFPDPHFKPFCDFvaoLD4s",
-      "pool_address": "DNAYCfUcAAMqbB4kd1r89Py362Tn7Rcf87pk8aQcBA6F",
-      "source_url": "https://www.geckoterminal.com/solana/pools/DNAYCfUcAAMqbB4kd1r89Py362Tn7Rcf87pk8aQcBA6F",
-      "checked_at": "2026-10-31T10:54:46Z",
+      "pair": "BLEP / SOL",
+      "token_address": "Hd81tGFqiLnFrrFTGSEA5oDV6x7Qg9FdKgSjg5xXhRBJ",
+      "pool_address": "4r8i9FEvN6TTZytDgR5kpxBBmMvpzq8ZqCR7rnR8N9B5",
+      "source_url": "https://www.geckoterminal.com/solana/pools/4r8i9FEvN6TTZytDgR5kpxBBmMvpzq8ZqCR7rnR8N9B5",
+      "checked_at": "2026-10-31T17:41:21Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 4281193430607393,
+        "supply_raw": 1000000000000000,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 17,
-        "top10_incl_pools_pct": "4.2811",
-        "last_updated": "2026-10-31T10:53:37Z",
-        "fetched_at": "2026-10-31T10:54:46Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/13QmkLUpcAz1Lqwm1oBFm7t2BFPDPHFKPFCDFvaoLD4s/info",
+        "count": 162,
+        "top10_incl_pools_pct": "88.3409",
+        "last_updated": "2026-10-31T14:58:52Z",
+        "fetched_at": "2026-10-31T17:41:21Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/Hd81tGFqiLnFrrFTGSEA5oDV6x7Qg9FdKgSjg5xXhRBJ/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 144,
-      "manual_holder_check_url": "https://solscan.io/token/13QmkLUpcAz1Lqwm1oBFm7t2BFPDPHFKPFCDFvaoLD4s#holders",
+      "sells_in_last_trades_page": 96,
+      "manual_holder_check_url": "https://solscan.io/token/Hd81tGFqiLnFrrFTGSEA5oDV6x7Qg9FdKgSjg5xXhRBJ#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -39,17 +39,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "FUN / SOL",
-      "token_address": "FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump",
-      "pool_address": "F8AvZ2MQ1dff2t2kgsWSin3CwbQ2eYwWoErZ4fABWXQM",
-      "source_url": "https://www.geckoterminal.com/solana/pools/F8AvZ2MQ1dff2t2kgsWSin3CwbQ2eYwWoErZ4fABWXQM",
-      "checked_at": "2026-10-31T10:55:39Z",
+      "pair": "DAVID / SOL",
+      "token_address": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump",
+      "pool_address": "76dpWgLDW4gh4N8bTC7HGooUzeMwUpkZuvRExjBteazG",
+      "source_url": "https://www.geckoterminal.com/solana/pools/76dpWgLDW4gh4N8bTC7HGooUzeMwUpkZuvRExjBteazG",
+      "checked_at": "2026-10-31T17:42:12Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 949594093871484,
+        "supply_raw": 992508060743201,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -58,29 +58,29 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump"
+            "metadataAddress": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump",
-            "name": "FUN",
-            "symbol": "FUN",
+            "mint": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump",
+            "name": "David Dobrik Coin",
+            "symbol": "DAVID",
             "updateAuthority": null,
-            "uri": "https://ipfs.io/ipfs/bafkreifqfwqjsilxefo6nrrkzlufge7t66dvcki67ei53uxkqhs6vxchoe"
+            "uri": "https://metadata.j7tracker.io/metadata/41d1e29802424e79.json"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 41,
-        "top10_incl_pools_pct": "92.307",
-        "last_updated": "2026-10-31T09:16:48Z",
-        "fetched_at": "2026-10-31T10:55:39Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump/info",
+        "count": 51,
+        "top10_incl_pools_pct": "95.8957",
+        "last_updated": "2026-10-31T16:13:53Z",
+        "fetched_at": "2026-10-31T17:42:12Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 123,
-      "manual_holder_check_url": "https://solscan.io/token/FDSG65a94jA3mdC47VPikD5WARCJN5ffSgot3TfHpump#holders",
+      "sells_in_last_trades_page": 128,
+      "manual_holder_check_url": "https://solscan.io/token/6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -92,17 +92,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "BNB / SOL",
-      "token_address": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump",
-      "pool_address": "81jgrpTMsQWc1rGWXutyYWW27ruiAtehUZwLydcHHWDB",
-      "source_url": "https://www.geckoterminal.com/solana/pools/81jgrpTMsQWc1rGWXutyYWW27ruiAtehUZwLydcHHWDB",
-      "checked_at": "2026-10-31T10:56:40Z",
+      "pair": "DAVID / SOL",
+      "token_address": "7ku3pcgXiGBqCCd6VZ8AyGe7t89BXtVpe6cVXwCLpump",
+      "pool_address": "9Rs4GBAFoxuGTSX6GecZozNcQU9U7PutN1cj3zkbCv77",
+      "source_url": "https://www.geckoterminal.com/solana/pools/9Rs4GBAFoxuGTSX6GecZozNcQU9U7PutN1cj3zkbCv77",
+      "checked_at": "2026-10-31T17:43:14Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 995072438429567,
+        "supply_raw": 982492170951859,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -111,29 +111,29 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump"
+            "metadataAddress": "7ku3pcgXiGBqCCd6VZ8AyGe7t89BXtVpe6cVXwCLpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump",
-            "name": "Broke Nigga Baddie",
-            "symbol": "BNB",
+            "mint": "7ku3pcgXiGBqCCd6VZ8AyGe7t89BXtVpe6cVXwCLpump",
+            "name": "David Dobrik Coin",
+            "symbol": "DAVID",
             "updateAuthority": null,
-            "uri": "https://ipfs.io/ipfs/bafkreidhd5mlkk7ievjp6wtaiuwohphzysishj4bifcx7muj7e25jckvri"
+            "uri": "https://ipfs.io/ipfs/QmWnaE7ee1Eh25eawyhLHwT2xdJGu6zjPurkesE2pCPAp4"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 7123,
-        "top10_incl_pools_pct": "7.8424",
-        "last_updated": "2026-10-31T10:28:18Z",
-        "fetched_at": "2026-10-31T10:56:40Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump/info",
+        "count": 43,
+        "top10_incl_pools_pct": "86.8882",
+        "last_updated": "2026-10-31T16:36:45Z",
+        "fetched_at": "2026-10-31T17:43:14Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7ku3pcgXiGBqCCd6VZ8AyGe7t89BXtVpe6cVXwCLpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 85,
-      "manual_holder_check_url": "https://solscan.io/token/EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump#holders",
+      "sells_in_last_trades_page": 142,
+      "manual_holder_check_url": "https://solscan.io/token/7ku3pcgXiGBqCCd6VZ8AyGe7t89BXtVpe6cVXwCLpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
