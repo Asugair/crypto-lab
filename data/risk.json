@@ -1,18 +1,18 @@
 {
-  "checked_at": "2026-11-11T12:40:03Z",
+  "checked_at": "2026-11-11T20:12:05Z",
   "reviews": [
     {
       "pair": "MACE / SOL",
-      "token_address": "HxJKDYVbqY8T7v3VV2g25ATw5g2nKuT9ita3c4ghYKau",
-      "pool_address": "7UFaqpU4UWQbyxZ68LAdVUXEXpsaoxLumJkFWoUMBMJ2",
-      "source_url": "https://www.geckoterminal.com/solana/pools/7UFaqpU4UWQbyxZ68LAdVUXEXpsaoxLumJkFWoUMBMJ2",
-      "checked_at": "2026-11-11T12:39:15Z",
+      "token_address": "AFkZHdMjC3BRt6XvriAxdowexuBghTHDRTTvihUkmGVu",
+      "pool_address": "3ymF5fgYZtmjjNPQNkNHyv4bN6sNQTCEqpcZQ1B43XSv",
+      "source_url": "https://www.geckoterminal.com/solana/pools/3ymF5fgYZtmjjNPQNkNHyv4bN6sNQTCEqpcZQ1B43XSv",
+      "checked_at": "2026-11-11T20:11:16Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 999999984324167,
+        "supply_raw": 1000000000000000,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -22,12 +22,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-11-11T12:39:15Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/HxJKDYVbqY8T7v3VV2g25ATw5g2nKuT9ita3c4ghYKau/info",
+        "fetched_at": "2026-11-11T20:11:16Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/AFkZHdMjC3BRt6XvriAxdowexuBghTHDRTTvihUkmGVu/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 140,
-      "manual_holder_check_url": "https://solscan.io/token/HxJKDYVbqY8T7v3VV2g25ATw5g2nKuT9ita3c4ghYKau#holders",
+      "sells_in_last_trades_page": 123,
+      "manual_holder_check_url": "https://solscan.io/token/AFkZHdMjC3BRt6XvriAxdowexuBghTHDRTTvihUkmGVu#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -39,17 +39,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "TI / SOL",
-      "token_address": "RhnJFBA4ip4WxmVtx6d4T8QpaRf6yLxAmbY5fUBaz2q",
-      "pool_address": "7XG9QAJsyf1DdaGtnKDuS3ho1G4qUQdxMZ6WBVJbpR1N",
-      "source_url": "https://www.geckoterminal.com/solana/pools/7XG9QAJsyf1DdaGtnKDuS3ho1G4qUQdxMZ6WBVJbpR1N",
-      "checked_at": "2026-11-11T12:39:44Z",
+      "pair": "UODF / SOL",
+      "token_address": "5Xczig7Rc4eziJXmUmjBKL2dzf8mcHoLoZB7LDx6RmBb",
+      "pool_address": "3Y4RXtkQWR7KvtoNnZ3NJCh2fc6hoKr7Suycw6fSVnKG",
+      "source_url": "https://www.geckoterminal.com/solana/pools/3Y4RXtkQWR7KvtoNnZ3NJCh2fc6hoKr7Suycw6fSVnKG",
+      "checked_at": "2026-11-11T20:11:45Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 6074361057119167,
+        "supply_raw": 99999999719869146,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -59,12 +59,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-11-11T12:39:44Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/RhnJFBA4ip4WxmVtx6d4T8QpaRf6yLxAmbY5fUBaz2q/info",
+        "fetched_at": "2026-11-11T20:11:45Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/5Xczig7Rc4eziJXmUmjBKL2dzf8mcHoLoZB7LDx6RmBb/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 139,
-      "manual_holder_check_url": "https://solscan.io/token/RhnJFBA4ip4WxmVtx6d4T8QpaRf6yLxAmbY5fUBaz2q#holders",
+      "sells_in_last_trades_page": 150,
+      "manual_holder_check_url": "https://solscan.io/token/5Xczig7Rc4eziJXmUmjBKL2dzf8mcHoLoZB7LDx6RmBb#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -76,17 +76,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "OPNW / SOL",
-      "token_address": "7wDZG1tf4XV2ftnQvT4h9LPEnyREhgeFVNKLKvZZnpry",
-      "pool_address": "3qfSb9f2cspuSGgNCMkxEJtJUP7uo8wUdCE42PccLoXJ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/3qfSb9f2cspuSGgNCMkxEJtJUP7uo8wUdCE42PccLoXJ",
-      "checked_at": "2026-11-11T12:40:03Z",
+      "pair": "PREDICT / SOL",
+      "token_address": "7GM6DTUa3q9V2Dv6efRuGhrvW4aDz6Gk2GAgoC4AUTd9",
+      "pool_address": "45TyLZB8nrMaAQDkE7qodQfxGrSFmvmyNozD7dQEHVGP",
+      "source_url": "https://www.geckoterminal.com/solana/pools/45TyLZB8nrMaAQDkE7qodQfxGrSFmvmyNozD7dQEHVGP",
+      "checked_at": "2026-11-11T20:12:05Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999999760542286,
+        "supply_raw": 99999999841515082,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -96,12 +96,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-11-11T12:40:03Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7wDZG1tf4XV2ftnQvT4h9LPEnyREhgeFVNKLKvZZnpry/info",
+        "fetched_at": "2026-11-11T20:12:05Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7GM6DTUa3q9V2Dv6efRuGhrvW4aDz6Gk2GAgoC4AUTd9/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 150,
-      "manual_holder_check_url": "https://solscan.io/token/7wDZG1tf4XV2ftnQvT4h9LPEnyREhgeFVNKLKvZZnpry#holders",
+      "sells_in_last_trades_page": 143,
+      "manual_holder_check_url": "https://solscan.io/token/7GM6DTUa3q9V2Dv6efRuGhrvW4aDz6Gk2GAgoC4AUTd9#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
