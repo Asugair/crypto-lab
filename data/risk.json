@@ -1,70 +1,49 @@
 {
-  "checked_at": "2026-11-15T12:42:03Z",
+  "checked_at": "2026-11-15T19:25:19Z",
   "reviews": [
     {
-      "pair": "bill / SOL",
-      "token_address": "B363HkenheRKssXjM8eEW2T6wS2FwrkH4Pgn9ZNyUWW",
-      "pool_address": "2UgGHLbhQekYg2WTQzSXZYcNbax2EE5Kxat5vH6obEAj",
-      "source_url": "https://www.geckoterminal.com/solana/pools/2UgGHLbhQekYg2WTQzSXZYcNbax2EE5Kxat5vH6obEAj",
-      "checked_at": "2026-11-15T12:41:16Z",
+      "pair": "rockstar / TTWO",
+      "token_address": "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump",
+      "pool_address": "5PYNPPTNpdG5REsu3VqeJKqHePiJ1uwP5L7A2CcHMxdY",
+      "source_url": "https://www.geckoterminal.com/solana/pools/5PYNPPTNpdG5REsu3VqeJKqHePiJ1uwP5L7A2CcHMxdY",
+      "checked_at": "2026-11-15T19:24:29Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
-        "program": "spl_token",
+        "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999995540970142,
+        "supply_raw": 951339794584915,
         "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
+        "extensions": [
+          "metadataPointer",
+          "tokenMetadata"
+        ],
+        "extension_details": {
+          "metadataPointer": {
+            "authority": null,
+            "metadataAddress": "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump"
+          },
+          "tokenMetadata": {
+            "additionalMetadata": [],
+            "mint": "9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump",
+            "name": "rockstar",
+            "symbol": "rockstar",
+            "updateAuthority": null,
+            "uri": "https://ipfs.io/ipfs/QmQGcqmYwnd1q5uR5PrD5tA4BwdgnREU8ZhWYWVNNFSxpD"
+          }
+        }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 2016,
-        "top10_incl_pools_pct": "93.6332",
-        "last_updated": "2026-11-15T12:25:14Z",
-        "fetched_at": "2026-11-15T12:41:16Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/B363HkenheRKssXjM8eEW2T6wS2FwrkH4Pgn9ZNyUWW/info",
+        "count": 2181,
+        "top10_incl_pools_pct": "30.4109",
+        "last_updated": "2026-11-15T19:13:27Z",
+        "fetched_at": "2026-11-15T19:24:29Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 138,
-      "manual_holder_check_url": "https://solscan.io/token/B363HkenheRKssXjM8eEW2T6wS2FwrkH4Pgn9ZNyUWW#holders",
-      "verdict": "unverified",
-      "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "check_errors": [
-        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 403 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32602,\"message\":\"Indexed requests require a personal token. Get one at: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
-    {
-      "pair": "WANTED / SOL",
-      "token_address": "NwbsNN7agA5KLzZ4uRoPfKPa2zR32w8Q8QLvhyC7snQ",
-      "pool_address": "7mXDtWG1WgLyrVurkJsLVPitBMGxjATeFyyLewFtqzGf",
-      "source_url": "https://www.geckoterminal.com/solana/pools/7mXDtWG1WgLyrVurkJsLVPitBMGxjATeFyyLewFtqzGf",
-      "checked_at": "2026-11-15T12:41:45Z",
-      "rpc": "solana-rpc.publicnode.com",
-      "mint": {
-        "program": "spl_token",
-        "mint_authority": null,
-        "freeze_authority": null,
-        "supply_raw": 999999925602030,
-        "decimals": 6,
-        "extensions": [],
-        "extension_details": {}
-      },
-      "holders": null,
-      "holders_geckoterminal": {
-        "count": 2018,
-        "top10_incl_pools_pct": "94.1891",
-        "last_updated": "2026-11-15T12:36:48Z",
-        "fetched_at": "2026-11-15T12:41:45Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/NwbsNN7agA5KLzZ4uRoPfKPa2zR32w8Q8QLvhyC7snQ/info",
-        "label": "includes pools; not a gate"
-      },
-      "sells_in_last_trades_page": 149,
-      "manual_holder_check_url": "https://solscan.io/token/NwbsNN7agA5KLzZ4uRoPfKPa2zR32w8Q8QLvhyC7snQ#holders",
+      "sells_in_last_trades_page": 131,
+      "manual_holder_check_url": "https://solscan.io/token/9HFUEab7sompLDPTAaTGkryMNGbtBaFMhHMVpJEBpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -76,17 +55,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "Socks / SOL",
-      "token_address": "FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump",
-      "pool_address": "AgqoLMPxk7ETjY74TnyePqKSQQYTTsCrmMVgyQRkaJK3",
-      "source_url": "https://www.geckoterminal.com/solana/pools/AgqoLMPxk7ETjY74TnyePqKSQQYTTsCrmMVgyQRkaJK3",
-      "checked_at": "2026-11-15T12:42:03Z",
+      "pair": "BLG牛逼 / SOL",
+      "token_address": "He2LERjiqsdFTgsakv9jth4xQ8skHJ7wQ4rtTipnhzzg",
+      "pool_address": "G4fCoXyLr43xFGQY8yQNPDevtYivyzgxxffp6HKQnMML",
+      "source_url": "https://www.geckoterminal.com/solana/pools/G4fCoXyLr43xFGQY8yQNPDevtYivyzgxxffp6HKQnMML",
+      "checked_at": "2026-11-15T19:24:49Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 967061061196601,
+        "supply_raw": 1000000002000000,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -95,29 +74,82 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump"
+            "metadataAddress": "He2LERjiqsdFTgsakv9jth4xQ8skHJ7wQ4rtTipnhzzg"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump",
-            "name": "Socks Neobank",
-            "symbol": "Socks",
+            "mint": "He2LERjiqsdFTgsakv9jth4xQ8skHJ7wQ4rtTipnhzzg",
+            "name": "BLG牛逼",
+            "symbol": "BLG牛逼",
             "updateAuthority": null,
-            "uri": "https://ipfs.io/ipfs/bafkreibncvhpuetxzmljrkvcgpj2lrd6b6ty5ni6aokc6mmkwxsziwv4qy"
+            "uri": "https://ipfs.io/ipfs/bafkreia4yucaijstblujm4smeoqfxcrtckb5kzltyerd323kqk5xp47seu"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 2966,
-        "top10_incl_pools_pct": "21.6485",
-        "last_updated": "2026-11-15T12:27:37Z",
-        "fetched_at": "2026-11-15T12:42:03Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump/info",
+        "count": 2116,
+        "top10_incl_pools_pct": "41.7439",
+        "last_updated": "2026-11-15T19:13:28Z",
+        "fetched_at": "2026-11-15T19:24:49Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/He2LERjiqsdFTgsakv9jth4xQ8skHJ7wQ4rtTipnhzzg/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 115,
-      "manual_holder_check_url": "https://solscan.io/token/FS1pBmZKp2Qw1atC64GoLamHstECAos9ot8bGPgDpump#holders",
+      "sells_in_last_trades_page": 133,
+      "manual_holder_check_url": "https://solscan.io/token/He2LERjiqsdFTgsakv9jth4xQ8skHJ7wQ4rtTipnhzzg#holders",
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "BLG / SOL",
+      "token_address": "DwzPXfXyPYFMbdsTBtP7aPRpQ6RNygLUViErqf1fqX9b",
+      "pool_address": "Zftxiv2nZknug7tX5jmZzctYyq9ipFHzG7LTsg42TKQ",
+      "source_url": "https://www.geckoterminal.com/solana/pools/Zftxiv2nZknug7tX5jmZzctYyq9ipFHzG7LTsg42TKQ",
+      "checked_at": "2026-11-15T19:25:19Z",
+      "rpc": "solana-rpc.publicnode.com",
+      "mint": {
+        "program": "token2022",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 1000000002000000,
+        "decimals": 6,
+        "extensions": [
+          "metadataPointer",
+          "tokenMetadata"
+        ],
+        "extension_details": {
+          "metadataPointer": {
+            "authority": null,
+            "metadataAddress": "DwzPXfXyPYFMbdsTBtP7aPRpQ6RNygLUViErqf1fqX9b"
+          },
+          "tokenMetadata": {
+            "additionalMetadata": [],
+            "mint": "DwzPXfXyPYFMbdsTBtP7aPRpQ6RNygLUViErqf1fqX9b",
+            "name": "BLG",
+            "symbol": "BLG",
+            "updateAuthority": null,
+            "uri": "https://ipfs.io/ipfs/bafkreicmjujiic437mta6ykhfrm2lkuiienixn7wti3difbpmohktfg45u"
+          }
+        }
+      },
+      "holders": null,
+      "holders_geckoterminal": {
+        "count": 2100,
+        "top10_incl_pools_pct": "85.2039",
+        "last_updated": "2026-11-15T18:37:47Z",
+        "fetched_at": "2026-11-15T19:25:19Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/DwzPXfXyPYFMbdsTBtP7aPRpQ6RNygLUViErqf1fqX9b/info",
+        "label": "includes pools; not a gate"
+      },
+      "sells_in_last_trades_page": 144,
+      "manual_holder_check_url": "https://solscan.io/token/DwzPXfXyPYFMbdsTBtP7aPRpQ6RNygLUViErqf1fqX9b#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
