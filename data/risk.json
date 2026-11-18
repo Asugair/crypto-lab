@@ -1,18 +1,18 @@
 {
-  "checked_at": "2026-11-17T23:54:05Z",
+  "checked_at": "2026-11-18T13:51:30Z",
   "reviews": [
     {
-      "pair": "GTAVI / SOL",
-      "token_address": "12Tpzs8w8tJcxpYQuaDU867aZ5EGYCMt1KXc9eVQDFWp",
-      "pool_address": "EcqTAxRcm2GkYuf6airkqSHk2gMTy64798U7ofRNTHWQ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/EcqTAxRcm2GkYuf6airkqSHk2gMTy64798U7ofRNTHWQ",
-      "checked_at": "2026-11-17T23:53:07Z",
+      "pair": "GTA / SOL",
+      "token_address": "6H34JpMxd7LdzdNzSEQ96JBzXZ3cfgrS8GNnuxjKBFkJ",
+      "pool_address": "HeFV8nzTLKpL27mfmNAxAndA4ygw5HTJYeMdBJAsgxLB",
+      "source_url": "https://www.geckoterminal.com/solana/pools/HeFV8nzTLKpL27mfmNAxAndA4ygw5HTJYeMdBJAsgxLB",
+      "checked_at": "2026-11-18T13:50:40Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 99999998764825492,
+        "supply_raw": 999999984250835,
         "decimals": 6,
         "extensions": [],
         "extension_details": {}
@@ -22,72 +22,14 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-11-17T23:53:07Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/12Tpzs8w8tJcxpYQuaDU867aZ5EGYCMt1KXc9eVQDFWp/info",
+        "fetched_at": "2026-11-18T13:50:40Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/6H34JpMxd7LdzdNzSEQ96JBzXZ3cfgrS8GNnuxjKBFkJ/info",
         "label": "includes pools; not a gate"
       },
       "sells_in_last_trades_page": 142,
-      "manual_holder_check_url": "https://solscan.io/token/12Tpzs8w8tJcxpYQuaDU867aZ5EGYCMt1KXc9eVQDFWp#holders",
+      "manual_holder_check_url": "https://solscan.io/token/6H34JpMxd7LdzdNzSEQ96JBzXZ3cfgrS8GNnuxjKBFkJ#holders",
       "verdict": "unverified",
       "reject_reasons": [],
-      "missing_checks": [
-        "holders"
-      ],
-      "check_errors": [
-        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 403 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32602,\"message\":\"Indexed requests require a personal token. Get one at: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
-      ],
-      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
-    },
-    {
-      "pair": "GTA6 / SOL",
-      "token_address": "GTA6ot7gjnojk8WwAoxKrqDkrLtCPtSfzAikk6zu2koH",
-      "pool_address": "Hb5RbkVssdJictskVjn9c2p16BsCesdHX4JdSWbFjG7a",
-      "source_url": "https://www.geckoterminal.com/solana/pools/Hb5RbkVssdJictskVjn9c2p16BsCesdHX4JdSWbFjG7a",
-      "checked_at": "2026-11-17T23:53:35Z",
-      "rpc": "solana-rpc.publicnode.com",
-      "mint": {
-        "program": "token2022",
-        "mint_authority": "JAn7XrtoGbMLY8TTZjkaHQ4zjL5mx3vdaEq9KpyazSbd",
-        "freeze_authority": null,
-        "supply_raw": 334810668476,
-        "decimals": 6,
-        "extensions": [
-          "transferFeeConfig"
-        ],
-        "extension_details": {
-          "transferFeeConfig": {
-            "newerTransferFee": {
-              "epoch": 1089,
-              "maximumFee": 18446744073709551615,
-              "transferFeeBasisPoints": 50
-            },
-            "olderTransferFee": {
-              "epoch": 1089,
-              "maximumFee": 18446744073709551615,
-              "transferFeeBasisPoints": 50
-            },
-            "transferFeeConfigAuthority": "JAn7XrtoGbMLY8TTZjkaHQ4zjL5mx3vdaEq9KpyazSbd",
-            "withdrawWithheldAuthority": "JAn7XrtoGbMLY8TTZjkaHQ4zjL5mx3vdaEq9KpyazSbd",
-            "withheldAmount": 459628844
-          }
-        }
-      },
-      "holders": null,
-      "holders_geckoterminal": {
-        "count": null,
-        "top10_incl_pools_pct": null,
-        "last_updated": null,
-        "fetched_at": "2026-11-17T23:53:35Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/GTA6ot7gjnojk8WwAoxKrqDkrLtCPtSfzAikk6zu2koH/info",
-        "label": "includes pools; not a gate"
-      },
-      "sells_in_last_trades_page": 104,
-      "manual_holder_check_url": "https://solscan.io/token/GTA6ot7gjnojk8WwAoxKrqDkrLtCPtSfzAikk6zu2koH#holders",
-      "verdict": "reject",
-      "reject_reasons": [
-        "mint_authority_present",
-        "extension_transferFeeConfig"
-      ],
       "missing_checks": [
         "holders"
       ],
@@ -97,17 +39,54 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "GTAVI / GTA6",
-      "token_address": "ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump",
-      "pool_address": "9YbrZx4ytWsuhsbfM75r4RfPW25MGaos4CVcuXM6qBNY",
-      "source_url": "https://www.geckoterminal.com/solana/pools/9YbrZx4ytWsuhsbfM75r4RfPW25MGaos4CVcuXM6qBNY",
-      "checked_at": "2026-11-17T23:54:05Z",
+      "pair": "BUCKZ / SOL",
+      "token_address": "EY8AQmF5NnjPxKLM3t5K9J4gNzZcYSSJVQLrjUKNvMw",
+      "pool_address": "DsiM463XcrmcREMM1xzAqduRJ6zdDyWCv5mN9BNzJjkB",
+      "source_url": "https://www.geckoterminal.com/solana/pools/DsiM463XcrmcREMM1xzAqduRJ6zdDyWCv5mN9BNzJjkB",
+      "checked_at": "2026-11-18T13:51:10Z",
+      "rpc": "solana-rpc.publicnode.com",
+      "mint": {
+        "program": "spl_token",
+        "mint_authority": null,
+        "freeze_authority": null,
+        "supply_raw": 99999997340411610,
+        "decimals": 6,
+        "extensions": [],
+        "extension_details": {}
+      },
+      "holders": null,
+      "holders_geckoterminal": {
+        "count": null,
+        "top10_incl_pools_pct": null,
+        "last_updated": null,
+        "fetched_at": "2026-11-18T13:51:10Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/EY8AQmF5NnjPxKLM3t5K9J4gNzZcYSSJVQLrjUKNvMw/info",
+        "label": "includes pools; not a gate"
+      },
+      "sells_in_last_trades_page": 143,
+      "manual_holder_check_url": "https://solscan.io/token/EY8AQmF5NnjPxKLM3t5K9J4gNzZcYSSJVQLrjUKNvMw#holders",
+      "verdict": "unverified",
+      "reject_reasons": [],
+      "missing_checks": [
+        "holders"
+      ],
+      "check_errors": [
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
+      ],
+      "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
+    },
+    {
+      "pair": "GTA / SOL",
+      "token_address": "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump",
+      "pool_address": "GQHhvHAKQmRmZm8bHK9kscfn93Xa7CBMoWh4duPZs2a",
+      "source_url": "https://www.geckoterminal.com/solana/pools/GQHhvHAKQmRmZm8bHK9kscfn93Xa7CBMoWh4duPZs2a",
+      "checked_at": "2026-11-18T13:51:30Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 979397382215629,
+        "supply_raw": 996772667956628,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -116,15 +95,15 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump"
+            "metadataAddress": "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump",
-            "name": "Official Grand Theft Auto VI",
-            "symbol": "GTAVI",
+            "mint": "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump",
+            "name": "Grand Trench Agency",
+            "symbol": "GTA",
             "updateAuthority": null,
-            "uri": "https://ipfs.launchblitz.ai/async/ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump.json"
+            "uri": "https://ipfs.io/ipfs/bafkreigugqemwqtwnxxyz74deer2ei7aodqnlvb6sj7kaqqbybubf5t2j4"
           }
         }
       },
@@ -133,12 +112,12 @@
         "count": null,
         "top10_incl_pools_pct": null,
         "last_updated": null,
-        "fetched_at": "2026-11-17T23:54:05Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump/info",
+        "fetched_at": "2026-11-18T13:51:30Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 57,
-      "manual_holder_check_url": "https://solscan.io/token/ERiM8NiCanarGEnWMnURAoxTuTvUXZbtJsPTirnHpump#holders",
+      "sells_in_last_trades_page": 61,
+      "manual_holder_check_url": "https://solscan.io/token/7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
