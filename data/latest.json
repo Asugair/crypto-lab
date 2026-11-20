@@ -1,113 +1,106 @@
 {
-  "cycle_at": "2026-11-20T13:59:10Z",
-  "discovery_status": "partial",
-  "scanned": 339,
-  "excluded": 329,
+  "cycle_at": "2026-11-20T23:05:57Z",
+  "discovery_status": "ok",
+  "scanned": 396,
+  "excluded": 386,
   "exclusion_summary": {
-    "too_young": 70,
-    "low_liquidity": 164,
-    "low_volume_h1": 186,
-    "low_txns_h1": 161,
-    "no_sells_seen_h1": 94,
-    "brand_impersonation": 24,
-    "too_old": 159,
-    "duplicate_token_pool": 1
+    "too_young": 93,
+    "low_liquidity": 183,
+    "low_volume_h1": 214,
+    "low_txns_h1": 188,
+    "no_sells_seen_h1": 96,
+    "too_old": 200,
+    "brand_impersonation": 16
   },
-  "discovery_errors": [
-    {
-      "source": "trending_1h",
-      "page": 1,
-      "error": "HTTP 429"
-    }
-  ],
+  "discovery_errors": [],
   "stale_for_scalping_after_min": 60,
   "candidates": [
     {
-      "pair": "Catnomics / SOL",
+      "pair": "GTA6 / SOL",
       "verdict": "unverified",
       "reasons": [],
       "missing": [
         "holders"
       ],
-      "cost_pct_est": 0.87,
-      "url": "https://www.geckoterminal.com/solana/pools/9e8RF2TvzW4fyukHWWgdU8C6Fcqo9uEMzQaht8YQ2gC3",
-      "token_address": "BR3TZmbCPtyTpgLBtUvJocMbxPt2pw3CBSUJ5oq6pump",
-      "pool_address": "9e8RF2TvzW4fyukHWWgdU8C6Fcqo9uEMzQaht8YQ2gC3",
+      "cost_pct_est": 0.66,
+      "url": "https://www.geckoterminal.com/solana/pools/7FkeeHoBxb9sTSBpiQeyDNNv9tqj5fYySXCrSbdeDJQx",
+      "token_address": "Y3q8TyczdPgibhKJM22vt1L77xjoaVDtp876vmkaKH7",
+      "pool_address": "7FkeeHoBxb9sTSBpiQeyDNNv9tqj5fYySXCrSbdeDJQx",
       "dex": "PumpSwap",
-      "age_hours": 2.24,
-      "liquidity_usd": 17080,
-      "volume_h1_usd": 270752,
-      "txns_h1": 7913,
-      "sells_h1": 3160,
-      "price_change_h1_pct": "-56.904",
-      "fdv_usd": "57499.8655641427",
-      "found_via": "trending_6h",
-      "price_usd": 5.798060034865183e-05,
+      "age_hours": 1.34,
+      "liquidity_usd": 182886,
+      "volume_h1_usd": 5903697,
+      "txns_h1": 10303,
+      "sells_h1": 4483,
+      "price_change_h1_pct": "24.033",
+      "fdv_usd": "129985.0914",
+      "found_via": "trending_1h",
+      "price_usd": 0.00012970640144425983,
       "same_symbol_other_mints": [],
-      "gt_holders_count": 1350,
-      "gt_top10_incl_pools_pct": "32.7441",
+      "gt_holders_count": 246,
+      "gt_top10_incl_pools_pct": "98.651",
       "check_errors": [
-        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
+        "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 403 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32602,\"message\":\"Indexed requests require a personal token. Get one at: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
       ],
-      "manual_holder_check_url": "https://solscan.io/token/BR3TZmbCPtyTpgLBtUvJocMbxPt2pw3CBSUJ5oq6pump#holders"
+      "manual_holder_check_url": "https://solscan.io/token/Y3q8TyczdPgibhKJM22vt1L77xjoaVDtp876vmkaKH7#holders"
     },
     {
-      "pair": "FIONA / SOL",
+      "pair": "Trader / SOL",
       "verdict": "unverified",
       "reasons": [],
       "missing": [
         "holders"
       ],
-      "cost_pct_est": 0.67,
-      "url": "https://www.geckoterminal.com/solana/pools/DjbLtX1HRGZZrJgJ7CwTX6SN3D7tBLiytkGwomBUwTVB",
-      "token_address": "B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump",
-      "pool_address": "DjbLtX1HRGZZrJgJ7CwTX6SN3D7tBLiytkGwomBUwTVB",
-      "dex": "PumpSwap",
-      "age_hours": 17.09,
-      "liquidity_usd": 150190,
-      "volume_h1_usd": 181414,
-      "txns_h1": 3795,
-      "sells_h1": 1735,
-      "price_change_h1_pct": "20.891",
-      "fdv_usd": "2805364.46",
-      "found_via": "trending_6h",
-      "price_usd": 0.0028053644596255658,
+      "cost_pct_est": 0.68,
+      "url": "https://www.geckoterminal.com/solana/pools/65eyzrLgqEjqZ5NMoFntrE6XE6SvxS9zggzaBiew4n8n",
+      "token_address": "BYKQkHKMWHidNBLQXgt7NX4PLUtJZRYGLWQYkJzPGenX",
+      "pool_address": "65eyzrLgqEjqZ5NMoFntrE6XE6SvxS9zggzaBiew4n8n",
+      "dex": "Raydium",
+      "age_hours": 2.26,
+      "liquidity_usd": 98652,
+      "volume_h1_usd": 376636,
+      "txns_h1": 8726,
+      "sells_h1": 3410,
+      "price_change_h1_pct": "35.939",
+      "fdv_usd": "306207.9329",
+      "found_via": "trending_1h",
+      "price_usd": 0.00031194048962510817,
       "same_symbol_other_mints": [],
-      "gt_holders_count": 9037,
-      "gt_top10_incl_pools_pct": "15.2166",
+      "gt_holders_count": 232,
+      "gt_top10_incl_pools_pct": "54.0277",
       "check_errors": [
         "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
       ],
-      "manual_holder_check_url": "https://solscan.io/token/B34nXKzCgsJb9ChLuSHPRpXLE3WFSWyeT8Cqkzzmpump#holders"
+      "manual_holder_check_url": "https://solscan.io/token/BYKQkHKMWHidNBLQXgt7NX4PLUtJZRYGLWQYkJzPGenX#holders"
     },
     {
-      "pair": "RUDY / USDC",
+      "pair": "AMC / SOL",
       "verdict": "unverified",
       "reasons": [],
       "missing": [
         "holders"
       ],
-      "cost_pct_est": 0.75,
-      "url": "https://www.geckoterminal.com/solana/pools/8i183K6cZXHN17umKrcr6Zjc9BXgN2nnqdQanYKgvko6",
-      "token_address": "GRMRQSkBGg2Cc8Y9GePNBcJVk49YepWkXUDQBXAMpump",
-      "pool_address": "8i183K6cZXHN17umKrcr6Zjc9BXgN2nnqdQanYKgvko6",
+      "cost_pct_est": 0.69,
+      "url": "https://www.geckoterminal.com/solana/pools/FW6MCPRwALr2AzUonRU6BP4RfPmtqxCbt8UimKRHdtf3",
+      "token_address": "7ABsdL6T9cNsnW3zEVSKGLfpoTXeZMaTukJNohEAWZnq",
+      "pool_address": "FW6MCPRwALr2AzUonRU6BP4RfPmtqxCbt8UimKRHdtf3",
       "dex": "PumpSwap",
-      "age_hours": 3.22,
-      "liquidity_usd": 35538,
-      "volume_h1_usd": 128715,
-      "txns_h1": 3090,
-      "sells_h1": 1261,
-      "price_change_h1_pct": "-32.986",
-      "fdv_usd": "130460.6064",
-      "found_via": "trending_6h",
-      "price_usd": 0.00013046060641295346,
+      "age_hours": 1.19,
+      "liquidity_usd": 80020,
+      "volume_h1_usd": 273318,
+      "txns_h1": 3578,
+      "sells_h1": 993,
+      "price_change_h1_pct": "483.971",
+      "fdv_usd": "101959.99390196",
+      "found_via": "trending_1h",
+      "price_usd": 0.00010242516543507824,
       "same_symbol_other_mints": [],
-      "gt_holders_count": 1758,
-      "gt_top10_incl_pools_pct": "32.61",
+      "gt_holders_count": 369,
+      "gt_top10_incl_pools_pct": "99.8149",
       "check_errors": [
         "getTokenLargestAccounts: solana-rpc.publicnode.com: HTTP 429 {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1} | api.mainnet-beta.solana.com: HTTP 429  {\"jsonrpc\":\"2.0\",\"error\":{\"code\": 429,\"message\":\"Too many requests for a specific RPC call\"}, \"id\": 1 }"
       ],
-      "manual_holder_check_url": "https://solscan.io/token/GRMRQSkBGg2Cc8Y9GePNBcJVk49YepWkXUDQBXAMpump#holders"
+      "manual_holder_check_url": "https://solscan.io/token/7ABsdL6T9cNsnW3zEVSKGLfpoTXeZMaTukJNohEAWZnq#holders"
     }
   ]
 }
