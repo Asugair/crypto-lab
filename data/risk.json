@@ -1,49 +1,33 @@
 {
-  "checked_at": "2026-11-24T15:46:06Z",
+  "checked_at": "2026-11-25T01:25:02Z",
   "reviews": [
     {
-      "pair": "JIMMY / SOL",
-      "token_address": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump",
-      "pool_address": "FnHWfV49ywCtGCDTyf34AVN8BiXxcgXUKqLctkrkP1gQ",
-      "source_url": "https://www.geckoterminal.com/solana/pools/FnHWfV49ywCtGCDTyf34AVN8BiXxcgXUKqLctkrkP1gQ",
-      "checked_at": "2026-11-24T15:45:21Z",
+      "pair": "4CHAN / SOL",
+      "token_address": "7wcCzoDByc2J5mjAmt5xbXKFas8Cym48vF8n4euL2J5E",
+      "pool_address": "9U4jtPw2qGpsaTHfV9Me3ayQeJF62RL226WdCR1shuGY",
+      "source_url": "https://www.geckoterminal.com/solana/pools/9U4jtPw2qGpsaTHfV9Me3ayQeJF62RL226WdCR1shuGY",
+      "checked_at": "2026-11-25T01:24:22Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
-        "program": "token2022",
+        "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 933814931018620,
+        "supply_raw": 1000000000000000,
         "decimals": 6,
-        "extensions": [
-          "metadataPointer",
-          "tokenMetadata"
-        ],
-        "extension_details": {
-          "metadataPointer": {
-            "authority": null,
-            "metadataAddress": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump"
-          },
-          "tokenMetadata": {
-            "additionalMetadata": [],
-            "mint": "38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump",
-            "name": "Jimmy Rustles",
-            "symbol": "JIMMY",
-            "updateAuthority": null,
-            "uri": "https://j7m.io/metadata/447f1b5ad4d94eef.json"
-          }
-        }
+        "extensions": [],
+        "extension_details": {}
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 3963,
-        "top10_incl_pools_pct": "25.0432",
-        "last_updated": "2026-11-24T15:36:30Z",
-        "fetched_at": "2026-11-24T15:45:21Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump/info",
+        "count": 2899,
+        "top10_incl_pools_pct": "85.9021",
+        "last_updated": "2026-11-25T00:49:46Z",
+        "fetched_at": "2026-11-25T01:24:22Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7wcCzoDByc2J5mjAmt5xbXKFas8Cym48vF8n4euL2J5E/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 116,
-      "manual_holder_check_url": "https://solscan.io/token/38M2z4UCfZEkUHFzD48vhKQhFhNyRGto8pZbLjNipump#holders",
+      "sells_in_last_trades_page": 150,
+      "manual_holder_check_url": "https://solscan.io/token/7wcCzoDByc2J5mjAmt5xbXKFas8Cym48vF8n4euL2J5E#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -55,48 +39,32 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "Slingoor / SOL",
-      "token_address": "ANvsL4A6tJKAXJsPg7XVSHQA7KYmFcpW42jPuhVtpump",
-      "pool_address": "8ymFvPheU5TEyd7bqsDFJQKGVMrZUv4WnHPeTTNTBaSn",
-      "source_url": "https://www.geckoterminal.com/solana/pools/8ymFvPheU5TEyd7bqsDFJQKGVMrZUv4WnHPeTTNTBaSn",
-      "checked_at": "2026-11-24T15:45:44Z",
+      "pair": "4CHAN / SOL",
+      "token_address": "12ipYPEzxrSREvnuUVRRwyD4dpxGtPiLaSdkkzwE9hKP",
+      "pool_address": "491wpeQt7D83q28aLobRsQxvCGkHpMTZ5vd4izHUeQH7",
+      "source_url": "https://www.geckoterminal.com/solana/pools/491wpeQt7D83q28aLobRsQxvCGkHpMTZ5vd4izHUeQH7",
+      "checked_at": "2026-11-25T01:24:43Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
-        "program": "token2022",
+        "program": "spl_token",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 972887664585970,
+        "supply_raw": 100000000000000000,
         "decimals": 6,
-        "extensions": [
-          "metadataPointer",
-          "tokenMetadata"
-        ],
-        "extension_details": {
-          "metadataPointer": {
-            "authority": null,
-            "metadataAddress": "ANvsL4A6tJKAXJsPg7XVSHQA7KYmFcpW42jPuhVtpump"
-          },
-          "tokenMetadata": {
-            "additionalMetadata": [],
-            "mint": "ANvsL4A6tJKAXJsPg7XVSHQA7KYmFcpW42jPuhVtpump",
-            "name": "The White Bull",
-            "symbol": "Slingoor",
-            "updateAuthority": null,
-            "uri": "https://j7m.io/metadata/424fcdc49de94010.json"
-          }
-        }
+        "extensions": [],
+        "extension_details": {}
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 1241,
-        "top10_incl_pools_pct": "34.5855",
-        "last_updated": "2026-11-24T15:13:59Z",
-        "fetched_at": "2026-11-24T15:45:44Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/ANvsL4A6tJKAXJsPg7XVSHQA7KYmFcpW42jPuhVtpump/info",
+        "count": 2020,
+        "top10_incl_pools_pct": "98.9056",
+        "last_updated": "2026-11-25T00:57:41Z",
+        "fetched_at": "2026-11-25T01:24:43Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/12ipYPEzxrSREvnuUVRRwyD4dpxGtPiLaSdkkzwE9hKP/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 114,
-      "manual_holder_check_url": "https://solscan.io/token/ANvsL4A6tJKAXJsPg7XVSHQA7KYmFcpW42jPuhVtpump#holders",
+      "sells_in_last_trades_page": 135,
+      "manual_holder_check_url": "https://solscan.io/token/12ipYPEzxrSREvnuUVRRwyD4dpxGtPiLaSdkkzwE9hKP#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -108,17 +76,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "DUVAL / SOL",
-      "token_address": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
-      "pool_address": "CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
-      "source_url": "https://www.geckoterminal.com/solana/pools/CSvKMfrQ2TedEZEDpFSoHbGqxNb1A3w5o2vVM6Y5eoQ5",
-      "checked_at": "2026-11-24T15:46:06Z",
+      "pair": "WIKI / SOL",
+      "token_address": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump",
+      "pool_address": "B6UE1U4u8Sf7hMPwkmT4tvxxz1JzVFsKgWEwuFTNRK9t",
+      "source_url": "https://www.geckoterminal.com/solana/pools/B6UE1U4u8Sf7hMPwkmT4tvxxz1JzVFsKgWEwuFTNRK9t",
+      "checked_at": "2026-11-25T01:25:02Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 947183928673948,
+        "supply_raw": 977930078837483,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -127,29 +95,29 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump"
+            "metadataAddress": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump",
-            "name": "The White Bull",
-            "symbol": "DUVAL",
+            "mint": "E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump",
+            "name": "Wikipedia Coin",
+            "symbol": "WIKI",
             "updateAuthority": null,
-            "uri": "https://j7m.io/metadata/997f882aedac44b8.json"
+            "uri": "https://j7m.io/metadata/df04e3c6d3cb4e0c.json"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 2200,
-        "top10_incl_pools_pct": "29.5578",
-        "last_updated": "2026-11-24T15:31:03Z",
-        "fetched_at": "2026-11-24T15:46:06Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump/info",
+        "count": 1702,
+        "top10_incl_pools_pct": "28.1098",
+        "last_updated": "2026-11-25T01:06:40Z",
+        "fetched_at": "2026-11-25T01:25:02Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 138,
-      "manual_holder_check_url": "https://solscan.io/token/7fmD1p3jzva28EPP9bPqbDoxZGj5j398yJoE3EVypump#holders",
+      "sells_in_last_trades_page": 147,
+      "manual_holder_check_url": "https://solscan.io/token/E2MJUFBMaTH7j21P2HncB96erJ4dM3FPL2W6i8Dpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
