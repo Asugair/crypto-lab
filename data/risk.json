@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-26T01:00:06Z",
+  "checked_at": "2026-11-26T15:00:08Z",
   "reviews": [
     {
-      "pair": "KOOP / SOL",
-      "token_address": "29KEzraeitfWXT4U1yfvmgiT8UPAmRWuvU7EUzQMdhjx",
-      "pool_address": "2P2KReFpF89Kci8j34Lhx9dLaAxBKBHMSkSMQPauh9Bi",
-      "source_url": "https://www.geckoterminal.com/solana/pools/2P2KReFpF89Kci8j34Lhx9dLaAxBKBHMSkSMQPauh9Bi",
-      "checked_at": "2026-11-26T00:59:20Z",
+      "pair": "DOG / SOL",
+      "token_address": "Evjt31qD83BBWGA2UuywYmXHMrAPCueym9bkC5XJz9XY",
+      "pool_address": "Ebot5iqierCGQLsZd2S38LQSpZNmS4sKxsVka66Uthb6",
+      "source_url": "https://www.geckoterminal.com/solana/pools/Ebot5iqierCGQLsZd2S38LQSpZNmS4sKxsVka66Uthb6",
+      "checked_at": "2026-11-26T14:59:21Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "spl_token",
@@ -19,15 +19,15 @@
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 1205,
-        "top10_incl_pools_pct": "96.5606",
-        "last_updated": "2026-11-26T00:06:15Z",
-        "fetched_at": "2026-11-26T00:59:20Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/29KEzraeitfWXT4U1yfvmgiT8UPAmRWuvU7EUzQMdhjx/info",
+        "count": 1988,
+        "top10_incl_pools_pct": "95.9649",
+        "last_updated": "2026-11-26T14:36:27Z",
+        "fetched_at": "2026-11-26T14:59:21Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/Evjt31qD83BBWGA2UuywYmXHMrAPCueym9bkC5XJz9XY/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 139,
-      "manual_holder_check_url": "https://solscan.io/token/29KEzraeitfWXT4U1yfvmgiT8UPAmRWuvU7EUzQMdhjx#holders",
+      "sells_in_last_trades_page": 137,
+      "manual_holder_check_url": "https://solscan.io/token/Evjt31qD83BBWGA2UuywYmXHMrAPCueym9bkC5XJz9XY#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -39,17 +39,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "PVE / PUMP",
-      "token_address": "BQTG5qcyt3YpU1nJ37RAsTwd4fJa3cZXKAp9WjMETQu6",
-      "pool_address": "7cugm29a6UxkbCKLNyNSmLd12LrqyidrHfHhXxan8mM4",
-      "source_url": "https://www.geckoterminal.com/solana/pools/7cugm29a6UxkbCKLNyNSmLd12LrqyidrHfHhXxan8mM4",
-      "checked_at": "2026-11-26T00:59:38Z",
+      "pair": "PAIR / SOL",
+      "token_address": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump",
+      "pool_address": "qkiYfkcm2QGfpNbEpuXvA5wiXq4F6ZdUWnZk2Y19cym",
+      "source_url": "https://www.geckoterminal.com/solana/pools/qkiYfkcm2QGfpNbEpuXvA5wiXq4F6ZdUWnZk2Y19cym",
+      "checked_at": "2026-11-26T14:59:39Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 979399596384650,
+        "supply_raw": 955785456174524,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -58,29 +58,29 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "BQTG5qcyt3YpU1nJ37RAsTwd4fJa3cZXKAp9WjMETQu6"
+            "metadataAddress": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "BQTG5qcyt3YpU1nJ37RAsTwd4fJa3cZXKAp9WjMETQu6",
-            "name": "PVE",
-            "symbol": "PVE",
+            "mint": "32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump",
+            "name": "Paircoin",
+            "symbol": "PAIR",
             "updateAuthority": null,
-            "uri": "https://gg.sc/metadata/055083a3-9b70-4fa0-8714-ef3cf8895ea7.json"
+            "uri": "https://j7m.io/metadata/8e253383498e40cb.json"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 2777,
-        "top10_incl_pools_pct": "31.5379",
-        "last_updated": "2026-11-26T00:45:12Z",
-        "fetched_at": "2026-11-26T00:59:38Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/BQTG5qcyt3YpU1nJ37RAsTwd4fJa3cZXKAp9WjMETQu6/info",
+        "count": 2408,
+        "top10_incl_pools_pct": "25.7811",
+        "last_updated": "2026-11-26T14:53:01Z",
+        "fetched_at": "2026-11-26T14:59:39Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 98,
-      "manual_holder_check_url": "https://solscan.io/token/BQTG5qcyt3YpU1nJ37RAsTwd4fJa3cZXKAp9WjMETQu6#holders",
+      "sells_in_last_trades_page": 126,
+      "manual_holder_check_url": "https://solscan.io/token/32rBxcFjCFnyqZ41CEPM5AL67X1dcw8w83vZt6Kxpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
@@ -92,17 +92,17 @@
       "caveat": "Past sells do not prove we can sell now. Costs/slippage not included here; run cost.py."
     },
     {
-      "pair": "Grodia / SOL",
-      "token_address": "6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump",
-      "pool_address": "7wNXypS79Whx7vX8NCrkdhQAFiYVbQZbBuqrRdKMRbve",
-      "source_url": "https://www.geckoterminal.com/solana/pools/7wNXypS79Whx7vX8NCrkdhQAFiYVbQZbBuqrRdKMRbve",
-      "checked_at": "2026-11-26T01:00:06Z",
+      "pair": "Investor / SOL",
+      "token_address": "J9eBkCb4UtquAMQqB6duwBmR99fFSMoTnDcaMB9Wpump",
+      "pool_address": "BeDR8m6W1KZ9ihxWxWfzaZDc3kYodrzFz4QQ9uzymNni",
+      "source_url": "https://www.geckoterminal.com/solana/pools/BeDR8m6W1KZ9ihxWxWfzaZDc3kYodrzFz4QQ9uzymNni",
+      "checked_at": "2026-11-26T15:00:08Z",
       "rpc": "solana-rpc.publicnode.com",
       "mint": {
         "program": "token2022",
         "mint_authority": null,
         "freeze_authority": null,
-        "supply_raw": 996287185796537,
+        "supply_raw": 966769864864907,
         "decimals": 6,
         "extensions": [
           "metadataPointer",
@@ -111,29 +111,29 @@
         "extension_details": {
           "metadataPointer": {
             "authority": null,
-            "metadataAddress": "6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump"
+            "metadataAddress": "J9eBkCb4UtquAMQqB6duwBmR99fFSMoTnDcaMB9Wpump"
           },
           "tokenMetadata": {
             "additionalMetadata": [],
-            "mint": "6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump",
-            "name": "Grodia",
-            "symbol": "Grodia",
+            "mint": "J9eBkCb4UtquAMQqB6duwBmR99fFSMoTnDcaMB9Wpump",
+            "name": "our little investor",
+            "symbol": "Investor",
             "updateAuthority": null,
-            "uri": "https://ipfs.io/ipfs/bafkreicnhiz7wzeg6yqgpldrj3df7emo56rehgyob75jxtxle7j7qdxf6u"
+            "uri": "https://j7m.io/metadata/8d3201cccd2b4e46.json"
           }
         }
       },
       "holders": null,
       "holders_geckoterminal": {
-        "count": 5625,
-        "top10_incl_pools_pct": "18.3755",
-        "last_updated": "2026-11-26T00:51:04Z",
-        "fetched_at": "2026-11-26T01:00:06Z",
-        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump/info",
+        "count": 836,
+        "top10_incl_pools_pct": "29.602",
+        "last_updated": "2026-11-26T14:43:36Z",
+        "fetched_at": "2026-11-26T15:00:08Z",
+        "source_url": "https://api.geckoterminal.com/api/v2/networks/solana/tokens/J9eBkCb4UtquAMQqB6duwBmR99fFSMoTnDcaMB9Wpump/info",
         "label": "includes pools; not a gate"
       },
-      "sells_in_last_trades_page": 74,
-      "manual_holder_check_url": "https://solscan.io/token/6HS1aeSk7osT5B1CzLp1HTRTAweFr5wurfMHS4vppump#holders",
+      "sells_in_last_trades_page": 117,
+      "manual_holder_check_url": "https://solscan.io/token/J9eBkCb4UtquAMQqB6duwBmR99fFSMoTnDcaMB9Wpump#holders",
       "verdict": "unverified",
       "reject_reasons": [],
       "missing_checks": [
